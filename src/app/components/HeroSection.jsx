@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
@@ -12,47 +12,63 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-blue-700">
               Hello There, I'm Mkhanyisi!{" "}
             </span>
-            <br />
+          </h1>
+          <div className="type-animation-wrapper">
             <TypeAnimation
               sequence={[
                 "I also go by MK",
                 1000,
                 "I'm a Software Engineer",
                 1000,
-                "a Full Stack Developer",
+                "I'm a versatile Full Stack Developer",
                 1000,
-                "A Web Developer",
+                "I'm comfortable with Web Technologies, Machine Learning and Cloud Services",
                 1000,
-                "a Backend Developer",
+                "I'm A Backend Developer",
                 1000,
-                "a Frontend Developer",
+                "I'm A Frontend Developer",
                 1000,
-                "a Traveler and Outdoor Enthusiast",
+                "I love Music, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ",
                 1000,
-                "An Avid Basketball, Biking and Gym Enthusiast",
+                "Away from the Computer keyboard, you can either find me at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
                 1000,
               ]}
-              wrapper="span"
-              speed={50}
-              style={{ display: "inline-block" }}
+              wrapper="h3"
+              speed={10}
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                padding: "15px",
+                borderRadius: "10px",
+                fontFamily: "monospace",
+                margin: "0",
+                background: "transparent",
+                backdropFilter: "blur(90%)",
+                maxHeight: "12rem",
+                display: "inline-block",
+                marginLeft: "15px",
+                marginRight: "15px",
+                marginBottom: "15px",
+              }}
               repeat={Infinity}
-              className="py-10"
             />
-          </h1>
-          <p classname="text-[ADB7BE] text-base text-lg mb-6 lg:text-xl">
-            Welcome to my corner of the internet. Here, I aim to share and
-            encapsulate some of my key skills and experiences. I'm a versatile
-            Full Stack Software Engineer passionate about problem-solving
-            through computational thinking across various domains. Feel free to
-            check out my work and reach out to me.
+          </div>
+
+          <p className="text-[#5C677D] text-lg lg:text-xl leading-relaxed mb-6">
+            Welcome to my little corner of of the internet! Here, I'm excited to
+            showcase some of my key skills and experiences. As a versatile Full
+            Stack Software Engineer, I'm deeply passionate about problem-solving
+            through computational thinking across diverse domains. Whether
+            you're here to explore my work or just chat, feel free to reach out.
+            I'm always up for a good discussion!
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">
               Let's Talk
             </button>
 
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br  from-red-900 to-blue-700 hover:bg-slate-800  mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 font-extrabold">
                 Download Resume
               </span>
             </button>
@@ -85,6 +101,11 @@ const HeroSection = () => {
             }
           }
 
+          .hero_bio {
+            font-size: 18px;
+            font-weight: 300;
+          }
+
           .hero_image-wrapper {
             width: 200px;
             height: 200px;
@@ -100,11 +121,23 @@ const HeroSection = () => {
             object-position: top;
           }
 
+          .type-animation-wrapper {
+            height: 12rem; /* Adjust this height based on your font size and line height */
+            overflow: hidden;
+            display: inline-block;
+          }
+
+          .type-animation {
+            white-space: nowrap; 
+          }
+
           @media (min-width: 1000px) {
             .hero_image-wrapper {
               width: 300px;
               height: 300px;
             }
+
+            .typ
           }
         `}
       </style>
