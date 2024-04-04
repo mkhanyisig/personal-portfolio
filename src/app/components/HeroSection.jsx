@@ -28,9 +28,9 @@ const HeroSection = () => {
                 1000,
                 "I'm A Frontend Developer",
                 1000,
-                "I love Music, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ",
-                1000,
                 "Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
+                1000,
+                "I love Music, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ",
                 1000,
               ]}
               wrapper="h3"
@@ -55,12 +55,10 @@ const HeroSection = () => {
           </div>
 
           <p className="text-[#5C677D] text-lg lg:text-xl leading-relaxed mb-6">
-            Welcome to my little corner of of the internet! Here, I'm excited to
-            showcase some of my key skills and experiences. As a versatile Full
-            Stack Software Engineer, I'm deeply passionate about problem-solving
-            through computational thinking across diverse domains. Whether
-            you're here to explore my work or just chat, feel free to reach out.
-            I'm always up for a good discussion!
+            Welcome to my little corner of of the internet! Here I showcase some
+            of my key skills and experiences. I love and enjoy solving problems
+            through code. Whether you're here to explore my work or just chat,
+            feel free to reach out. I'm always up for a good discussion!
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">
