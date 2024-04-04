@@ -30,7 +30,7 @@ const HeroSection = () => {
                 1000,
                 "I love Music, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ",
                 1000,
-                "Away from the Computer keyboard, you can either find me at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
+                "Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
                 1000,
               ]}
               wrapper="h3"
@@ -75,7 +75,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="bg-[#181818] lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:h-[200px] rounded-full relative hero_image-wrapper ">
+          <div className="bg-[#181818] lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:h-[200px] relative hero_image-wrapper ">
             <Image
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hero_profile-image"
               src="/images/mk3.png"
