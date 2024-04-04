@@ -22,7 +22,7 @@ const HeroSection = () => {
                 1000,
                 "I'm a versatile Full Stack Developer",
                 1000,
-                "I'm comfortable with Web Technologies, Machine Learning and Cloud Services",
+                "I'm comfortable with Web Technologies, Cloud Services, Data Processing and Machine Learning",
                 1000,
                 "I'm A Backend Developer",
                 1000,
@@ -122,8 +122,7 @@ const HeroSection = () => {
           }
 
           .type-animation-wrapper {
-            height: 12rem; /* Adjust this height based on your font size and line height */
-            overflow: hidden;
+            height: 12rem; 
             display: inline-block;
           }
 
