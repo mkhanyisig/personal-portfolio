@@ -3,26 +3,27 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
-const HeroSection = () => {
+const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
   return (
-    <section>
+    <section className={isBackgroundDark ? "bg-[#121212]" : "bg-white"}>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 lg:col-span-7 place-self-center text-center sm:text-left">
           <h1 className="py-10 text-white mb4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-blue-700">
-              Hello There, I'm Mkhanyisi!{" "}
+              Hello There, I'm Mkhanyisi!
             </span>
           </h1>
           <div className="type-animation-wrapper">
             <TypeAnimation
+              key={forceUpdateKey}
               sequence={[
-                "I also go by MK",
+                "I also go by MK if that's easier to pronounce or remember 😄",
                 1000,
                 "I'm a Software Engineer",
                 1000,
                 "I'm a versatile Full Stack Developer",
                 1000,
-                "I'm comfortable with Web Technologies, Cloud Services, Data Processing and Machine Learning",
+                "I'm comfortable with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
                 1000,
                 "I'm A Backend Developer",
                 1000,
@@ -42,9 +43,10 @@ const HeroSection = () => {
                 borderRadius: "10px",
                 fontFamily: "monospace",
                 margin: "0",
+                color: isBackgroundDark ? "white" : "black",
                 background: "transparent",
                 backdropFilter: "blur(90%)",
-                maxHeight: "12rem",
+                maxHeight: "14rem",
                 display: "inline-block",
                 marginLeft: "15px",
                 marginRight: "15px",
@@ -56,7 +58,7 @@ const HeroSection = () => {
 
           <p className="text-[#5C677D] text-lg lg:text-xl leading-relaxed mb-6">
             Welcome to my little corner of of the internet! Here I showcase some
-            of my key skills and experiences. I love and enjoy solving problems
+            of my skills and experiences. I love and enjoy solving problems
             through code. Whether you're here to explore my work or just chat,
             feel free to reach out. I'm always up for a good discussion!
           </p>
@@ -73,7 +75,11 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="bg-[#181818] lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:h-[200px] relative hero_image-wrapper ">
+          <div
+            className={`${
+              isBackgroundDark ? "bg-[#121212]" : "bg-white"
+            } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:h-[200px] relative hero_image-wrapper`}
+          >
             <Image
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hero_profile-image"
               src="/images/mk3.png"

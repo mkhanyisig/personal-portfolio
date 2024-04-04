@@ -1,14 +1,27 @@
-import { Container } from "postcss";
+"use client";
 import HeroSection from "./components/HeroSection";
 import NavBar from "./components/NavBar";
+import { useState } from "react";
 
 export default function Home() {
+  const [isBackgroundDark, setIsBackgroundDark] = useState(true);
+  const [key, setKey] = useState(0);
+
+  const toggleBackgroundColor = () => {
+    setIsBackgroundDark(!isBackgroundDark);
+    setKey(prevKey => prevKey + 1);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
-      <NavBar />
+    <main className={`flex min-h-screen flex-col ${isBackgroundDark ? 'bg-[#121212]' : 'bg-white'}`}>
+       <NavBar
+        isBackgroundDark={isBackgroundDark}
+        onBackgroundToggle={toggleBackgroundColor}
+      />
       <div className="container mx-auto px-12 py-14">
-        <HeroSection />
+        <HeroSection isBackgroundDark={isBackgroundDark} forceUpdateKey={key}/>
       </div>
+     
     </main>
   );
 }
