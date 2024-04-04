@@ -2,6 +2,7 @@
 import HeroSection from "./components/HeroSection";
 import NavBar from "./components/NavBar";
 import { useState } from "react";
+import AboutSection from "./components/AboutSection";
 
 export default function Home() {
   const [isBackgroundDark, setIsBackgroundDark] = useState(true);
@@ -13,15 +14,23 @@ export default function Home() {
   };
 
   return (
+    
+
     <main className={`flex min-h-screen flex-col ${isBackgroundDark ? 'bg-[#121212]' : 'bg-white'}`}>
-       <NavBar
+         
+      <NavBar
         isBackgroundDark={isBackgroundDark}
         onBackgroundToggle={toggleBackgroundColor}
       />
       <div className="container mx-auto px-12 py-14">
         <HeroSection isBackgroundDark={isBackgroundDark} forceUpdateKey={key}/>
+        
       </div>
-     
+
+      <div className="container mx-auto px-12 py-14">
+        <AboutSection isBackgroundDark={isBackgroundDark} />
+      </div>
+      
     </main>
   );
 }
