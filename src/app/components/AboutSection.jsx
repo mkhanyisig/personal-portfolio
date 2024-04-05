@@ -8,13 +8,13 @@ const educationItems = [
   {
     organization: "Brandeis University",
     role: "MS in Computer Science",
-    date: "August 2021 - May 2023",
+    date: "2021 - 2023",
     logo: "/images/brandeis2.png",
   },
   {
     organization: "Colby College",
     role: "BS in Computer Science & Physics: Astrophysics",
-    date: "August 2015 - May 2019",
+    date: "2015 - 2019",
     logo: "/images/colby2.png",
   },
   {
@@ -159,13 +159,13 @@ const AboutSection = ({ isBackgroundDark }) => {
             <ExperienceSection
               title="Education"
               items={educationItems}
-              isBackgroundDark={isBackgroundDark}
+              darkMode={isBackgroundDark}
             />
 
             <ExperienceSection
-              title="Work Experience"
+              title="Work"
               items={workItems}
-              isBackgroundDark={isBackgroundDark}
+              darkMode={isBackgroundDark}
             />
           </div>
         </div>

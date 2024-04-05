@@ -8,9 +8,9 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
     <section className={isBackgroundDark ? "bg-[#121212]" : "bg-white"}>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 lg:col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="py-10 text-white mb4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+          <h1 className="py-10 text-white mb4 text-4xl sm:text-5xl lg:text-5xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-blue-700">
-              Hello There, I'm Mkhanyisi!
+              👋 Hello There, I'm Mkhanyisi!
             </span>
           </h1>
           <div className="type-animation-wrapper">
@@ -19,13 +19,13 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
               sequence={[
                 "I also go by MK if that's easier to pronounce or remember 😄",
                 1000,
-                "I'm a Software Engineer",
+                "I'm A Software Engineer",
                 1000,
-                "I'm a versatile Full Stack Developer",
-                1000,
-                "I'm comfortable with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
+                "I'm A versatile Full Stack Developer",
                 1000,
                 "I'm A Backend Developer",
+                1000,
+                "I'm comfortable with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
                 1000,
                 "I'm A Frontend Developer",
                 1000,
@@ -61,7 +61,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             highlight some of my skills and experiences. I love and enjoy
             solving problems through code. Whether you're here to explore my
             work or just chat, feel free to reach out. I'm always up for a good
-            discussion!
+            conversation!
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">
