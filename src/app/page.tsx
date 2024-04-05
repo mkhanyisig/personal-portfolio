@@ -24,7 +24,6 @@ export default function Home() {
       />
       <div className="container mx-auto px-12 py-14">
         <HeroSection isBackgroundDark={isBackgroundDark} forceUpdateKey={key}/>
-        
       </div>
 
       <div className="container mx-auto px-12 py-14">

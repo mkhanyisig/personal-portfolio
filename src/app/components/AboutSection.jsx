@@ -113,21 +113,13 @@ const AboutSection = ({ isBackgroundDark }) => {
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
-        <Image src="/images/grad.jpeg" alt="MK grad" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold  mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700  to-red-900">
-              About Me
-            </span>
-          </h2>
-          <p className="text-base lg:text-lg ">
-            I am a software engineer with a passion for creating software
-            solutions that solve real-world problems. I have experience in
-            full-stack web development. I am proficient in JavaScript,
-            TypeScript, Python, and Java. I am also familiar with cloud
-            platforms, mainly AWS. I am a quick learner and a team player. I am
-            always eager to learn new technologies and improve my skills.
-          </p>
+        <div>
+          <Image
+            src="/images/grad.jpeg"
+            alt="MK grad"
+            width={500}
+            height={500}
+          />
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               active={tab === "skills"}
@@ -155,6 +147,19 @@ const AboutSection = ({ isBackgroundDark }) => {
               Education{" "}
             </TabButton>
           </div>
+        </div>
+
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold  mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700  to-red-900">
+              About Me
+            </span>
+          </h2>
+          <p className="text-base lg:text-lg ">
+            I am a software engineer with a passion for creating software
+            solutions that solve real-world problems.
+          </p>
+
           <div className="mt-8">
             <ExperienceSection
               title="Education"
@@ -168,6 +173,11 @@ const AboutSection = ({ isBackgroundDark }) => {
               darkMode={isBackgroundDark}
             />
           </div>
+          <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br  from-red-900 to-blue-700 hover:bg-slate-800  mt-3">
+            <span className="text-white block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 font-extrabold">
+              Download Resume
+            </span>
+          </button>
         </div>
       </div>
     </section>

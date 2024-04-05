@@ -30,9 +30,9 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 1000,
                 "I'm A Backend Developer",
                 1000,
-                "I'm comfortable with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
-                1000,
                 "I'm A Frontend Developer",
+                1000,
+                "I'm comfortable and competent with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
                 1000,
                 "Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
                 1000,
@@ -48,7 +48,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 borderRadius: "10px",
                 fontFamily: "monospace",
                 margin: "0",
-                color: textColor,
+                color: isBackgroundDark ? "white" : "black",
                 background: "transparent",
                 backdropFilter: "blur(90%)",
                 maxHeight: "14rem",
@@ -71,12 +71,6 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">
               Let's Talk
-            </button>
-
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br  from-red-900 to-blue-700 hover:bg-slate-800  mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 font-extrabold">
-                Download Resume
-              </span>
             </button>
           </div>
         </div>
