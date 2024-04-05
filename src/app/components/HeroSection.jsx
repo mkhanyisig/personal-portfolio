@@ -69,8 +69,10 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             conversation!
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">
-              Let's Talk
+            <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-900 to-blue-300 hover:bg-slate-800 mt-3">
+              <span className="text-blue-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-3 py-2 font-extrabold">
+                Let's Talk
+              </span>
             </button>
           </div>
         </div>

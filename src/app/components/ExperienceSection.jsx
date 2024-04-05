@@ -37,7 +37,7 @@ const ExperienceItem = ({ organization, role, date, logo, darkMode }) => {
 
 const ExperienceSection = ({ title, id, items, darkMode }) => {
   return (
-    <section className="text-white py-5 " id={id}>
+    <section className="text-white py-3 " id={id}>
       <div className="rounded-2xl border border-gray-800 p-6 dark:border-zinc-400">
         {title === "Work" ? (
           <h2 className="flex text-xl font-bold text-zinc-900 dark:text-zinc-100">
@@ -55,7 +55,7 @@ const ExperienceSection = ({ title, id, items, darkMode }) => {
           </h2>
         )}
 
-        <ol className="mt-6 space-y-4">
+        <ol className="mt-6 space-y-3">
           {items.map((item, index) => (
             <ExperienceItem key={index} darkMode={darkMode} {...item} />
           ))}

@@ -76,13 +76,10 @@ const TAB_DATA = [
     title: "Work",
     id: "work",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Full Stack Engineer, Electives Inc, Feb 2023 - </li>
-        <li>
-          Software Engineer Intern/Coop, HubSpot Inc, June 2022 - August 2022
-        </li>
-        <li>Software Engineer, Prospector Portal, June 2020 - December 2022</li>
-      </ul>
+      <p>
+        I have worked mostly within startup environments in small autonomous
+        teams
+      </p>
     ),
   },
   {
@@ -155,12 +152,12 @@ const AboutSection = ({ isBackgroundDark }) => {
               About Me
             </span>
           </h2>
-          <p className="text-base lg:text-lg ">
-            I am a software engineer with a passion for creating software
-            solutions that solve real-world problems.
+          <p className="text-xl font-extrabold">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-400">
+              Full Stack Software Engineer
+            </span>
           </p>
-
-          <div className="mt-8">
+          <div className="mt-2">
             <ExperienceSection
               title="Education"
               items={educationItems}
@@ -173,8 +170,8 @@ const AboutSection = ({ isBackgroundDark }) => {
               darkMode={isBackgroundDark}
             />
           </div>
-          <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br  from-red-900 to-blue-700 hover:bg-slate-800  mt-3">
-            <span className="text-white block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 font-extrabold">
+          <button className="px-2 py-2 w-full sm:w-fit rounded-full bg-gradient-to-br from-red-900 to-red-300 hover:bg-slate-800 mt-3">
+            <span className="text-red-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-4 py-2 font-extrabold">
               Download Resume
             </span>
           </button>
