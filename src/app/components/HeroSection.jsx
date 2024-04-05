@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
-  const textColor = isBackgroundDark ? "text-white" : "text-black";
+  const welcomeColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
 
   return (
     <section
@@ -61,7 +61,9 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             />
           </div>
 
-          <p className={`${textColor} text-lg lg:text-xl leading-relaxed mb-6`}>
+          <p
+            className={`${welcomeColor} text-lg lg:text-xl leading-relaxed mb-6`}
+          >
             Welcome to my little corner of of the internet! Here I try to
             highlight some of my skills and experiences. I love and enjoy
             solving problems through code. Whether you're here to explore my

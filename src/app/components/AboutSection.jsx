@@ -7,7 +7,7 @@ import ExperienceSection from "./ExperienceSection";
 const educationItems = [
   {
     organization: "Brandeis University",
-    role: "MS in Computer Science",
+    role: "MS in Computer Science - Systems & Machine Learning",
     date: "2021 - 2023",
     logo: "/images/brandeis2.png",
   },
@@ -68,14 +68,13 @@ const TAB_DATA = [
           I've gained extensive experience across diverse technology stacks and
           problem domains, primarily focusing on Web Applications, Data
           Processing, and Task Automation. My journey has involved mastering
-          various frameworks, tools, and libraries, with my primary programming
-          expertise lying in Python, JavaScript/TypeScript, and Java.
+          various frameworks, tools, and libraries. The primary tools I've
+          worked with and am strongly proficient in are
+          <br />
+          <b className="text-yellow-700">
+            Python, JavaScript/TypeScript, and Java.
+          </b>
         </p>
-        <ul className="list-disc pl-2 py-2">
-          <li>Javascript / Typescript</li>
-          <li>Python</li>
-          <li>Java</li>
-        </ul>
       </div>
     ),
   },
@@ -83,25 +82,35 @@ const TAB_DATA = [
     title: "Work",
     id: "work",
     content: (
-      <p>
-        My early career journey thus far has predominantly unfolded within
-        projects, small autonomous teams, and startup environments. I've owned
-        end-to-end feature implementations and deployment, including
-        implementing Figma designs that match the final User Interface and are
-        performant, reusable, and scalable solutions. Adept at automating tasks
-        and orchestrating functions that utilize third-party API’s or cloud
-        services, I've consistently delivered impactful solutions. I remain
-        dedicated to continuous growth and innovation in software development.
-      </p>
+      <div>
+        <p>
+          My early career journey thus far has predominantly unfolded within
+          projects, small autonomous teams, and startup environments. I've owned
+          end-to-end feature implementations and deployment, including ensuring
+          Figma designs that match the final User Interface and are performant,
+          reusable, and scalable solutions. Adept at automating tasks and
+          orchestrating functions that utilize third-party API’s or cloud
+          services, I've consistently delivered impactful solutions. I remain
+          dedicated to continuous growth and innovation in software development.
+        </p>
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li> BS in Computer Science,Colby College, 2015 - 2019</li>
-      </ul>
+      <div>
+        <p>
+          My educational journey, which includes both an MS and a BS in Computer
+          Science, has equipped me with robust problem-solving skills and a
+          solid foundation in computational thinking. Recognizing the dynamic
+          nature of the tech industry, I am deeply committed to continual
+          self-improvement. I actively engage in self-study and seek out
+          opportunities to learn new technologies, ensuring that my skills
+          remain current and adaptable to industry demands.
+        </p>
+      </div>
     ),
   },
 ];
@@ -157,8 +166,15 @@ const AboutSection = ({ isBackgroundDark }) => {
               Education{" "}
             </TabButton>
           </div>
-          <div className="mt-4">
-            <div>
+          <div
+            className="mt-4 "
+            style={{ height: "380px", maxHeight: "400px", overflowY: "auto" }}
+          >
+            <div
+              className={`${
+                isBackgroundDark ? "text-neutral-300" : "text-neutral-700"
+              } font-bold `}
+            >
               {tab === "skills" &&
                 TAB_DATA.find((tab) => tab.id === "skills").content}
               {tab === "work" &&
