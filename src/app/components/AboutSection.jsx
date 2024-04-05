@@ -63,13 +63,20 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Typescript</li>
-        <li>Javascript</li>
-        <li>Python</li>
-        <li>Java</li>
-      </ul>
+      <div>
+        <p>
+          I've gained extensive experience across diverse technology stacks and
+          problem domains, primarily focusing on Web Applications, Data
+          Processing, and Task Automation. My journey has involved mastering
+          various frameworks, tools, and libraries, with my primary programming
+          expertise lying in Python, JavaScript/TypeScript, and Java.
+        </p>
+        <ul className="list-disc pl-2 py-2">
+          <li>Javascript / Typescript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </div>
     ),
   },
   {
@@ -77,8 +84,14 @@ const TAB_DATA = [
     id: "work",
     content: (
       <p>
-        I have worked mostly within startup environments in small autonomous
-        teams
+        My early career journey thus far has predominantly unfolded within
+        projects, small autonomous teams, and startup environments. I've owned
+        end-to-end feature implementations and deployment, including
+        implementing Figma designs that match the final User Interface and are
+        performant, reusable, and scalable solutions. Adept at automating tasks
+        and orchestrating functions that utilize third-party API’s or cloud
+        services, I've consistently delivered impactful solutions. I remain
+        dedicated to continuous growth and innovation in software development.
       </p>
     ),
   },
@@ -114,14 +127,14 @@ const AboutSection = ({ isBackgroundDark }) => {
           <Image
             src="/images/grad.jpeg"
             alt="MK grad"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
           />
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               active={tab === "skills"}
               selectTab={() => handleTabChange("skills")}
-              tcolor={"text-blue-600"}
+              tcolor={"text-yellow-700 hover:text-yellow-400"}
             >
               {" "}
               Skills{" "}
@@ -129,7 +142,7 @@ const AboutSection = ({ isBackgroundDark }) => {
             <TabButton
               active={tab === "work"}
               selectTab={() => handleTabChange("work")}
-              tcolor={"text-red-600"}
+              tcolor={"text-red-700 hover:text-red-400"}
             >
               {" "}
               Work{" "}
@@ -138,11 +151,21 @@ const AboutSection = ({ isBackgroundDark }) => {
             <TabButton
               active={tab === "education"}
               selectTab={() => handleTabChange("education")}
-              tcolor={"text-yellow-600"}
+              tcolor={"text-blue-700 hover:text-blue-400"}
             >
               {" "}
               Education{" "}
             </TabButton>
+          </div>
+          <div className="mt-4">
+            <div>
+              {tab === "skills" &&
+                TAB_DATA.find((tab) => tab.id === "skills").content}
+              {tab === "work" &&
+                TAB_DATA.find((tab) => tab.id === "work").content}
+              {tab === "education" &&
+                TAB_DATA.find((tab) => tab.id === "education").content}
+            </div>
           </div>
         </div>
 

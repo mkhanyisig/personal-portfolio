@@ -1,15 +1,11 @@
 import React from "react";
 
 const TabButton = ({ active, selectTab, children, tcolor }) => {
-  const buttonClasses = active
-    ? "text-purple-600 border-purple-500 border-b"
-    : `text-${tcolor} `;
+  const buttonClasses = active ? " border-neutral-500 border-b" : `${tcolor} `;
 
   return (
     <button onClick={selectTab}>
-      <p
-        className={`mr-3 font-semibold ${tcolor} hover:text-blue-600 ${buttonClasses} `}
-      >
+      <p className={`mr-3 text-xl font-extrabold ${tcolor}  ${buttonClasses} `}>
         {children}
       </p>
     </button>

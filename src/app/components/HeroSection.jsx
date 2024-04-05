@@ -65,8 +65,8 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             Welcome to my little corner of of the internet! Here I try to
             highlight some of my skills and experiences. I love and enjoy
             solving problems through code. Whether you're here to explore my
-            work or just chat, feel free to reach out. I'm always up for a good
-            conversation!
+            work or just curious, feel free to reach out. I'm always up for a
+            good conversation!
           </p>
           <div>
             <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-900 to-blue-300 hover:bg-slate-800 mt-3">
