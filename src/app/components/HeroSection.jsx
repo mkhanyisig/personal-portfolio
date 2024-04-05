@@ -57,10 +57,11 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           </div>
 
           <p className="text-[#5C677D] text-lg lg:text-xl leading-relaxed mb-6">
-            Welcome to my little corner of of the internet! Here I showcase some
-            of my skills and experiences. I love and enjoy solving problems
-            through code. Whether you're here to explore my work or just chat,
-            feel free to reach out. I'm always up for a good discussion!
+            Welcome to my little corner of of the internet! Here I try to
+            highlight some of my skills and experiences. I love and enjoy
+            solving problems through code. Whether you're here to explore my
+            work or just chat, feel free to reach out. I'm always up for a good
+            discussion!
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-red-900 to-blue-700 hover:bg-slate-200 text-white font-extrabold">

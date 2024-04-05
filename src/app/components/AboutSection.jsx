@@ -2,6 +2,61 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import ExperienceSection from "./ExperienceSection";
+
+const educationItems = [
+  {
+    organization: "Brandeis University",
+    role: "MS in Computer Science",
+    date: "August 2021 - May 2023",
+    logo: "/images/brandeis2.png",
+  },
+  {
+    organization: "Colby College",
+    role: "BS in Computer Science & Physics: Astrophysics",
+    date: "August 2015 - May 2019",
+    logo: "/images/colby2.png",
+  },
+  {
+    organization: "Tuck School of Business at Dartmouth College",
+    role: "Business Bridge Program",
+    date: "July 2018",
+    logo: "/images/tuck2.png",
+  },
+];
+
+const workItems = [
+  {
+    organization: "Electives Inc",
+    role: "Full Stack Engineer",
+    date: "Feb 2023 - ",
+    logo: "/images/electives2.png",
+  },
+  {
+    organization: "HubSpot Inc",
+    role: "Software Engineer Intern/Coop",
+    date: "June 2022 - August 2022",
+    logo: "/images/hubspot.png",
+  },
+  {
+    organization: "Prospector Portal",
+    role: "Software Engineer",
+    date: "June 2020 - December 2022",
+    logo: "/images/prospector.png",
+  },
+  {
+    organization: "Brandeis University",
+    role: "Graduate Research/Teaching Assistant",
+    date: "October 2021 - Dec 2022",
+    logo: "/images/brandeis2.png",
+  },
+  {
+    organization: "The Jackson Laboratory",
+    role: "Software Engineer Intern",
+    date: "August 2019 - November 2019",
+    logo: "/images/jax3.png",
+  },
+];
 
 const TAB_DATA = [
   {
@@ -18,20 +73,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>MS in Computer Science, Brandeis University, 2023</li>
-        <li>
-          BS in Physics: Astrophysics and Computer Science, Colby College, 2019
-        </li>
-      </ul>
-    ),
-  },
-  {
-    title: "Experience",
-    id: "experience",
+    title: "Work",
+    id: "work",
     content: (
       <ul className="list-disc pl-2">
         <li>Full Stack Engineer, Electives Inc, Feb 2023 - </li>
@@ -39,6 +82,15 @@ const TAB_DATA = [
           Software Engineer Intern/Coop, HubSpot Inc, June 2022 - August 2022
         </li>
         <li>Software Engineer, Prospector Portal, June 2020 - December 2022</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="list-disc pl-2">
+        <li> BS in Computer Science,Colby College, 2015 - 2019</li>
       </ul>
     ),
   },
@@ -56,11 +108,18 @@ const AboutSection = ({ isBackgroundDark }) => {
   };
 
   return (
-    <section className="text-white">
+    <section
+      className={isBackgroundDark ? "text-white" : "text-[#121212]"}
+      id="about"
+    >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
         <Image src="/images/grad.jpeg" alt="MK grad" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold  mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700  to-red-900">
+              About Me
+            </span>
+          </h2>
           <p className="text-base lg:text-lg ">
             I am a software engineer with a passion for creating software
             solutions that solve real-world problems. I have experience in
@@ -78,6 +137,14 @@ const AboutSection = ({ isBackgroundDark }) => {
               {" "}
               Skills{" "}
             </TabButton>
+            <TabButton
+              active={tab === "work"}
+              selectTab={() => handleTabChange("work")}
+              tcolor={"text-red-600"}
+            >
+              {" "}
+              Work{" "}
+            </TabButton>
 
             <TabButton
               active={tab === "education"}
@@ -87,18 +154,19 @@ const AboutSection = ({ isBackgroundDark }) => {
               {" "}
               Education{" "}
             </TabButton>
-
-            <TabButton
-              active={tab === "experience"}
-              selectTab={() => handleTabChange("experience")}
-              tcolor={"text-red-600"}
-            >
-              {" "}
-              Experience{" "}
-            </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            <ExperienceSection
+              title="Education"
+              items={educationItems}
+              isBackgroundDark={isBackgroundDark}
+            />
+
+            <ExperienceSection
+              title="Work Experience"
+              items={workItems}
+              isBackgroundDark={isBackgroundDark}
+            />
           </div>
         </div>
       </div>
