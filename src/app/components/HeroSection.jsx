@@ -1,14 +1,19 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
+  const textColor = isBackgroundDark ? "text-white" : "text-black";
+
   return (
-    <section className={isBackgroundDark ? "bg-[#121212]" : "bg-white"}>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section
+      className={` ${
+        isBackgroundDark ? "bg-[#121212]" : "bg-white"
+      } h-screen w-full`}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
         <div className="col-span-7 lg:col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="py-10 text-white mb4 text-4xl sm:text-5xl lg:text-5xl font-extrabold">
+          <h1 className=" text-white mb4 text-4xl sm:text-5xl lg:text-5xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-900 to-blue-700">
               👋 Hello There, I'm Mkhanyisi!
             </span>
@@ -43,7 +48,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 borderRadius: "10px",
                 fontFamily: "monospace",
                 margin: "0",
-                color: isBackgroundDark ? "white" : "black",
+                color: textColor,
                 background: "transparent",
                 backdropFilter: "blur(90%)",
                 maxHeight: "14rem",
@@ -56,7 +61,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             />
           </div>
 
-          <p className="text-[#5C677D] text-lg lg:text-xl leading-relaxed mb-6">
+          <p className={`${textColor} text-lg lg:text-xl leading-relaxed mb-6`}>
             Welcome to my little corner of of the internet! Here I try to
             highlight some of my skills and experiences. I love and enjoy
             solving problems through code. Whether you're here to explore my
