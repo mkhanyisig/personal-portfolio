@@ -10,6 +10,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
       } h-screen w-full`}
+      id="home"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
         <div className="col-span-7 lg:col-span-7 place-self-center text-center sm:text-left">

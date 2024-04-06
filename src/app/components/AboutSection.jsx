@@ -7,7 +7,7 @@ import ExperienceSection from "./ExperienceSection";
 const educationItems = [
   {
     organization: "Brandeis University",
-    role: "MS in Computer Science - Systems & Machine Learning",
+    role: "MS in Computer Science",
     date: "2021 - 2023",
     logo: "/images/brandeis2.png",
   },
@@ -84,14 +84,15 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          My early career journey thus far has predominantly unfolded within
-          projects, small autonomous teams, and startup environments. I've owned
-          end-to-end feature implementations and deployment, including ensuring
-          Figma designs that match the final User Interface and are performant,
-          reusable, and scalable solutions. Adept at automating tasks and
-          orchestrating functions that utilize third-party API’s or cloud
-          services, I've consistently delivered impactful solutions. I remain
-          dedicated to continuous growth and innovation in software development.
+          My young career journey thus far has predominantly unfolded within
+          research/class projects, small autonomous teams, and startup
+          environments. I've owned end-to-end feature implementations and
+          deployment, including ensuring Figma designs that match the final User
+          Interface and are performant, reusable, and scalable solutions. Adept
+          at automating tasks and orchestrating functions that utilize
+          third-party API’s or cloud services, I've consistently delivered
+          impactful solutions. I remain dedicated to continuous growth and
+          innovation in software development.
         </p>
       </div>
     ),
@@ -128,7 +129,9 @@ const AboutSection = ({ isBackgroundDark }) => {
 
   return (
     <section
-      className={isBackgroundDark ? "text-white" : "text-[#121212]"}
+      className={` ${
+        isBackgroundDark ? "bg-[#121212]" : "bg-white"
+      } h-screen w-full`}
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
