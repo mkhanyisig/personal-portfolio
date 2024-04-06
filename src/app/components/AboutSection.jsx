@@ -65,11 +65,11 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          I've gained extensive experience across diverse technology stacks and
-          problem domains, primarily focusing on Web Applications, Data
+          I've gained experience and exposure across diverse technology stacks
+          and problem domains, primarily focusing on Web Applications, Data
           Processing, and Task Automation. My journey has involved mastering
-          various frameworks, tools, and libraries. The primary tools I've
-          worked with and am strongly proficient in are
+          various frameworks, tools, and libraries. The primary programming
+          languages I've worked with and am strongly proficient in are
           <br />
           <b className="text-yellow-700">
             Python, JavaScript/TypeScript, and Java.
@@ -131,7 +131,7 @@ const AboutSection = ({ isBackgroundDark }) => {
     <section
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
-      } h-screen w-full`}
+      } lg:h-screen lg:w-full`}
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">

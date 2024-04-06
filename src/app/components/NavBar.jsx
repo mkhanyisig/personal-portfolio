@@ -45,9 +45,9 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
             onClick={onBackgroundToggle}
           >
             {isBackgroundDark ? (
-              <SunIcon className="h-8 w-8" />
+              <SunIcon className="h-8 w-8 hover:text-yellow-600 fill-current" />
             ) : (
-              <MoonIcon className="h-8 w-8" />
+              <MoonIcon className="h-8 w-8 text-zinc-500 hover:text-zinc-800 fill-current" />
             )}
           </button>
 
