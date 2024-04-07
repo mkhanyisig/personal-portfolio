@@ -35,7 +35,10 @@ const ProjectCard = ({
           </Link>
         </div>
       </div>
-      <div className="bg-[#181818] rounded-b-xl py-6 px-4 text-white">
+      <div
+        className="bg-[#181818] rounded-b-xl py-6 px-4 text-white"
+        style={{ height: "14em" }}
+      >
         <h5 className="font-lg font-semibold">{title}</h5>
         <div>
           <p className="text-[#ADB7BE] overflow-hidden line-clamp-6">
