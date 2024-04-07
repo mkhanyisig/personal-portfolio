@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import NavBar from "./components/NavBar";
 import { useState } from "react";
 import AboutSection from "./components/AboutSection";
+import ProjectSection from "./components/Projects";
 
 export default function Home() {
   const [isBackgroundDark, setIsBackgroundDark] = useState(true);
@@ -26,8 +27,12 @@ export default function Home() {
         <HeroSection isBackgroundDark={isBackgroundDark} forceUpdateKey={key}/>
       </div>
 
-      <div className="container mx-auto px-12 py-14">
+      <div className="container mx-auto px-12 ">
         <AboutSection isBackgroundDark={isBackgroundDark} />
+      </div>
+
+      <div className="container mx-auto px-12">
+        <ProjectSection isBackgroundDark={isBackgroundDark} />
       </div>
       
     </main>
