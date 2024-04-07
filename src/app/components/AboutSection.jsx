@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useTransition } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import ExperienceSection from "./ExperienceSection";
@@ -77,6 +77,7 @@ const TAB_DATA = [
         </p>
       </div>
     ),
+    colorStyling: "text-yellow-700 hover:text-yellow-400",
   },
   {
     title: "Work",
@@ -96,6 +97,7 @@ const TAB_DATA = [
         </p>
       </div>
     ),
+    colorStyling: "text-red-700 hover:text-red-400",
   },
   {
     title: "Education",
@@ -113,18 +115,32 @@ const TAB_DATA = [
         </p>
       </div>
     ),
+    colorStyling: "text-blue-700 hover:text-blue-400",
   },
 ];
 
 const AboutSection = ({ isBackgroundDark }) => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [autoSwitchTab, setAutoSwitchTab] = useState(true);
+
+  useEffect(() => {
+    if (autoSwitchTab) {
+      const intervalId = setInterval(() => {
+        const currentIndex = TAB_DATA.findIndex((item) => item.id === tab);
+        const nextIndex = (currentIndex + 1) % TAB_DATA.length;
+
+        setTab(TAB_DATA[nextIndex].id);
+      }, 5000);
+
+      return () => clearInterval(intervalId);
+    } else {
+      return;
+    }
+  }, [tab, autoSwitchTab]);
 
   const handleTabChange = (tabID) => {
-    console.log("tab change ID: ", tabID);
-    startTransition(() => {
-      setTab(tabID);
-    });
+    setTab(tabID);
+    setAutoSwitchTab(false);
   };
 
   return (
@@ -143,31 +159,16 @@ const AboutSection = ({ isBackgroundDark }) => {
             height={400}
           />
           <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              active={tab === "skills"}
-              selectTab={() => handleTabChange("skills")}
-              tcolor={"text-yellow-700 hover:text-yellow-400"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              active={tab === "work"}
-              selectTab={() => handleTabChange("work")}
-              tcolor={"text-red-700 hover:text-red-400"}
-            >
-              {" "}
-              Work{" "}
-            </TabButton>
-
-            <TabButton
-              active={tab === "education"}
-              selectTab={() => handleTabChange("education")}
-              tcolor={"text-blue-700 hover:text-blue-400"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
+            {TAB_DATA.map((tabItem) => (
+              <TabButton
+                key={tabItem.id}
+                active={tab === tabItem.id}
+                selectTab={() => handleTabChange(tabItem.id)}
+                tcolor={`${tabItem.colorStyling}`}
+              >
+                {tabItem.title}
+              </TabButton>
+            ))}
           </div>
           <div
             className="mt-4 "
@@ -178,12 +179,7 @@ const AboutSection = ({ isBackgroundDark }) => {
                 isBackgroundDark ? "text-neutral-300" : "text-neutral-700"
               } font-bold `}
             >
-              {tab === "skills" &&
-                TAB_DATA.find((tab) => tab.id === "skills").content}
-              {tab === "work" &&
-                TAB_DATA.find((tab) => tab.id === "work").content}
-              {tab === "education" &&
-                TAB_DATA.find((tab) => tab.id === "education").content}
+              {TAB_DATA.find((tabItem) => tabItem.id === tab).content}
             </div>
           </div>
         </div>

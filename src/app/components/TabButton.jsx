@@ -1,8 +1,9 @@
 import React from "react";
+import "./styles.css";
 
 const TabButton = ({ active, selectTab, children, tcolor }) => {
   const buttonClasses = active
-    ? "font-black border-neutral-500 border-b"
+    ? "font-black border-neutral-500 border-b border-b-thick hover:border-b-hover"
     : `font-bold ${tcolor} `;
 
   return (
