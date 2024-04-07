@@ -14,7 +14,7 @@ const ProjectCard = ({
   return (
     <div>
       <div
-        className="group rounded-t-xl h-52 md:h-72 bg-center relative overflow-hidden project-card_thumbnail"
+        className="group h-52 md:h-72 bg-center relative overflow-hidden project-card_thumbnail"
         style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover" }}
         alt={title}
       >
@@ -36,12 +36,22 @@ const ProjectCard = ({
         </div>
       </div>
       <div
-        className="bg-[#181818] rounded-b-xl py-6 px-4 text-white"
-        style={{ height: "14em" }}
+        className="bg-stone-800 rounded-b-xl py-2 px-4 text-white"
+        style={{ height: "15em" }}
       >
-        <h5 className="font-lg font-semibold">{title}</h5>
+        <h5 className="font-lg font-extrabold">{title}</h5>
+        <div className="flex flex-wrap gap-2 py-1 mb-2">
+          {techStack.map((tech) => (
+            <span
+              key={tech}
+              className="bg-zinc-200 text-red-600 font-semibold rounded-full px-2 py-1 text-xs"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
         <div>
-          <p className="text-[#ADB7BE] overflow-hidden line-clamp-6">
+          <p className="text-[#ADB7BE] overflow-hidden line-clamp-7">
             {description}
           </p>
         </div>

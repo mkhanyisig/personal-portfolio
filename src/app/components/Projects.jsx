@@ -39,18 +39,17 @@ const ProjectsData = [
     tags: ["All", "GUI", "Data / Machine Learning"],
   },
   {
-    id: 4,
-    title: "Gym Buddy Workouts 💪 App",
+    id: 6,
+    title: "Covid-19 Swaziland cases Geo-Visualization",
     description:
-      "Gym Buddy Workouts is designed to be an assisitive gym app helping track workouts during session and log body health data.",
-    imageUrl: "/images/gymBuddy.png",
-    repoLink:
-      "https://github.com/mkhanyisig/gym_buddy_App?tab=readme-ov-file#gym-buddy-workouts---app",
-    demoLink:
-      "https://github.com/mkhanyisig/gym_buddy_App?tab=readme-ov-file#gym-buddy-workouts---app",
-    techStack: ["React Native", "Expo"],
-    tags: ["All", "Mobile"],
+      "On this project I built out a Geo-Visualization of Covid-19 cases in Swaziland using a customized GeoJSON, visualitaion and data loader functions. I sourced the data from the reports by Ministry of Health and the World Health Organization.",
+    imageUrl: "/images/covidGeoMap.png",
+    repoLink: "https://github.com/mkhanyisig/covidGeoMapEswatini/tree/master",
+    demoLink: "/covidGeoMapEswatini/index.html",
+    techStack: ["JavaScript", "D3.js", "GeoJSON", "HTML", "CSS"],
+    tags: ["All", "Web"],
   },
+
   {
     id: 5,
     title: "Falcon",
@@ -62,6 +61,53 @@ const ProjectsData = [
       "https://www.linkedin.com/pulse/falcon-vision-brought-life-gerald-nvule/",
     techStack: ["Python", "Pygame"],
     tags: ["All", "Game"],
+  },
+  {
+    id: 7,
+    title: "Geospatial Visualization of Mineral resource details",
+    description:
+      "Early Exploratory Proof Of Concept (POC) Visualizations of publicly sourced mineral resource data in the US. The data was sourced from the USGS and the visualization was done using using the Google Maps API tools",
+    imageUrl: "/images/prospectorGeoMaps.png",
+    repoLink: "https://github.com/mkhanyisig/prospector_geomaps",
+    demoLink: null,
+    techStack: ["JavaScript", "Google Maps API", "HTML", "CSS"],
+    tags: ["All", "Web", "Data / Machine Learning"],
+  },
+  {
+    id: 8,
+    title: "Linkedin Data Scraper and Mapping",
+    description:
+      "A Python Selenium Webdriver scraper crawls linkedin pages for predefined linkedin company profiles and scrapes the data. The data then used internal to build profiles or other proprietary analysis",
+    imageUrl: "/images/linkedinScraping.png",
+    repoLink: "https://github.com/mkhanyisig/LinkedinSraper_PRospector",
+    demoLink: null,
+    techStack: ["Python", "Selenium", "BeautifulSoup"],
+    tags: ["All", "Data / Machine Learning", "Web"],
+  },
+
+  {
+    id: 9,
+    title: "Personal Portfolio Website",
+    description:
+      "Developed from scratch using NextJS, ReactJS, TailwindCSS, and Heroicons. The website is designed to be responsive, with dynamic styling and accessible on all devices.",
+    imageUrl: "/images/portfolio.png",
+    repoLink: "https://github.com/mkhanyisig/personal-portfolio",
+    demoLink: "/",
+    techStack: ["NextJS", "ReactJS", "TailwindCSS", "Typescript", "NodeJS"],
+    tags: ["All", "Web"],
+  },
+  {
+    id: 4,
+    title: "Gym Buddy Workouts 💪 App",
+    description:
+      "Gym Buddy Workouts is designed to be an assisitive gym app helping track workouts during session and log body health data.",
+    imageUrl: "/images/gymBuddy.png",
+    repoLink:
+      "https://github.com/mkhanyisig/gym_buddy_App?tab=readme-ov-file#gym-buddy-workouts---app",
+    demoLink:
+      "https://drive.google.com/drive/folders/1o3qHBni2Ecp0Pp5Sk2tYhLTwYsK611Td",
+    techStack: ["React Native", "Expo"],
+    tags: ["All", "Mobile", "Web"],
   },
 ];
 
@@ -87,6 +133,10 @@ const ProjectSection = ({ isBackgroundDark }) => {
             Projects
           </span>
         </h2>
+        <p className="text-red-900 font-lg font-bold ">
+          Please click on the project Image to find links too either view live
+          demo or the project repository
+        </p>
         <div className="flex flex-row justify-center gap-2 text-white m-6">
           <ProjectTag
             name="All"
