@@ -208,11 +208,13 @@ const AboutSection = ({ isBackgroundDark }) => {
               darkMode={isBackgroundDark}
             />
           </div>
-          <button className="px-2 py-2 w-full sm:w-fit rounded-full bg-gradient-to-br from-red-900 to-red-300 hover:bg-slate-800 mt-3">
-            <span className="text-red-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-4 py-2 font-extrabold">
-              Resume
-            </span>
-          </button>
+          <a href="/documents/Mkhanyisi_Resume_04_08.pdf" download>
+            <button className="px-2 py-2 w-full sm:w-fit rounded-full bg-gradient-to-br from-red-900 to-red-300 hover:bg-slate-800 mt-3">
+              <span className="text-red-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-4 py-2 font-extrabold">
+                Download Resume
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </section>
