@@ -7,25 +7,27 @@ const ExperienceItem = ({ organization, role, date, logo, darkMode }) => {
 
   return (
     <li className="flex gap-5">
-      <div className="relative mt-1 flex h-13 w-13 flex-none items-center justify-center rounded-full">
+      <div className="relative mt-1 flex h-15 w-15 flex-none items-center justify-center rounded-full">
         <img
           src={logo}
           alt={organization}
-          className="h-10 w-10 object-cover rounded-full"
+          className="h-12 w-12 object-cover rounded-full"
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Organization</dt>
         <dd
-          className={`w-full flex-none text-sm font-medium ${darkTextColorClass}`}
+          className={`w-full flex-none text-base font-medium ${darkTextColorClass}`}
         >
           {organization}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className={`text-xs ${lightTextColorClass}`}>{role}</dd>
+        <dd className={`text-sm font-semibold ${lightTextColorClass}`}>
+          {role}
+        </dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className={`ml-auto text-xs ${lightTextColorClass}`}
+          className={`ml-auto text-sm ${lightTextColorClass}`}
           aria-label={`${date} until ${date}`}
         >
           <time dateTime={date}>{date}</time>
