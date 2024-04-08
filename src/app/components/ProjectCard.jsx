@@ -10,6 +10,7 @@ const ProjectCard = ({
   demoLink,
   repoLink,
   techStack,
+  darkMode,
 }) => {
   return (
     <div>
@@ -36,7 +37,7 @@ const ProjectCard = ({
         </div>
       </div>
       <div
-        className="bg-stone-800 rounded-b-xl py-2 px-4 text-white"
+        className="bg-sky-950 rounded-b-xl py-2 px-4 text-white"
         style={{ height: "15em" }}
       >
         <h5 className="font-lg font-extrabold">{title}</h5>
@@ -51,7 +52,7 @@ const ProjectCard = ({
           ))}
         </div>
         <div>
-          <p className="text-[#ADB7BE] overflow-hidden line-clamp-7">
+          <p className="text-red-400 overflow-hidden line-clamp-7">
             {description}
           </p>
         </div>

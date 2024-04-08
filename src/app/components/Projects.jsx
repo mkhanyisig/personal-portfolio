@@ -49,7 +49,17 @@ const ProjectsData = [
     techStack: ["JavaScript", "D3.js", "GeoJSON", "HTML", "CSS"],
     tags: ["All", "Web"],
   },
-
+  {
+    id: 9,
+    title: "Personal Portfolio Website",
+    description:
+      "Developed from scratch using NextJS, ReactJS, TailwindCSS, and Heroicons. The website is designed to be responsive, with dynamic styling and accessible on all devices.",
+    imageUrl: "/images/portfolio.png",
+    repoLink: "https://github.com/mkhanyisig/personal-portfolio",
+    demoLink: "/",
+    techStack: ["NextJS", "ReactJS", "TailwindCSS", "Typescript", "NodeJS"],
+    tags: ["All", "Web"],
+  },
   {
     id: 5,
     title: "Falcon",
@@ -85,17 +95,6 @@ const ProjectsData = [
     tags: ["All", "Data / Machine Learning", "Web"],
   },
 
-  {
-    id: 9,
-    title: "Personal Portfolio Website",
-    description:
-      "Developed from scratch using NextJS, ReactJS, TailwindCSS, and Heroicons. The website is designed to be responsive, with dynamic styling and accessible on all devices.",
-    imageUrl: "/images/portfolio.png",
-    repoLink: "https://github.com/mkhanyisig/personal-portfolio",
-    demoLink: "/",
-    techStack: ["NextJS", "ReactJS", "TailwindCSS", "Typescript", "NodeJS"],
-    tags: ["All", "Web"],
-  },
   {
     id: 4,
     title: "Gym Buddy Workouts 💪 App",
@@ -173,6 +172,7 @@ const ProjectSection = ({ isBackgroundDark }) => {
               techStack={project.techStack}
               repoLink={project.repoLink}
               demoLink={project.demoLink}
+              darkMode={isBackgroundDark}
             />
           ))}
         </div>
