@@ -133,30 +133,34 @@ const ProjectSection = ({ isBackgroundDark }) => {
             Projects
           </span>
         </h2>
-        <p className="text-red-900 font-lg font-bold ">
+        <p className="text-red-700 text-2xl text-center  font-bold ">
           Please click on the project Image to find links too either view live
           demo or the project repository
         </p>
-        <div className="flex flex-row justify-center gap-2 text-white m-6">
+        <div className={`flex flex-row justify-center gap-2 text-red-700 m-6`}>
           <ProjectTag
             name="All"
             onClick={handleTagChange}
             isSelected={activeTag === "All"}
+            darkMode={isBackgroundDark}
           />
           <ProjectTag
             name="Web"
             onClick={handleTagChange}
             isSelected={activeTag === "Web"}
+            darkMode={isBackgroundDark}
           />
           <ProjectTag
             name="GUI"
             onClick={handleTagChange}
             isSelected={activeTag === "GUI"}
+            darkMode={isBackgroundDark}
           />
           <ProjectTag
             name="Data / Machine Learning"
             onClick={handleTagChange}
             isSelected={activeTag === "Data / Machine Learning"}
+            darkMode={isBackgroundDark}
           />
         </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
