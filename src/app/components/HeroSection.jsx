@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { SocialIcon } from "react-social-icons";
 
 const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
   const welcomeColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
@@ -72,11 +73,42 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             good conversation!
           </p>
           <div>
-            <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-900 to-blue-300 hover:bg-slate-800 mt-3">
-              <span className="text-blue-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-3 py-2 font-extrabold">
-                Let's Talk
-              </span>
-            </button>
+            <a
+              href="https://calendly.com/mkhanyisi-g/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-900 to-blue-300 hover:bg-slate-800 mt-3">
+                <span className="text-blue-700 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-3 py-2 font-extrabold">
+                  Let's Talk
+                </span>
+              </button>
+            </a>
+          </div>
+
+          <div className="flex items-center py-5">
+            <div className="flex space-x-4">
+              <SocialIcon
+                network="linkedin"
+                url="https://www.linkedin.com/in/mkhanyisifabo/"
+                bgColor="#71717a"
+                fgColor="#fff"
+                style={{ height: 60, width: 60 }}
+              />
+              <SocialIcon
+                network="github"
+                url="https://github.com/mkhanyisig"
+                bgColor="#71717a"
+                fgColor="#fff"
+                style={{ height: 60, width: 60 }}
+              />
+              <SocialIcon
+                url="mailto:mkhanyisi.g@gmail.com"
+                bgColor="#71717a"
+                fgColor="#fff"
+                style={{ height: 60, width: 60 }}
+              />
+            </div>
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">

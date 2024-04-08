@@ -19,7 +19,7 @@ const ProjectsData = [
     id: 10,
     title: "World Event Recognition using Deep Learning",
     description:
-      "A re-exploration into the ChaLearn 2015 Looking at people challenge in Computer Vision. Given more state of art models were released after, rexplored if I could beat benchmarks with newer models. Confirmed initial educated guess that pretrained models and new AlexNet would perform better compared to ReNet which won",
+      "A re-exploration into the ChaLearn 2015 Looking at people challenge in Computer Vision. Given more state of art models were released after, rexplored if I could beat benchmarks with newer models. Confirmed initial educated guess that pretrained models and new AlexNet would perform better compared to ResNet which won",
     imageUrl: "/images/chalearn.png",
     repoLink: "https://github.com/mkhanyisig/Deep-Learning-Events-Project",
     demoLink:
@@ -66,7 +66,7 @@ const ProjectsData = [
     id: 9,
     title: "Personal Portfolio Website",
     description:
-      "Developed from scratch using NextJS, ReactJS, TailwindCSS, and Heroicons. The website is designed to be responsive, with dynamic styling and accessible on all devices.",
+      "This webpage you are looking at 😊. Developed from scratch using NextJS, ReactJS, TailwindCSS, and Heroicons. The website is designed to be responsive, with dynamic styling and accessible on all devices.",
     imageUrl: "/images/portfolio.png",
     repoLink: "https://github.com/mkhanyisig/personal-portfolio",
     demoLink: "/",
