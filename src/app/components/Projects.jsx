@@ -16,6 +16,18 @@ const ProjectsData = [
     tags: ["All", "Web"],
   },
   {
+    id: 10,
+    title: "World Event Recognition using Deep Learning",
+    description:
+      "A re-exploration into the ChaLearn 2015 Looking at people challenge in Computer Vision. Given more state of art models were released after, rexplored if I could beat benchmarks with newer models. Confirmed initial educated guess that pretrained models and new AlexNet would perform better compared to ReNet which won",
+    imageUrl: "/images/chalearn.png",
+    repoLink: "https://github.com/mkhanyisig/Deep-Learning-Events-Project",
+    demoLink:
+      "https://github.com/mkhanyisig/Deep-Learning-Events-Project/blob/main/Mkhanyisi%20Gemdze%20COSI%20165B%20Final%20Report.pdf",
+    techStack: ["Python", "Pytorch", "Pandas", "Numpy", "Seaborn"],
+    tags: ["All", "Data / Machine Learning"],
+  },
+  {
     id: 2,
     title: "Database Management System GUI",
     description:
@@ -26,6 +38,7 @@ const ProjectsData = [
     techStack: ["Java", "PostgreSQL", "JDBC"],
     tags: ["All", "GUI"],
   },
+
   {
     id: 3,
     title: "Data Analysis and Visualization GUI",
