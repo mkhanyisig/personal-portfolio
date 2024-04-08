@@ -17,17 +17,17 @@ const ExperienceItem = ({ organization, role, date, logo, darkMode }) => {
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Organization</dt>
         <dd
-          className={`w-full flex-none text-base font-medium ${darkTextColorClass}`}
+          className={`w-full flex-none text-sm font-medium ${darkTextColorClass}`}
         >
           {organization}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className={`text-sm font-semibold ${lightTextColorClass}`}>
+        <dd className={`text-xs font-semibold ${lightTextColorClass}`}>
           {role}
         </dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className={`ml-auto text-sm ${lightTextColorClass}`}
+          className={`ml-auto text-xs ${lightTextColorClass}`}
           aria-label={`${date} until ${date}`}
         >
           <time dateTime={date}>{date}</time>
@@ -39,8 +39,8 @@ const ExperienceItem = ({ organization, role, date, logo, darkMode }) => {
 
 const ExperienceSection = ({ title, id, items, darkMode }) => {
   return (
-    <section className="text-white py-3 " id={id}>
-      <div className="rounded-2xl border border-gray-800 p-6 dark:border-zinc-400">
+    <section className="text-white py-1 " id={id}>
+      <div className="rounded-2xl border border-gray-800 p-3 dark:border-zinc-400">
         {title === "Work" ? (
           <h2 className="flex text-xl font-bold text-zinc-900 dark:text-zinc-100">
             <BriefcaseIcon className="h-12 w-12 text-red-800" />
