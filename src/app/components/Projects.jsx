@@ -146,8 +146,8 @@ const ProjectSection = ({ isBackgroundDark }) => {
           </span>
         </h2>
         <p className="text-red-700 text-2xl text-center  font-bold ">
-          Please click on the project Image to find links too either view live
-          demo or the project repository
+          Please click on the project Image to see links to either view live
+          demo or the source code repository
         </p>
         <div className={`flex flex-row justify-center gap-2 text-red-700 m-6`}>
           <ProjectTag
