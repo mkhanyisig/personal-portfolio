@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { SocialIcon } from "react-social-icons";
 
 const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
   const welcomeColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
+  const [isLinkedInHovered, setIsLinkedInHovered] = useState(false);
+  const [isGitHubHovered, setIsGitHubHovered] = useState(false);
+  const [isEmailHovered, setIsEmailHovered] = useState(false);
 
   return (
     <section
@@ -92,20 +95,27 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 network="linkedin"
                 url="https://www.linkedin.com/in/mkhanyisifabo/"
                 bgColor="#71717a"
-                fgColor="#fff"
+                fgColor={isLinkedInHovered ? "#0077cc" : "#fff"}
+                onMouseEnter={() => setIsLinkedInHovered(true)}
+                onMouseLeave={() => setIsLinkedInHovered(false)}
                 style={{ height: 60, width: 60 }}
               />
               <SocialIcon
                 network="github"
                 url="https://github.com/mkhanyisig"
                 bgColor="#71717a"
-                fgColor="#fff"
+                fgColor={isGitHubHovered ? "#0077cc" : "#fff"}
+                onMouseEnter={() => setIsGitHubHovered(true)}
+                onMouseLeave={() => setIsGitHubHovered(false)}
                 style={{ height: 60, width: 60 }}
               />
               <SocialIcon
                 url="mailto:mkhanyisi.g@gmail.com"
                 bgColor="#71717a"
-                fgColor="#fff"
+                fgColor={isEmailHovered ? "#0077cc" : "#fff"}
+                className="social-icon"
+                onMouseEnter={() => setIsEmailHovered(true)}
+                onMouseLeave={() => setIsEmailHovered(false)}
                 style={{ height: 60, width: 60 }}
               />
             </div>
