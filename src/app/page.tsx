@@ -41,7 +41,7 @@ export default function Home() {
         <EmailSection isBackgroundDark={isBackgroundDark} />
       </div>
 
-      <Footer darkMode={isBackgroundDark} />
+      <Footer  />
        
     </main>
   );

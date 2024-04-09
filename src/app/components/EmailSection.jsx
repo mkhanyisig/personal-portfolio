@@ -50,6 +50,19 @@ const EmailSection = ({ isBackgroundDark }) => {
           Whether you have a question or just want to say hi, I'll try my best
           to get back to you!
         </p>
+        <div className="mb-5">
+          <a
+            href="https://calendly.com/mkhanyisi-g/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-slate-900 to-slate-300 hover:bg-slate-800 mt-1">
+              <span className="text-red-400 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-3 py-2 font-extrabold">
+                Schedule A Call
+              </span>
+            </button>
+          </a>
+        </div>
         <div className="flex flex-row gap-2 ">
           <SocialIcon
             url="https://www.linkedin.com/in/mkhanyisifabo/"
