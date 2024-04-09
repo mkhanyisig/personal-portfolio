@@ -98,7 +98,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 fgColor={isLinkedInHovered ? "#0077cc" : "#fff"}
                 onMouseEnter={() => setIsLinkedInHovered(true)}
                 onMouseLeave={() => setIsLinkedInHovered(false)}
-                style={{ height: 60, width: 60 }}
+                style={{ height: 45, width: 45 }}
               />
               <SocialIcon
                 network="github"
@@ -107,7 +107,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 fgColor={isGitHubHovered ? "#0077cc" : "#fff"}
                 onMouseEnter={() => setIsGitHubHovered(true)}
                 onMouseLeave={() => setIsGitHubHovered(false)}
-                style={{ height: 60, width: 60 }}
+                style={{ height: 45, width: 45 }}
               />
             </div>
           </div>

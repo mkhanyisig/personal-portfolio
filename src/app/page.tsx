@@ -4,6 +4,8 @@ import NavBar from "./components/NavBar";
 import { useState } from "react";
 import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/Projects";
+import EmailSection from "./components/EmailSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [isBackgroundDark, setIsBackgroundDark] = useState(true);
@@ -34,7 +36,13 @@ export default function Home() {
       <div className="container mx-auto px-12">
         <ProjectSection isBackgroundDark={isBackgroundDark} />
       </div>
-      
+
+      <div className="container mx-auto px-12">
+        <EmailSection isBackgroundDark={isBackgroundDark} />
+      </div>
+
+      <Footer darkMode={isBackgroundDark} />
+       
     </main>
   );
 }
