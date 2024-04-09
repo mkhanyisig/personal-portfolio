@@ -109,15 +109,6 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 onMouseLeave={() => setIsGitHubHovered(false)}
                 style={{ height: 60, width: 60 }}
               />
-              <SocialIcon
-                url="mailto:mkhanyisi.g@gmail.com"
-                bgColor="#71717a"
-                fgColor={isEmailHovered ? "#0077cc" : "#fff"}
-                className="social-icon"
-                onMouseEnter={() => setIsEmailHovered(true)}
-                onMouseLeave={() => setIsEmailHovered(false)}
-                style={{ height: 60, width: 60 }}
-              />
             </div>
           </div>
         </div>
