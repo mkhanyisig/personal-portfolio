@@ -83,12 +83,7 @@ const EmailSection = ({ isBackgroundDark }) => {
         </div>
       </div>
       <div>
-        <form
-          className="flex flex-col gap-4"
-          onSubmit={() => {
-            /* replace later because deploy fails */
-          }}
-        >
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <div className="mb-2">
             <label
               htmlFor="email"
