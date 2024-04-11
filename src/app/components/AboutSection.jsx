@@ -148,7 +148,7 @@ const AboutSection = ({ isBackgroundDark }) => {
     <section
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
-      } lg:h-screen lg:w-full`}
+      } lg:h-full lg:w-full`}
       id="about"
     >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
