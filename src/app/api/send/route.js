@@ -7,23 +7,19 @@ const fromEmail = process.env.FROM_EMAIL;
 export async function POST(req, res) {
   try {
     const formData = await req.formData();
+    console.log("formData:", formData);
 
     const email = formData.get("email");
     const subject = formData.get("subject");
     const message = formData.get("message");
 
+    console.log("message:", message);
+
     const response = await resend.emails.send({
-      to: ["fabolax@gmail.com", email],
+      to: [email],
       from: fromEmail,
       subject: subject,
-      React: (
-        <>
-          <h1>{subject}</h1>
-          <p>Thank you for contacting me!</p>
-          <p>I will get back to you as soon as possible.</p>
-          <p>{message}</p>
-        </>
-      ),
+      html: '<div><h1>"hello"</h1><p>Thank you for contacting me!</p> <p>I will get back to you as soon as possible.</p> <p>"testing"</p> </div>',
     });
 
     return NextResponse.json(response);
