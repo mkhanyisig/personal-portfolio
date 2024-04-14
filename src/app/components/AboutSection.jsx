@@ -110,9 +110,9 @@ const TAB_DATA = [
           Science, has equipped me with robust problem-solving skills and a
           solid foundation in computational thinking. Recognizing the dynamic
           nature of the tech industry, I am deeply committed to continual
-          self-improvement. I actively engage in self-study and seek out
-          opportunities to learn new technologies, ensuring that my skills
-          remain current and adaptable to industry demands.
+          self-improvement. I am adaptable and actively engage in self-study to
+          learn new technologies, ensuring that my skills remain current and
+          adaptable to industry demands.
         </p>
       </div>
     ),
