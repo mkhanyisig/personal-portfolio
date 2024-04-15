@@ -7,13 +7,12 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
   const welcomeColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
   const [isLinkedInHovered, setIsLinkedInHovered] = useState(false);
   const [isGitHubHovered, setIsGitHubHovered] = useState(false);
-  const [isEmailHovered, setIsEmailHovered] = useState(false);
 
   return (
     <section
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
-      } h-screen w-full`}
+      } lg:h-screen w-full`}
       id="home"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
@@ -67,7 +66,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           </div>
 
           <p
-            className={`${welcomeColor} text-lg lg:text-xl leading-relaxed mb-6`}
+            className={`${welcomeColor} text-lg sm:text-base lg:text-xl leading-relaxed mb-6`}
           >
             Welcome to my little corner of of the internet! Here I try to
             highlight some of my skills and experiences. I love and enjoy
@@ -116,7 +115,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           <div
             className={`${
               isBackgroundDark ? "bg-[#121212]" : "bg-white"
-            } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:h-[200px] relative hero_image-wrapper`}
+            } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:py-11 relative hero_image-wrapper`}
           >
             <Image
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hero_profile-image"

@@ -140,7 +140,7 @@ const ProjectSection = ({ isBackgroundDark }) => {
       id="projects"
     >
       <div className="py-8 px-4">
-        <h2 className="lg:text-6xl font-extrabold text-center py-8 mt-4 mb-8 md:mb-12">
+        <h2 className="text-6xl font-extrabold text-center py-8 mt-4 mb-8 md:mb-12">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-900  via-red-200 to-red-900">
             Projects
           </span>
