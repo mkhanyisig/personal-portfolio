@@ -145,7 +145,7 @@ const ProjectSection = ({ isBackgroundDark }) => {
             Projects
           </span>
         </h2>
-        <p className="text-red-700 text-2xl text-center  font-bold ">
+        <p className="text-red-700 text-xl sm:text-lg text-center  font-bold ">
           Please click on the project Image to see links to either view live
           demo or the source code repository
         </p>
