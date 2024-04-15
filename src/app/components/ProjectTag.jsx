@@ -11,7 +11,7 @@ const ProjectTag = ({ name, onClick, isSelected, darkMode }) => {
   return (
     <button
       onClick={() => onClick(name)}
-      className={`border-4 rounded-full px-6 py-3 text-xl cursor-pointer ${buttonStyles} hover:border-red-500`}
+      className={`border-4 rounded-full px-4 py-2 text-base lg:text-xl sm:text-base cursor-pointer ${buttonStyles} hover:border-red-500`}
     >
       {name}
     </button>
