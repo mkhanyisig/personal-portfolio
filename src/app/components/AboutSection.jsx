@@ -11,18 +11,21 @@ const educationItems = [
     role: "MS in Computer Science",
     date: "2021 - 2023",
     logo: "/images/brandeis2.png",
+    url: "https://www.brandeis.edu/computer-science/"
   },
   {
     organization: "Colby College",
     role: "BS in Computer Science & Physics: Astrophysics",
     date: "2015 - 2019",
     logo: "/images/colby2.png",
+    url: "https://www.colby.edu/academics/departments-and-programs/physics-and-astronomy/"
   },
   {
     organization: "Tuck School of Business at Dartmouth College",
     role: "Business Bridge Program",
     date: "July 2018",
     logo: "/images/tuck2.png",
+    url: "https://bridge.tuck.dartmouth.edu/"
   },
 ];
 
@@ -32,30 +35,35 @@ const workItems = [
     role: "Full Stack Engineer",
     date: "Feb 2023 - ",
     logo: "/images/electives2.png",
+    url:"https://www.electives.io/"
   },
   {
     organization: "HubSpot Inc",
     role: "Software Engineer Intern/Coop",
     date: "June 2022 - August 2022",
     logo: "/images/hubspot.png",
+    url: "https://www.hubspot.com/"
   },
   {
     organization: "Prospector Portal",
     role: "Software Engineer",
     date: "June 2020 - December 2022",
     logo: "/images/prospector.png",
+    url: "https://www.prospectorportal.com/"
   },
   {
     organization: "Brandeis University",
     role: "Graduate Research/Teaching Assistant",
     date: "October 2021 - Dec 2022",
     logo: "/images/brandeis2.png",
+    url: "https://www.brandeis.edu/computer-science/"
   },
   {
     organization: "The Jackson Laboratory",
     role: "Software Engineer Intern",
     date: "August 2019 - November 2019",
     logo: "/images/jax3.png",
+    url: "https://www.jax.org/"
   },
 ];
 
@@ -90,11 +98,11 @@ const TAB_DATA = [
           research/class projects, small autonomous teams, and startup
           environments. I've owned end-to-end feature implementations and
           deployment, including ensuring that Figma designs match the final User
-          Interface and that they are performant, reusable, and scalable
-          solutions. Adept at automating tasks and orchestrating functions that
-          utilize third-party API’s or cloud services, I've consistently
-          delivered impactful solutions. I remain dedicated to continuous growth
-          and innovation in software development.
+          Interface implemented and that they are performant, reusable, and
+          scalable solutions. Adept at automating tasks and orchestrating
+          functions that utilize third-party API’s or cloud services, I've
+          consistently delivered impactful solutions. I remain dedicated to
+          continuous growth and innovation in software development.
         </p>
       </div>
     ),
@@ -201,12 +209,14 @@ const AboutSection = ({ isBackgroundDark }) => {
               title="Education"
               items={educationItems}
               darkMode={isBackgroundDark}
+              work={false}
             />
 
             <ExperienceSection
               title="Work"
               items={workItems}
               darkMode={isBackgroundDark}
+              work={true}
             />
           </div>
           <Link href="#contact">
