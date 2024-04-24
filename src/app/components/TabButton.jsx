@@ -3,7 +3,7 @@ import "./styles.css";
 
 const TabButton = ({ active, selectTab, children, tcolor }) => {
   const buttonClasses = active
-    ? "font-black border-neutral-500 border-b border-b-thick hover:border-b-hover"
+    ? "font-black border-neutral-500 border-b border-b-thick"
     : `font-bold ${tcolor} `;
 
   return (
