@@ -12,7 +12,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
     <section
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
-      } lg:h-screen w-full`}
+      } h-screen w-full`}
       id="home"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
