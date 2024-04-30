@@ -12,7 +12,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
     <section
       className={` ${
         isBackgroundDark ? "bg-[#121212]" : "bg-white"
-      } h-screen sm:h-full w-full`}
+      } h-screen  w-full`}
       id="home"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12 h-full">
@@ -115,7 +115,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           <div
             className={`${
               isBackgroundDark ? "bg-[#121212]" : "bg-white"
-            } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:py-11 relative hero_image-wrapper`}
+            } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:py-11  relative hero_image-wrapper`}
           >
             <Image
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hero_profile-image"
