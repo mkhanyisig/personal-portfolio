@@ -111,7 +111,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             </div>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+        <div className="col-span-5 place-self-center mt-4 lg:mt-0 mb-11">
           <div
             className={`${
               isBackgroundDark ? "bg-[#121212]" : "bg-white"

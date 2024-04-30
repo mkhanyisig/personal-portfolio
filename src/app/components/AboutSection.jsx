@@ -162,6 +162,7 @@ const AboutSection = ({ isBackgroundDark }) => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
         <div>
           <Image
+            className="mt-10"
             src="/images/grad.jpeg"
             alt="MK grad"
             width={400}
