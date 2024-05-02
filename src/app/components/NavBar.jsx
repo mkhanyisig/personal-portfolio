@@ -39,9 +39,9 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
           {/* Add title here */}
         </Link>
 
-        <div className="flex items-center ml-auto">
+        <div className="flex items-center ml-auto ">
           <button
-            className={`flex items-center px-3 py-1  ${navOptionsColor}`}
+            className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
             onClick={onBackgroundToggle}
           >
             {isBackgroundDark ? (
