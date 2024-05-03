@@ -69,7 +69,7 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
             {!navbarOpen ? (
               <button
                 id="nav-toggle"
-                className={`flex items-center px-3 py-2 border rounded ${navOptionsColor}`}
+                className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 <Bars3Icon className="h-5 w-5"></Bars3Icon>
@@ -77,7 +77,7 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
             ) : (
               <button
                 id="nav-toggle"
-                className={`flex items-center px-3 py-2 border rounded ${navOptionsColor}`}
+                className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 <XMarkIcon className="h-5 w-5"></XMarkIcon>
