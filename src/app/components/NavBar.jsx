@@ -41,13 +41,13 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
 
         <div className="flex items-center ml-auto ">
           <button
-            className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
+            className={`flex items-center px-3 py-2 border rounded ${navOptionsColor}`}
             onClick={onBackgroundToggle}
           >
             {isBackgroundDark ? (
-              <SunIcon className="h-8 w-8 hover:text-yellow-600 fill-current" />
+              <SunIcon className="h-6 w-6 hover:text-yellow-600 fill-current" />
             ) : (
-              <MoonIcon className="h-8 w-8 text-zinc-500 hover:text-zinc-800 fill-current" />
+              <MoonIcon className="h-6 w-6 text-zinc-500 hover:text-zinc-800 fill-current" />
             )}
           </button>
 
@@ -69,18 +69,18 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
             {!navbarOpen ? (
               <button
                 id="nav-toggle"
-                className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
+                className={`flex items-center px-3 py-2 border rounded ${navOptionsColor}`}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
-                <Bars3Icon className="h-5 w-5"></Bars3Icon>
+                <Bars3Icon className="h-6 w-6"></Bars3Icon>
               </button>
             ) : (
               <button
                 id="nav-toggle"
-                className={`flex items-center px-3 py-1 border rounded ${navOptionsColor}`}
+                className={`flex items-center px-3 py-2 border rounded ${navOptionsColor}`}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
-                <XMarkIcon className="h-5 w-5"></XMarkIcon>
+                <XMarkIcon className="h-6 w-6"></XMarkIcon>
               </button>
             )}
           </div>
