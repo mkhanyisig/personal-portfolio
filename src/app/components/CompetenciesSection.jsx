@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPython, FaJsSquare, FaJava, FaTools, FaReact, FaDocker, FaAws, FaGit, FaNodeJs, FaLaravel } from 'react-icons/fa';
+import { FaPython, FaJsSquare, FaJava, FaTools, FaReact, FaDocker, FaAws, FaGit, FaNodeJs, FaLaravel, FaHtml5 } from 'react-icons/fa';
 import { IoMdSettings } from "react-icons/io";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiPandas, SiSelenium, SiGraphql } from "react-icons/si";
@@ -45,9 +45,9 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                 <div style={{ display: 'inline-block' }}><FaRobot/></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Machine Learning</h4>
-            <p className={`${textColor}`}>My academic coursework and practical projects have equipped me with a solid understanding of statistical machine learning, deep learning, and data analysis, enabling me to develop robust and effective machine learning solutions. I have substantial experience in data extraction, cleaning, and standardization, preparing datasets for research and model training purposes.</p>
+            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>My academic coursework and practical projects have equipped me with a solid understanding of statistical machine learning, deep learning, and data analysis, enabling me to develop robust and effective machine learning solutions. I have substantial experience in data extraction, cleaning, and standardization, preparing datasets for research and model training purposes.</p>
             <br/>
-            <p className={`${textColor}`}>While my direct production experience with deploying machine learning models is limited, I am eager to contribute to roles where my skills can support model development and deployment operations.</p>
+            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>While my direct production experience with deploying machine learning models is limited, I am eager to contribute to roles where my skills can support model development and deployment operations.</p>
           </div>
           
               
@@ -88,6 +88,15 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                 <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
                     <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '79%' }}></div>
                 </div>
+                </li>
+                <li className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                          <FaHtml5 className="mr-2 text-2xl" />
+                          <span className="w-1/5">HTML/CSS</span>
+                      </div>
+                      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                          <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                      </div>
                 </li>
                 <li className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
