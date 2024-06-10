@@ -16,7 +16,11 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
     <section className={` ${bgColor} py-2`} id="competencies">
       <div className="container mx-auto px-4">
         <div className="main-title text-center mb-8">
-          <h2 className={`text-3xl font-bold ${textColor}`}>Competencies</h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold  mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-200  to-blue-900">
+              Competencies
+            </span>
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className={`service text-center p-6 ${sectionBackground} border-b rounded-b-lg shadow-lg`}>
@@ -54,7 +58,11 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
         </div>
         <div className="mt-12">
           <div className="main-title text-center mb-8">
-            <h2 className={`text-3xl font-bold ${textColor}`}>Skills</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold  mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-200  to-blue-900">
+                  Skills
+                </span>
+              </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
