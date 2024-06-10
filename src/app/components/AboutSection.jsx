@@ -69,6 +69,29 @@ const workItems = [
 
 const TAB_DATA = [
   {
+    title: "Work",
+    id: "work",
+    content: (
+      <div>
+        <p>
+          My young career journey has predominantly unfolded within
+          a combination of work and projects, mainly in small autonomous teams 
+          and early-stage environments. I've owned end-to-end feature implementations 
+          in full stack applications and deployments, aiming for efficient and high-quality 
+          outcomes. I'm adept at automating tasks and utilizing third-party API’s or cloud 
+          services in solutions.
+          <br/>
+          <br/>
+          I remain dedicated to continuous growth and innovation in the fast-paced 
+          field of software development, ready to contribute to innovative projects 
+          within forward-thinking companies.
+
+        </p>
+      </div>
+    ),
+    colorStyling: "text-yellow-700 hover:text-yellow-400",
+  },
+  {
     title: "Skills",
     id: "skills",
     content: (
@@ -76,33 +99,17 @@ const TAB_DATA = [
         <p>
           I've gained experience and exposure across diverse technology stacks
           and problem domains, primarily focusing on Web Applications, Data
-          Processing, and Task Automation. My journey has involved mastering
-          various frameworks, tools, and libraries. The primary programming
-          languages I've worked with and am strongly proficient in are
+          Processing, and Task Automation. I work with various programming 
+          languages and development frameworks, tailored for both frontend and 
+          backend solutions. 
+          <br />
+          <br />
+          The primary programming languages I've worked with 
+          and am strongly proficient in are
           <br />
           <b className="text-yellow-700">
             Python, JavaScript/TypeScript, and Java.
           </b>
-        </p>
-      </div>
-    ),
-    colorStyling: "text-yellow-700 hover:text-yellow-400",
-  },
-  {
-    title: "Work",
-    id: "work",
-    content: (
-      <div>
-        <p>
-          My young career journey thus far has predominantly unfolded within
-          research/class projects, small autonomous teams, and startup
-          environments. I've owned end-to-end feature implementations and
-          deployment, including ensuring that Figma designs match the final User
-          Interface implemented and that they are performant, reusable, and
-          scalable solutions. Adept at automating tasks and orchestrating
-          functions that utilize third-party API’s or cloud services, I've
-          consistently delivered impactful solutions. I remain dedicated to
-          continuous growth and innovation in software development.
         </p>
       </div>
     ),
