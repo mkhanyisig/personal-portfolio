@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/Projects";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
+import CompetenciesSection from "./components/CompetenciesSection";
 
 export default function Home() {
   const [isBackgroundDark, setIsBackgroundDark] = useState(true);
@@ -31,6 +32,10 @@ export default function Home() {
 
       <div className="container mx-auto px-12 ">
         <AboutSection isBackgroundDark={isBackgroundDark} />
+      </div>
+
+      <div className="container mx-auto px-12">
+        <CompetenciesSection isBackgroundDark={isBackgroundDark} />
       </div>
 
       <div className="container mx-auto px-12">
