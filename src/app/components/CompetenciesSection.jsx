@@ -2,8 +2,10 @@ import React from 'react';
 import { FaPython, FaJsSquare, FaJava, FaTools, FaReact, FaDocker, FaAws, FaGit, FaNodeJs, FaLaravel } from 'react-icons/fa';
 import { IoMdSettings } from "react-icons/io";
 import { IoStorefrontSharp } from "react-icons/io5";
-import { SiTypescript, SiRubyonrails, SiTerraform } from "react-icons/si";
+import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiMongodb } from "react-icons/si";
 import { FaRobot } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import { PiFileSqlBold } from "react-icons/pi";
 
 const CompetenciesSection = ({ isBackgroundDark }) => {
   const textColor = isBackgroundDark ? 'text-white' : 'text-black';
@@ -67,6 +69,18 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                   <FaJava className="mr-2 text-2xl" />
                   <span>Java</span>
                 </li>
+                <li className="flex items-center justify-center mb-2">
+                    <PiFileSqlBold className="mr-2 text-2xl" />
+                    <span>SQL</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <SiRuby className="mr-2 text-2xl" />
+                    <span>Ruby</span>
+                </li>   
+                <li className="flex items-center justify-center mb-2">
+                    <SiPhp className="mr-2 text-2xl" />
+                    <span>PHP</span>
+                </li>
               </ul>
             </div>
             <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
@@ -74,15 +88,35 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               <ul className={`${textColor}`}>
                 <li className="flex items-center justify-center mb-2">
                   <FaReact className="mr-2 text-2xl" />
-                  <span>React</span>
+                  <span >React</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <RiNextjsFill className="mr-2 text-2xl" />
+                    <span className="ml-2">NextJS</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                     <SiRubyonrails className="mr-2 text-2xl" />
-                    <span>Ruby on Rails</span>
+                    <span className="ml-2">Ruby on Rails</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                     <FaLaravel className="mr-2 text-2xl" />
-                    <span>Laravel</span>
+                    <span className="ml-2">Laravel</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <SiPostgresql className="mr-2 text-2xl" />
+                    <span className="ml-2">PostgreSQL</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <SiMysql className="mr-2 text-2xl" />
+                    <span className="ml-2">MySQL</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <SiAmazondynamodb className="mr-2 text-2xl" />
+                    <span className="ml-2">DynamoDB</span>
+                </li>
+                <li className="flex items-center justify-center mb-2">
+                    <SiMongodb className="mr-2 text-2xl" />
+                    <span className="ml-2">MongoDB</span>
                 </li>
                 
               </ul>
@@ -92,23 +126,23 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               <ul className={`${textColor}`}>
                 <li className="flex items-center justify-center mb-2">
                   <FaDocker className="mr-2 text-2xl" />
-                  <span>Docker</span>
+                  <span className="ml-2">Docker</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                   <FaAws className="mr-2 text-2xl" />
-                  <span>AWS</span>
+                  <span className="ml-2">AWS</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                   <FaNodeJs className="mr-2 text-2xl" />
-                  <span>Node.js</span>
+                  <span className="ml-2">Node.js</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                   <FaGit className="mr-2 text-2xl" />
-                  <span>Git</span>
+                  <span className="ml-2">Git</span>
                 </li>
                 <li className="flex items-center justify-center mb-2">
                     <SiTerraform className="mr-2 text-2xl"/>
-                    <span> Terraform </span>
+                    <span className="ml-2">Terraform</span>
                 </li>
 
               </ul>
