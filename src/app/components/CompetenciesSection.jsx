@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPython, FaJsSquare, FaJava, FaTools, FaReact, FaDocker, FaAws, FaGit, FaNodeJs, FaLaravel } from 'react-icons/fa';
 import { IoMdSettings } from "react-icons/io";
 import { IoStorefrontSharp } from "react-icons/io5";
-import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiMongodb } from "react-icons/si";
+import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiPandas, SiSelenium } from "react-icons/si";
 import { FaRobot } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import { PiFileSqlBold } from "react-icons/pi";
@@ -50,39 +50,81 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
             <h2 className={`text-3xl font-bold ${textColor}`}>Skills</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
-              <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Programming Languages</h3>
-              <ul className={`${textColor}`}>
-                <li className="flex items-center justify-center mb-2">
-                  <FaPython className="mr-2 text-2xl" />
-                  <span>Python</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                  <FaJsSquare className="mr-2 text-2xl" />
-                  <span>JavaScript</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                <SiTypescript className="mr-2 text-2xl" />
-                    <span>TypeScript</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                  <FaJava className="mr-2 text-2xl" />
-                  <span>Java</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                    <PiFileSqlBold className="mr-2 text-2xl" />
-                    <span>SQL</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiRuby className="mr-2 text-2xl" />
-                    <span>Ruby</span>
-                </li>   
-                <li className="flex items-center justify-center mb-2">
-                    <SiPhp className="mr-2 text-2xl" />
-                    <span>PHP</span>
-                </li>
-              </ul>
-            </div>
+            
+         
+          <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+  <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Programming Languages</h3>
+  <ul className={`${textColor}`}>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <FaPython className="mr-2 text-2xl" />
+        <span className="w-1/5">Python</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '95%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <FaJsSquare className="mr-2 text-2xl" />
+        <span className="w-1/5">JavaScript</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '84%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <SiTypescript className="mr-2 text-2xl" />
+        <span className="w-1/5">TypeScript</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '79%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <FaJava className="mr-2 text-2xl" />
+        <span className="w-2/5">Java</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '68%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <PiFileSqlBold className="mr-2 text-2xl" />
+        <span className="w-2/5">SQL</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '75%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <SiPhp className="mr-2 text-2xl" />
+        <span className="w-1/5">PHP</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '45%' }}></div>
+      </div>
+    </li>
+    <li className="flex items-center justify-between mb-4">
+      <div className="flex items-center">
+        <SiRuby className="mr-2 text-2xl" />
+        <span className="w-1/5">Ruby</span>
+      </div>
+      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '38%' }}></div>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
             <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
               <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Frameworks and Libraries</h3>
               <ul className={`${textColor}`}>
@@ -113,10 +155,6 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                 <li className="flex items-center justify-center mb-2">
                     <SiAmazondynamodb className="mr-2 text-2xl" />
                     <span className="ml-2">DynamoDB</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiMongodb className="mr-2 text-2xl" />
-                    <span className="ml-2">MongoDB</span>
                 </li>
                 
               </ul>
