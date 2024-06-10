@@ -53,138 +53,137 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
             
          
           <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
-  <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Programming Languages</h3>
-  <ul className={`${textColor}`}>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <FaPython className="mr-2 text-2xl" />
-        <span className="w-1/5">Python</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '95%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <FaJsSquare className="mr-2 text-2xl" />
-        <span className="w-1/5">JavaScript</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '84%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <SiTypescript className="mr-2 text-2xl" />
-        <span className="w-1/5">TypeScript</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '79%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <FaJava className="mr-2 text-2xl" />
-        <span className="w-2/5">Java</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '68%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <PiFileSqlBold className="mr-2 text-2xl" />
-        <span className="w-2/5">SQL</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '75%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <SiPhp className="mr-2 text-2xl" />
-        <span className="w-1/5">PHP</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '45%' }}></div>
-      </div>
-    </li>
-    <li className="flex items-center justify-between mb-4">
-      <div className="flex items-center">
-        <SiRuby className="mr-2 text-2xl" />
-        <span className="w-1/5">Ruby</span>
-      </div>
-      <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '38%' }}></div>
-      </div>
-    </li>
-    
-  </ul>
-</div>
-
-
-
-
-            <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
-              <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Frameworks and Libraries</h3>
-              <ul className={`${textColor}`}>
-                <li className="flex items-center justify-center mb-2">
-                  <FaReact className="mr-2 text-2xl" />
-                  <span >React</span>
+            <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Programming Languages</h3>
+            <ul className={`${textColor}`}>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <FaPython className="mr-2 text-2xl" />
+                    <span className="w-1/5">Python</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '95%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <RiNextjsFill className="mr-2 text-2xl" />
-                    <span className="ml-2">NextJS</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <FaJsSquare className="mr-2 text-2xl" />
+                    <span className="w-1/5">JavaScript</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '84%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiRubyonrails className="mr-2 text-2xl" />
-                    <span className="ml-2">Ruby on Rails</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <SiTypescript className="mr-2 text-2xl" />
+                    <span className="w-1/5">TypeScript</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '79%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <FaLaravel className="mr-2 text-2xl" />
-                    <span className="ml-2">Laravel</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <FaJava className="mr-2 text-2xl" />
+                    <span className="w-2/5">Java</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '68%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiPostgresql className="mr-2 text-2xl" />
-                    <span className="ml-2">PostgreSQL</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <PiFileSqlBold className="mr-2 text-2xl" />
+                    <span className="w-2/5">SQL</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '75%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiMysql className="mr-2 text-2xl" />
-                    <span className="ml-2">MySQL</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <SiPhp className="mr-2 text-2xl" />
+                    <span className="w-1/5">PHP</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '45%' }}></div>
+                </div>
                 </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiAmazondynamodb className="mr-2 text-2xl" />
-                    <span className="ml-2">DynamoDB</span>
+                <li className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                    <SiRuby className="mr-2 text-2xl" />
+                    <span className="w-1/5">Ruby</span>
+                </div>
+                <div className="w-2/5 bg-gray-400 rounded-full h-2.5">
+                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '38%' }}></div>
+                </div>
                 </li>
                 
-              </ul>
-            </div>
-            <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
-              <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Tools and Technologies</h3>
-              <ul className={`${textColor}`}>
-                <li className="flex items-center justify-center mb-2">
-                  <FaDocker className="mr-2 text-2xl" />
-                  <span className="ml-2">Docker</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                  <FaAws className="mr-2 text-2xl" />
-                  <span className="ml-2">AWS</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                  <FaNodeJs className="mr-2 text-2xl" />
-                  <span className="ml-2">Node.js</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                  <FaGit className="mr-2 text-2xl" />
-                  <span className="ml-2">Git</span>
-                </li>
-                <li className="flex items-center justify-center mb-2">
-                    <SiTerraform className="mr-2 text-2xl"/>
-                    <span className="ml-2">Terraform</span>
-                </li>
+            </ul>
+        </div>
 
+        <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+              <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Frameworks and Libraries</h3>
+              <ul className={`${textColor}`}>
+                  <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                    <FaReact className="mr-2 text-2xl" />
+                    <span>React</span>
+                  </li>
+
+                  <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                      <RiNextjsFill className="mr-2 text-2xl" />
+                      <span className="ml-2">NextJS</span>
+                  </li>
+                  <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                      <SiRubyonrails className="mr-2 text-2xl" />
+                      <span className="ml-2">Ruby on Rails</span>
+                  </li>
+                  <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                      <FaLaravel className="mr-2 text-2xl" />
+                      <span className="ml-2">Laravel</span>
+                  </li>
+                 
               </ul>
             </div>
+
+        <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+          <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Tools and Technologies</h3>
+          <ul className={`${textColor}`}>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <FaNodeJs className="mr-2 text-2xl" />
+                <span className="ml-2">Node.js</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <FaAws className="mr-2 text-2xl" />
+                <span className="ml-2">AWS</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <FaGit className="mr-2 text-2xl" />
+                <span className="ml-2">Git</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                  <SiPostgresql className="mr-2 text-2xl" />
+                  <span className="ml-2">PostgreSQL</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                  <SiMysql className="mr-2 text-2xl" />
+                  <span className="ml-2">MySQL</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                  <SiAmazondynamodb className="mr-2 text-2xl" />
+                  <span className="ml-2">DynamoDB</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <FaDocker className="mr-2 text-2xl" />
+                <span className="ml-2">Docker</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <SiTerraform className="mr-2 text-2xl" />
+                <span className="ml-2">Terraform</span>
+              </li>
+          </ul>
+        </div>
+
             
           </div>
         </div>
