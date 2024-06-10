@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPython, FaJsSquare, FaJava, FaTools, FaReact, FaDocker, FaAws, FaGit, FaNodeJs, FaLaravel } from 'react-icons/fa';
 import { IoMdSettings } from "react-icons/io";
 import { IoStorefrontSharp } from "react-icons/io5";
-import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiPandas, SiSelenium } from "react-icons/si";
+import { SiTypescript, SiRubyonrails, SiTerraform, SiRuby, SiPhp, SiPostgresql, SiMysql, SiAmazondynamodb, SiPandas, SiSelenium, SiGraphql } from "react-icons/si";
 import { FaRobot } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import { PiFileSqlBold } from "react-icons/pi";
@@ -10,6 +10,7 @@ import { PiFileSqlBold } from "react-icons/pi";
 const CompetenciesSection = ({ isBackgroundDark }) => {
   const textColor = isBackgroundDark ? 'text-white' : 'text-black';
   const bgColor = isBackgroundDark ? 'bg-[#121212]' : 'bg-white';
+  const sectionBackground = isBackgroundDark ? 'bg-gray-900' : 'bg-gray-400';
 
   return (
     <section className={` ${bgColor} py-2`} id="competencies">
@@ -18,29 +19,35 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
           <h2 className={`text-3xl font-bold ${textColor}`}>Competencies</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="service text-center p-6 border rounded-lg shadow-lg">
-            <div className="service-icon mb-4 text-4xl">
+          <div className={`service text-center p-6 ${sectionBackground} border-b rounded-b-lg shadow-lg`}>
+            <div className="service-icon  mb-4 text-4xl">
                 <div style={{ display: 'inline-block' }}><IoMdSettings /></div>
                 <div style={{ display: 'inline-block', marginLeft: '5px' }}><FaTools /></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Backend Development</h4>
-            <p className={`${textColor}`}>I specialize in creating scalable, maintainable, and efficient server-side applications, demonstrating a deep understanding of both the architecture and the code that powers them. My proficiency encompasses a wide range of technologies, including Node.js, Python, Java, and SQL databases.</p>
-            <p className={`${textColor}`}>Not only am I experienced in integrating APIs for enhanced functionality, but I also excel in developing custom APIs and server-side solutions from the ground up. This includes designing and managing server architectures to ensure seamless end-to-end solutions that are robust and scalable.</p>
-            <p className={`${textColor}`}>My capability extends to working with complex data structures, optimizing database operations, and implementing security best practices, underlining my role as a comprehensive backend engineer.</p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I wield a diverse skill set spanning various languages and frameworks for Web servers and other types of task automation as well. Beyond server-side applications, I’ve scripted functions for various tasks that consume different integrations including third parties, and managed data persistence across SQL and NoSQL databases. My deployment proficiency extends to AWS cloud services, as well as Docker containerization with exposed REST endpoints.</p>
+            <br/>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I approach problems methodically, adhering to best practices and design patterns to ensure robust scalability and performance. Experienced in API integration and crafting bespoke solutions expanding functionality, including writing controller functions, and leveraging third-party services. I’ve contributed to both monolithic and microservice architectures, including serverless deployments.  </p>
+            <br/>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>My capabilities encompass optimizing data structures, service calls, and database operations while prioritizing security best practices.</p>
           </div>
-          <div className="service text-center p-6 border rounded-lg shadow-lg">
+          <div className={`service text-center p-6 ${sectionBackground} border-b rounded-b-lg shadow-lg`}>
             <div className="service-icon mb-4 text-4xl">
                 <div style={{ display: 'inline-block' }}><IoStorefrontSharp/></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Frontend Development</h4>
-            <p className={`${textColor}`}>Skilled in creating intuitive, responsive, and visually appealing user interfaces. Proficient in HTML, CSS, JavaScript, and modern frameworks like React.js and Vue.js. Adept at balancing user experience with performance and scalability to deliver top-notch web applications.</p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I am proficient in developing intuitive and visually appealing user interfaces, bringing the intended aesthetic and responsiveness of a page to life. I have collaborated closely with design teams and product stakeholders to translate mockups and wireframes into polished front-end implementations that align with the intended user experience on the client side.</p>
+            <br/>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>With a strong foundation in vanilla HTML, CSS, and JavaScript, I have honed my skills in modern front-end frameworks such as React.js and Vue.js. My expertise extends to creating responsive designs that deliver exceptional user experiences across various devices and screen sizes. Additionally, I possess a keen eye for detail and a commitment to optimizing performance and accessibility standards to ensure that front-end applications are both efficient and inclusive.</p>
           </div>
-          <div className="service text-center p-6 border rounded-lg shadow-lg">
+          <div className={`service text-center p-6 ${sectionBackground} border-b rounded-b-lg shadow-lg`}>
           <div className="service-icon mb-4 text-4xl">
                 <div style={{ display: 'inline-block' }}><FaRobot/></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Machine Learning</h4>
-            <p className={`${textColor}`}>Well-versed in designing and implementing machine learning models to solve complex problems. Skilled in using libraries such as TensorFlow, PyTorch, and Scikit-learn. Experienced in data preprocessing, model training and evaluation, and deploying models in a production environment. Committed to leveraging machine learning to drive business growth and innovation.</p>
+            <p className={`${textColor}`}>My academic coursework and practical projects have equipped me with a solid understanding of statistical machine learning, deep learning, and data analysis, enabling me to develop robust and effective machine learning solutions. I have substantial experience in data extraction, cleaning, and standardization, preparing datasets for research and model training purposes.</p>
+            <br/>
+            <p className={`${textColor}`}>While my direct production experience with deploying machine learning models is limited, I am eager to contribute to roles where my skills can support model development and deployment operations.</p>
           </div>
           
               
@@ -52,7 +59,7 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
          
-          <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+          <div className={`skills-category text-center ${sectionBackground} p-6 border-b rounded-lg shadow-lg`}>
             <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Programming Languages</h3>
             <ul className={`${textColor}`}>
                 <li className="flex items-center justify-between mb-4">
@@ -122,7 +129,7 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
             </ul>
         </div>
 
-        <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+        <div className={`skills-category text-center ${sectionBackground} p-6 border-b rounded-b-lg shadow-lg`} >
               <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Frameworks and Libraries</h3>
               <ul className={`${textColor}`}>
                   <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
@@ -133,6 +140,10 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                   <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
                       <RiNextjsFill className="mr-2 text-2xl" />
                       <span className="ml-2">NextJS</span>
+                  </li>
+                  <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                      <SiGraphql className="mr-2 text-2xl" />
+                      <span className="ml-2">GraphQL</span>
                   </li>
                   <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
                       <SiRubyonrails className="mr-2 text-2xl" />
@@ -146,7 +157,7 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               </ul>
             </div>
 
-        <div className="skills-category text-center p-6 border rounded-lg shadow-lg">
+          <div className={`skills-category text-center ${sectionBackground} p-6 border-b rounded-lg shadow-lg`}>
           <h3 className={`text-xl font-semibold mb-4 ${textColor}`}>Tools and Technologies</h3>
           <ul className={`${textColor}`}>
               <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
@@ -156,10 +167,6 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
                 <FaAws className="mr-2 text-2xl" />
                 <span className="ml-2">AWS</span>
-              </li>
-              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
-                <FaGit className="mr-2 text-2xl" />
-                <span className="ml-2">Git</span>
               </li>
               <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
                   <SiPostgresql className="mr-2 text-2xl" />
@@ -180,6 +187,10 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
                 <SiTerraform className="mr-2 text-2xl" />
                 <span className="ml-2">Terraform</span>
+              </li>
+              <li className="flex items-center mb-2" style={{ marginLeft: '10%' }}>
+                <FaGit className="mr-2 text-2xl" />
+                <span className="ml-2">Git</span>
               </li>
           </ul>
         </div>
