@@ -29,9 +29,9 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                 <div style={{ display: 'inline-block', marginLeft: '5px' }}><FaTools /></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Backend Development</h4>
-            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I wield a diverse skill set spanning various languages and frameworks for Web servers and other types of task automation as well. Beyond server-side applications, I’ve scripted functions for various tasks that consume different integrations including third parties, and managed data persistence across SQL and NoSQL databases. My deployment proficiency extends to AWS cloud services, as well as Docker containerization with exposed REST endpoints.</p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I wield a diverse skill set spanning various languages and frameworks for Web servers and other types of task automation as well. Beyond server-side applications, I’ve scripted functions for various tasks that consume different libraries or API integrations including third parties, and managed data persistence across SQL and NoSQL databases. My deployment proficiency extends to AWS cloud services, as well as Docker containerization with exposed REST endpoints.</p>
             <br/>
-            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I approach problems methodically, adhering to best practices and design patterns to ensure robust scalability and performance. Experienced in API integration and crafting bespoke solutions expanding functionality, including writing controller functions, and leveraging third-party services. I’ve contributed to both monolithic and microservice architectures, including serverless deployments.  </p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I approach problems methodically, adhering to best practices and design patterns to ensure robust scalability and performance. Experienced in API integration and crafting bespoke solutions expanding functionality, including writing controller functions, and leveraging third-party services. I’ve contributed to both monolithic( including MVC) and microservice architectures, including serverless deployments.  </p>
             <br/>
             <p className={`${textColor}`} style={{ textAlign: 'left' }}>My capabilities encompass optimizing data structures, service calls, and database operations while prioritizing security best practices.</p>
           </div>
@@ -40,18 +40,18 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
                 <div style={{ display: 'inline-block' }}><IoStorefrontSharp/></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Frontend Development</h4>
-            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I am proficient in developing intuitive and visually appealing user interfaces, bringing the intended aesthetic and responsiveness of a page to life. I have collaborated closely with design teams and product stakeholders to translate mockups and wireframes into polished front-end implementations that align with the intended user experience on the client side.</p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>I am proficient in developing intuitive and visually appealing user interfaces, bringing the intended aesthetic and responsiveness of a page to life. I have collaborated closely with designers and product stakeholders to translate mockups and wireframes into polished front-end implementations that align with the intended user experience on the client side.</p>
             <br/>
-            <p className={`${textColor}`} style={{ textAlign: 'left' }}>With a strong foundation in vanilla HTML, CSS, and JavaScript, I have honed my skills in modern front-end frameworks such as React.js and Vue.js. My expertise extends to creating responsive designs that deliver exceptional user experiences across various devices and screen sizes. Additionally, I possess a keen eye for detail and a commitment to optimizing performance and accessibility standards to ensure that front-end applications are both efficient and inclusive.</p>
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>With a strong foundation in vanilla HTML, CSS, and JavaScript, I have also honed my skills and worked using in modern front-end frameworks such as React.js. My expertise extends to creating responsive designs that deliver exceptional user experiences across various devices and screen sizes. Additionally, I possess a keen eye for detail and a commitment to optimizing performance and accessibility standards to ensure that front-end applications are both efficient and inclusive.</p>
           </div>
           <div className={`service text-center p-6 ${sectionBackground} border-b rounded-b-lg shadow-lg`}>
           <div className="service-icon mb-4 text-4xl">
                 <div style={{ display: 'inline-block' }}><FaRobot/></div>
             </div>
             <h4 className={`text-xl font-semibold mb-2 ${textColor}`}>Machine Learning</h4>
-            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>My academic coursework and practical projects have equipped me with a solid understanding of statistical machine learning, deep learning, and data analysis, enabling me to develop robust and effective machine learning solutions. I have substantial experience in data extraction, cleaning, and standardization, preparing datasets for research and model training purposes.</p>
+            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>My academic coursework and practical projects have equipped me with a solid understanding of statistical machine learning, deep learning, and data analysis, enabling me to develop robust and effective machine learning solutions. I have substantial experience in data extraction, cleaning, and standardization, preparing datasets for research purposes and have trained plus evaluated model performance.</p>
             <br/>
-            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>While my direct production experience with deploying machine learning models is limited, I am eager to contribute to roles where my skills can support model development and deployment operations.</p>
+            <p className={`${textColor}`}  style={{ textAlign: 'left' }}>While my production experience with deploying machine learning models is limited to the academic context on projects, I am eager to contribute to roles where my skills can support the product's machine learning model development, deployment and operations.</p>
           </div>
           
               
