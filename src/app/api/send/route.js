@@ -17,17 +17,41 @@ export async function POST(req, res) {
     console.log('message:', message);
 
     const response = await resend.emails.send({
-      to: [email, myEmail], // remove my email address before deploying, testing purposes only
+      to: [email],
+      bcc: [myEmail],
       from: fromEmail,
       subject: subject,
-      html: '<div><h1>"hello"</h1><p>Thank you for contacting me!</p> <p>I will get back to you as soon as possible.</p> <p>"testing"</p> </div>',
+      html: `
+        <div style="font-family: Arial, sans-serif; color: #333;">
+          <div style="background-color: #f7f7f7; padding: 20px; border-radius: 10px; text-align: center;">
+            <h2 style="color: #000c66;">Hi!</h2>
+            <p style="font-size: 16px; line-height: 1.5;">
+              Thank you for contacting me!
+            </p>
+            <p style="font-size: 16px; line-height: 1.5;">
+              I will try to get back to you as soon as possible.
+            </p>
+            <p style="font-size: 16px; line-height: 1.5;">
+              Best,<br>
+              <span style="font-weight: bold;">Mkhanyisi</span>
+            </p>
+          </div>
+          <div style="margin-top: 20px; padding: 15px; border-top: 1px solid #ddd;">
+            <h3 style="font-style: italic; color: #555;">Your Message:</h3>
+            <p style="font-size: 15px; color: #555;">${message}</p>
+          </div>
+        </div>
+      `,
     });
 
     console.log('response:', JSON.stringify(response, null, 2));
 
     return NextResponse.json(response);
   } catch (error) {
-    console.error(error);
-    return NextResponse.error(error);
+    console.error('Error sending email:', error);
+    return NextResponse.json(
+      { error: error.message || 'Internal Server Error' },
+      { status: 500 },
+    );
   }
 }
