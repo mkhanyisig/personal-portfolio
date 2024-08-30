@@ -14,8 +14,6 @@ export async function POST(req, res) {
     const subject = formData.get('subject');
     const message = formData.get('message');
 
-    console.log('message:', message);
-
     const response = await resend.emails.send({
       to: [email],
       bcc: [myEmail],
@@ -43,8 +41,6 @@ export async function POST(req, res) {
         </div>
       `,
     });
-
-    console.log('response:', JSON.stringify(response, null, 2));
 
     return NextResponse.json(response);
   } catch (error) {
