@@ -40,7 +40,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 1000,
               ]}
               wrapper="h3"
-              speed={10}
+              speed={40}
               style={{
                 fontSize: '1.5rem',
                 fontWeight: 'bold',
