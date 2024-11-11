@@ -1,10 +1,10 @@
-"use client";
-import React, { useState } from "react";
-import { SocialIcon } from "react-social-icons";
+'use client';
+import React, { useState } from 'react';
+import { SocialIcon } from 'react-social-icons';
 
 const EmailSection = ({ isBackgroundDark }) => {
-  const connectColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
-  const subjectColor = isBackgroundDark ? "text-white" : "text-black";
+  const connectColor = isBackgroundDark ? 'text-zinc-500' : 'text-zinc-900';
+  const subjectColor = isBackgroundDark ? 'text-white' : 'text-black';
   const [isLinkedInHovered, setIsLinkedInHovered] = useState(false);
   const [isGitHubHovered, setIsGitHubHovered] = useState(false);
 
@@ -14,30 +14,30 @@ const EmailSection = ({ isBackgroundDark }) => {
     const formData = new FormData(e.target);
 
     try {
-      const response = await fetch("/api/send", {
-        method: "POST",
+      const response = await fetch('/api/send', {
+        method: 'POST',
         body: formData,
       });
 
-      console.log("response:", response);
+      console.log('response:', response);
 
       if (response.status === 200) {
-        alert("Your message has been sent successfully!");
+        alert('Your message has been sent successfully!');
       } else {
         alert(
-          "An error occurred while sending your message. Please try again."
+          'An error occurred while sending your message. Please try again.',
         );
       }
     } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending your message. Please try again.");
+      console.error('Error:', error);
+      alert('An error occurred while sending your message. Please try again.');
     }
   };
 
   return (
     <section
       className={` ${
-        isBackgroundDark ? "bg-[#121212]" : "bg-white"
+        isBackgroundDark ? 'bg-[#121212]' : 'bg-white'
       } grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4`}
       id="contact"
     >
@@ -46,9 +46,9 @@ const EmailSection = ({ isBackgroundDark }) => {
           Let's Connect
         </h5>
         <p className={`${connectColor} mb-4 font-semibold max-w-md`}>
-          I'm currently looking for new opportunities, my inbox is always open.
-          Whether you have a question or just want to say hi, I'll try my best
-          to get back to you!
+          Keen to explore new opportunities, my inbox is always open. Whether
+          you have a question or just want to say hi, I'll try my best to get
+          back to you!
         </p>
         <div className="mb-5">
           <a
@@ -67,7 +67,7 @@ const EmailSection = ({ isBackgroundDark }) => {
           <SocialIcon
             url="https://www.linkedin.com/in/mkhanyisifabo/"
             bgColor="#71717a"
-            fgColor={isLinkedInHovered ? "#0077cc" : "#fff"}
+            fgColor={isLinkedInHovered ? '#0077cc' : '#fff'}
             onMouseEnter={() => setIsLinkedInHovered(true)}
             onMouseLeave={() => setIsLinkedInHovered(false)}
             style={{ height: 40, width: 40 }}
@@ -75,7 +75,7 @@ const EmailSection = ({ isBackgroundDark }) => {
           <SocialIcon
             url="https://github.com/mkhanyisig"
             bgColor="#71717a"
-            fgColor={isGitHubHovered ? "#0077cc" : "#fff"}
+            fgColor={isGitHubHovered ? '#0077cc' : '#fff'}
             onMouseEnter={() => setIsGitHubHovered(true)}
             onMouseLeave={() => setIsGitHubHovered(false)}
             style={{ height: 40, width: 40 }}
@@ -137,8 +137,8 @@ const EmailSection = ({ isBackgroundDark }) => {
               type="submit"
               className="bg-[#71717a] hover:bg-slate-500 text-white font-bold  text-lg py-2.5 px-5 rounded-lg w-full"
             >
-              {" "}
-              Send message{" "}
+              {' '}
+              Send message{' '}
             </button>
           </div>
         </form>
