@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
-import { SocialIcon } from "react-social-icons";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
+import { SocialIcon } from 'react-social-icons';
 
 const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
-  const welcomeColor = isBackgroundDark ? "text-zinc-500" : "text-zinc-900";
+  const welcomeColor = isBackgroundDark ? 'text-zinc-500' : 'text-zinc-900';
   const [isLinkedInHovered, setIsLinkedInHovered] = useState(false);
   const [isGitHubHovered, setIsGitHubHovered] = useState(false);
 
   return (
     <section
       className={` ${
-        isBackgroundDark ? "bg-[#121212]" : "bg-white"
+        isBackgroundDark ? 'bg-[#121212]' : 'bg-white'
       } h-screen  w-full`}
       id="home"
     >
@@ -22,44 +22,40 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
               👋 Hello There, I'm Mkhanyisi!
             </span>
           </h1>
-          <div className="type-animation-wrapper">
+          <div className="type-animation-wrapper" style={{ height: '14rem' }}>
             <TypeAnimation
               key={forceUpdateKey}
               sequence={[
-                "I also go by MK if that's easier to pronounce or remember 😄",
-                1000,
                 "I'm A Software Engineer",
                 1000,
-                "I'm A versatile Full Stack Developer",
-                1000,
-                "I'm A Backend Developer",
-                1000,
-                "I'm A Frontend Developer",
+                "I'm A versatile Full Stack Developer. I can handle both Backend and Frontend Development",
                 1000,
                 "I'm comfortable and competent with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
                 1000,
-                "Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️",
+                "I also go by MK incase that's easier to pronounce or remember 😄",
                 1000,
-                "I love Music, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ",
+                'Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️',
+                1000,
+                'I love Music, Sports, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
                 1000,
               ]}
               wrapper="h3"
               speed={10}
               style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
-                padding: "15px",
-                borderRadius: "10px",
-                fontFamily: "monospace",
-                margin: "0",
-                color: isBackgroundDark ? "white" : "black",
-                background: "transparent",
-                backdropFilter: "blur(90%)",
-                maxHeight: "14rem",
-                display: "inline-block",
-                marginLeft: "15px",
-                marginRight: "15px",
-                marginBottom: "15px",
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                padding: '15px',
+                borderRadius: '10px',
+                fontFamily: 'monospace',
+                margin: '0',
+                color: isBackgroundDark ? 'white' : 'black',
+                background: 'transparent',
+                backdropFilter: 'blur(90%)',
+                maxHeight: '14rem',
+                display: 'inline-block',
+                marginLeft: '15px',
+                marginRight: '15px',
+                marginBottom: '15px',
               }}
               repeat={Infinity}
             />
@@ -94,7 +90,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 network="linkedin"
                 url="https://www.linkedin.com/in/mkhanyisifabo/"
                 bgColor="#71717a"
-                fgColor={isLinkedInHovered ? "#0077cc" : "#fff"}
+                fgColor={isLinkedInHovered ? '#0077cc' : '#fff'}
                 onMouseEnter={() => setIsLinkedInHovered(true)}
                 onMouseLeave={() => setIsLinkedInHovered(false)}
                 style={{ height: 45, width: 45 }}
@@ -103,7 +99,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 network="github"
                 url="https://github.com/mkhanyisig"
                 bgColor="#71717a"
-                fgColor={isGitHubHovered ? "#0077cc" : "#fff"}
+                fgColor={isGitHubHovered ? '#0077cc' : '#fff'}
                 onMouseEnter={() => setIsGitHubHovered(true)}
                 onMouseLeave={() => setIsGitHubHovered(false)}
                 style={{ height: 45, width: 45 }}
@@ -114,7 +110,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
         <div className="col-span-5 place-self-center mt-4 lg:mt-0 mb-11">
           <div
             className={`${
-              isBackgroundDark ? "bg-[#121212]" : "bg-white"
+              isBackgroundDark ? 'bg-[#121212]' : 'bg-white'
             } lg:w-[320px] lg:h-[320px] sm:w-[200px] sm:py-11  relative hero_image-wrapper`}
           >
             <Image

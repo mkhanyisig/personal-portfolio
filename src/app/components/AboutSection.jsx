@@ -1,111 +1,116 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import TabButton from "./TabButton";
-import ExperienceSection from "./ExperienceSection";
-import Link from "next/link";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import TabButton from './TabButton';
+import ExperienceSection from './ExperienceSection';
+import Link from 'next/link';
 
 const educationItems = [
   {
-    organization: "Brandeis University",
-    role: "MS in Computer Science",
-    date: "2021 - 2023",
-    logo: "/images/brandeis2.png",
-    url: "https://www.brandeis.edu/computer-science/"
+    organization: 'Brandeis University',
+    role: 'MS in Computer Science',
+    date: '2021 - 2023',
+    logo: '/images/brandeis2.png',
+    url: 'https://www.brandeis.edu/computer-science/',
   },
   {
-    organization: "Colby College",
-    role: "BS in Computer Science & Physics: Astrophysics",
-    date: "2015 - 2019",
-    logo: "/images/colby2.png",
-    url: "https://www.colby.edu/academics/departments-and-programs/physics-and-astronomy/"
+    organization: 'Colby College',
+    role: 'BS in Computer Science & Physics: Astrophysics',
+    date: '2015 - 2019',
+    logo: '/images/colby2.png',
+    url: 'https://www.colby.edu/academics/departments-and-programs/physics-and-astronomy/',
   },
   {
-    organization: "Tuck School of Business at Dartmouth College",
-    role: "Business Bridge Program",
-    date: "July 2018",
-    logo: "/images/tuck2.png",
-    url: "https://bridge.tuck.dartmouth.edu/"
+    organization: 'Tuck School of Business at Dartmouth College',
+    role: 'Business Bridge Program',
+    date: 'July 2018',
+    logo: '/images/tuck2.png',
+    url: 'https://bridge.tuck.dartmouth.edu/',
   },
 ];
 
 const workItems = [
   {
-    organization: "Electives Inc",
-    role: "Full Stack Engineer",
-    date: "Feb 2023 - ",
-    logo: "/images/electives2.png",
-    url:"https://www.electives.io/"
+    organization: '***',
+    role: 'Software Engineer  - Backend',
+    date: 'August 2024 - ',
+    logo: 'https://storage.googleapis.com/pod_public/1300/168838.jpg',
+    url: '',
   },
   {
-    organization: "HubSpot Inc",
-    role: "Software Engineer Intern/Coop",
-    date: "June 2022 - August 2022",
-    logo: "/images/hubspot.png",
-    url: "https://www.hubspot.com/"
+    organization: 'Electives Inc',
+    role: 'Full Stack Engineer',
+    date: 'Feb 2023 - March 2024',
+    logo: '/images/electives2.png',
+    url: 'https://www.electives.io/',
   },
   {
-    organization: "Prospector Portal",
-    role: "Software Engineer",
-    date: "June 2020 - December 2022",
-    logo: "/images/prospector.png",
-    url: "https://www.prospectorportal.com/"
+    organization: 'HubSpot Inc',
+    role: 'Software Engineer Intern/Coop',
+    date: 'June 2022 - August 2022',
+    logo: '/images/hubspot.png',
+    url: 'https://www.hubspot.com/',
   },
   {
-    organization: "Brandeis University",
-    role: "Graduate Research/Teaching Assistant",
-    date: "October 2021 - Dec 2022",
-    logo: "/images/brandeis2.png",
-    url: "https://www.brandeis.edu/computer-science/"
+    organization: 'Prospector Portal',
+    role: 'Software Engineer',
+    date: 'June 2020 - December 2022',
+    logo: '/images/prospector.png',
+    url: 'https://www.prospectorportal.com/',
   },
   {
-    organization: "The Jackson Laboratory",
-    role: "Software Engineer Intern",
-    date: "August 2019 - November 2019",
-    logo: "/images/jax3.png",
-    url: "https://www.jax.org/"
+    organization: 'Brandeis University',
+    role: 'Graduate Research/Teaching Assistant',
+    date: 'October 2021 - Dec 2022',
+    logo: '/images/brandeis2.png',
+    url: 'https://www.brandeis.edu/computer-science/',
+  },
+  {
+    organization: 'The Jackson Laboratory',
+    role: 'Software Engineer Intern',
+    date: 'August 2019 - November 2019',
+    logo: '/images/jax3.png',
+    url: 'https://www.jax.org/',
   },
 ];
 
 const TAB_DATA = [
   {
-    title: "Work",
-    id: "work",
+    title: 'Work',
+    id: 'work',
     content: (
       <div>
         <p>
-          My young career journey has predominantly unfolded within
-          a combination of work and projects, mainly in small autonomous teams 
-          and early-stage environments. I've owned end-to-end feature implementations 
-          in full stack applications and deployments, aiming for efficient and high-quality 
-          outcomes. I'm adept at automating tasks and utilizing third-party API’s or cloud 
-          services in solutions.
-          <br/>
-          <br/>
-          I remain dedicated to continuous growth and innovation in the fast-paced 
-          field of software development, ready to contribute to innovative projects 
-          within forward-thinking companies.
-
+          My young career journey has predominantly unfolded within a
+          combination of work and projects, mainly in small autonomous teams and
+          early-stage environments. I've owned end-to-end feature
+          implementations in full stack applications and deployments, aiming for
+          efficient and high-quality outcomes. I'm adept at automating tasks and
+          utilizing third-party API’s or cloud services in solutions.
+          <br />
+          <br />I remain dedicated to continuous growth and innovation in the
+          fast-paced field of software development, ready to contribute to
+          innovative projects within forward-thinking companies.
         </p>
       </div>
     ),
-    colorStyling: "text-yellow-700 hover:text-yellow-400",
+    colorStyling: 'text-yellow-700 hover:text-yellow-400',
   },
   {
-    title: "Skills",
-    id: "skills",
+    title: 'Skills',
+    id: 'skills',
     content: (
       <div>
         <p>
           I've gained experience and exposure across diverse technology stacks
           and problem domains, primarily focusing on Web Applications, Data
-          Processing, and Task Automation. I work with various programming 
-          languages and development frameworks, tailored for both frontend and 
-          backend solutions. 
+          Processing, and Task Automation. I work with various programming
+          languages and development frameworks, tailored for both frontend and
+          backend solutions.
           <br />
           <br />
-          The primary programming languages I've worked with 
-          and am strongly proficient in are
+          The primary programming languages I've worked with and am strongly
+          proficient in are
           <br />
           <b className="text-yellow-700">
             Python, JavaScript/TypeScript, and Java.
@@ -113,11 +118,11 @@ const TAB_DATA = [
         </p>
       </div>
     ),
-    colorStyling: "text-red-700 hover:text-red-400",
+    colorStyling: 'text-red-700 hover:text-red-400',
   },
   {
-    title: "Education",
-    id: "education",
+    title: 'Education',
+    id: 'education',
     content: (
       <div>
         <p>
@@ -131,12 +136,12 @@ const TAB_DATA = [
         </p>
       </div>
     ),
-    colorStyling: "text-blue-700 hover:text-blue-400",
+    colorStyling: 'text-blue-700 hover:text-blue-400',
   },
 ];
 
 const AboutSection = ({ isBackgroundDark }) => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState('skills');
   const [autoSwitchTab, setAutoSwitchTab] = useState(true);
 
   useEffect(() => {
@@ -162,7 +167,7 @@ const AboutSection = ({ isBackgroundDark }) => {
   return (
     <section
       className={` ${
-        isBackgroundDark ? "bg-[#121212]" : "bg-white"
+        isBackgroundDark ? 'bg-[#121212]' : 'bg-white'
       } lg:h-full lg:w-full`}
       id="about"
     >
@@ -189,11 +194,11 @@ const AboutSection = ({ isBackgroundDark }) => {
           </div>
           <div
             className="mt-4 "
-            style={{ height: "380px", maxHeight: "400px", overflowY: "auto" }}
+            style={{ height: '380px', maxHeight: '400px', overflowY: 'auto' }}
           >
             <div
               className={`${
-                isBackgroundDark ? "text-neutral-300" : "text-neutral-700"
+                isBackgroundDark ? 'text-neutral-300' : 'text-neutral-700'
               } font-bold `}
             >
               {TAB_DATA.find((tabItem) => tabItem.id === tab).content}
