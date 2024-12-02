@@ -31,10 +31,10 @@ const educationItems = [
 
 const workItems = [
   {
-    organization: '***',
+    organization: '',
     role: 'Software Engineer  - Backend',
     date: 'August 2024 - ',
-    logo: 'https://storage.googleapis.com/pod_public/1300/168838.jpg',
+    logo: 'https://pbs.twimg.com/profile_images/1517594757492580352/mO6w0tZo_400x400.png',
     url: '',
   },
   {
