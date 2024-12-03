@@ -23,7 +23,7 @@ const educationItems = [
   {
     organization: 'Tuck School of Business at Dartmouth College',
     role: 'Business Bridge Program',
-    date: 'July 2018',
+    date: 'Summer 2018',
     logo: '/images/tuck2.png',
     url: 'https://bridge.tuck.dartmouth.edu/',
   },
@@ -47,7 +47,7 @@ const workItems = [
   {
     organization: 'HubSpot Inc',
     role: 'Software Engineer Intern/Coop',
-    date: 'Summer 2022',
+    date: '2022',
     logo: '/images/hubspot.png',
     url: 'https://www.hubspot.com/',
   },
