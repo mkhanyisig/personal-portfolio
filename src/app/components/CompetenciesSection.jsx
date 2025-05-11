@@ -131,20 +131,38 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
               Machine Learning
             </h4>
             <p className={`${textColor}`} style={{ textAlign: 'left' }}>
-              My academic coursework and practical projects have equipped me
-              with a solid understanding of statistical machine learning, deep
-              learning, and data analysis, enabling me to develop robust and
-              effective machine learning solutions. I have substantial
-              experience in data extraction, cleaning, and standardization,
-              preparing datasets for research purposes and have trained plus
-              evaluated model performance.
+              My strong academic coursework and practical projects have equipped
+              me with a strong foundation in statistical machine learning, deep
+              learning, and data analysis. I have extensive experience across
+              the ML development lifecycle from data extraction, cleaning, and
+              feature engineering to model training, evaluation, and
+              integration.
             </p>
             <br />
             <p className={`${textColor}`} style={{ textAlign: 'left' }}>
-              While my production experience with deploying machine learning
-              models is limited to the academic context on projects, I am eager
-              to contribute to roles where my skills can support the product's
-              machine learning model development, deployment and operations.
+              I’ve applied both statistical and deep learning methods to
+              real-world problems, particularly in time series forecasting,
+              regression analysis, and diagnostic reporting. My work has
+              supported product improvement and R&D initiatives, with predictive
+              insights often delivered directly to business stakeholders,
+              including C-suite audiences.
+            </p>
+            <br />
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>
+              I’ve contributed to internal tools where trained models were
+              integrated into analytics workflows, improving the accuracy,
+              reliability, and interpretability of product-facing metrics. I
+              prioritize business-aligned evaluation, practical model fit, and
+              clear visual communication to cross-functional teams.
+            </p>
+            <br />
+            <p className={`${textColor}`} style={{ textAlign: 'left' }}>
+              I'm continually intigued by by data driven approaches to problem
+              solving both within the business context and beyond. While I
+              haven’t worked on MLOps infrastructure or full CI/CD production
+              deployment pipelines, I bring a full-stack mindset and take strong
+              ownership of integrating machine learning solutions into tools
+              that drive measurable impact.
             </p>
           </div>
         </div>
