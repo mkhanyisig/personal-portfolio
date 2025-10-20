@@ -81,16 +81,9 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          My young career journey has predominantly unfolded within a
-          combination of work and projects, mainly in small autonomous teams and
-          early-stage environments. I've owned end-to-end feature
-          implementations in full stack applications and deployments, aiming for
-          efficient and high-quality outcomes. I'm adept at automating tasks and
-          utilizing third-party API’s or cloud services in solutions.
-          <br />
-          <br />I remain dedicated to continuous growth and innovation in the
-          fast-paced field of software development, ready to contribute to
-          innovative projects within forward-thinking companies.
+          I’ve built my career in small, fast-moving teams focusing on problem solving for various stakeholders, delivering full-stack features and zero-to-one projects from concept to deployment. 
+          I focus on building efficient, scalable solutions, often automating workflows and integrating third-party APIs or cloud services. 
+          I’m passionate about continuous learning and contributing to impactful, forward-thinking engineering teams.
         </p>
       </div>
     ),
@@ -101,21 +94,14 @@ const TAB_DATA = [
     id: 'skills',
     content: (
       <div>
-        <p>
-          I've gained experience and exposure across diverse technology stacks
-          and problem domains, primarily focusing on Web Applications, Data
-          Processing, and Task Automation. I work with various programming
-          languages and development frameworks, tailored for both frontend and
-          backend solutions.
-          <br />
-          <br />
-          The primary programming languages I've worked with and am strongly
-          proficient in are
-          <br />
-          <b className="text-yellow-700">
-            Python, JavaScript/TypeScript, and Java.
-          </b>
-        </p>
+        I build across the stack, with experience in web applications, data processing, and automation. 
+        I’m comfortable working within enterprise systems and modern frameworks for both frontend and backend development, using
+        <br /> 
+        <b className="text-yellow-700">
+          Python, JavaScript/TypeScript, and Java
+        </b> 
+        <br />
+        as my core languages.
       </div>
     ),
     colorStyling: 'text-red-700 hover:text-red-400',
@@ -126,13 +112,8 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          My educational journey, which includes both an MS and a BS in Computer
-          Science, has equipped me with robust problem-solving skills and a
-          solid foundation in computational thinking. Recognizing the dynamic
-          nature of the tech industry, I am deeply committed to continual
-          self-improvement. I am adaptable and actively engage in self-study to
-          learn new technologies, ensuring that my skills remain current and
-          adaptable to industry demands.
+          My MS and BS in Computer Science have strengthened my problem-solving abilities and foundation in computational thinking. 
+          I stay committed to continuous learning, adapting quickly to new technologies and evolving industry trends to keep my skills current and impactful.
         </p>
       </div>
     ),

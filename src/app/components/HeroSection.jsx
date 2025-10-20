@@ -28,15 +28,13 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
               sequence={[
                 "I'm A Software Engineer",
                 1000,
-                "I'm A versatile Full Stack Developer. I can handle both Backend and Frontend Development",
+                "I'm A versatile Full Stack Web Developer. I can handle both Backend and Frontend Development",
                 1000,
-                "I'm comfortable and competent with Web Technologies, Data Processing, Cloud Services, and Machine Learning",
+                "I'm comfortable and competent with Web Technologies, Automations/Testing, Data Processing, Cloud Services, and Machine Learning",
                 1000,
-                "I also go by MK incase that's easier to pronounce or remember 😄",
+                'Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , at the Soccer Field ⚽️ or on my Bike 🚴',
                 1000,
-                'Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , on my Bike 🚴 or at the Soccer Field ⚽️',
-                1000,
-                'I love Music, Sports, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
+                'I love and am always rejivenated by Music, Sports/Working Out, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
                 1000,
               ]}
               wrapper="h3"
