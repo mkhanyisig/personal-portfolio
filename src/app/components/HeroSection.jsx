@@ -34,7 +34,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 1000,
                 'Away from the Computer Screen, you can find me either at the Gym 🏋️‍♂️ , at the Soccer Field ⚽️ or on my Bike 🚴',
                 1000,
-                'I love and am always rejivenated by Music, Sports/Working Out, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
+                'I love and am always rejuvenated by Music, Sports/Working Out, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
                 1000,
               ]}
               wrapper="h3"
