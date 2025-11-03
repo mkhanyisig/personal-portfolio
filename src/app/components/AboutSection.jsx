@@ -4,6 +4,7 @@ import Image from 'next/image';
 import TabButton from './TabButton';
 import ExperienceSection from './ExperienceSection';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 const educationItems = [
   {
@@ -232,6 +233,10 @@ const AboutSection = ({ isBackgroundDark }) => {
       </div>
     </section>
   );
+};
+
+AboutSection.propTypes = {
+  isBackgroundDark: PropTypes.bool,
 };
 
 export default AboutSection;
