@@ -67,20 +67,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
             previous projects or just curious, feel free to reach out. I'm always up for a
             good conversation!
           </p>
-          <div>
-            <a
-              href="https://calendly.com/mkhanyisi-g/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-900 to-blue-300 hover:bg-slate-800 mt-1 lg:mt-3">
-                <span className="text-blue-700 block text-lg bg-gray-100 hover:bg-gray-400 rounded-full px-3 py-2 font-extrabold">
-                  Get In Touch
-                </span>
-              </button>
-            </a>
-          </div>
-
+          
           <div className="flex items-center py-5">
             <div className="flex space-x-4">
               <SocialIcon
