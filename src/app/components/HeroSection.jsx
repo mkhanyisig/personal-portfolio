@@ -37,7 +37,7 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
                 'I love and am always rejuvenated by Music, Sports/Working Out, Traveling and Exploring the Outdoors 🎵🎹  ✈️  🥾 ⛰️  ',
                 1000,
               ]}
-              wrapper="h3"Welcome to my little corner of of the internet! Here I try to highlight some of my skills and experiences. Whether you're here to explore my work or just curious, feel free to reach out. I'm always up for a good conversation!
+              wrapper="h3"
               speed={40}
               style={{
                 fontSize: '1.5rem',
@@ -62,10 +62,9 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           <p
             className={`${welcomeColor} text-lg sm:text-base lg:text-xl leading-relaxed mb-6`}
           >
-            Welcome to my little corner of of the internet! Here I try to
-            highlight some of my skills and experiences. I love and enjoy
-            solving problems through code. Whether you're here to explore my
-            work or just curious, feel free to reach out. I'm always up for a
+            Welcome to my little corner of of the internet! Here I try to briefly
+            highlight some of my skills and experiences. Whether you're here to explore my
+            previous projects or just curious, feel free to reach out. I'm always up for a
             good conversation!
           </p>
           <div>
