@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import NavLink from './NavLink';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import MenuOverlay from './MenuOverlay';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
 const NavLinks = [
   {
-    title: "About",
-    path: "#about",
+    title: 'About',
+    path: '#about',
   },
   {
-    title: "Projects",
-    path: "#projects",
+    title: 'Projects',
+    path: '#projects',
   },
   {
-    title: "Contact",
-    path: "#contact",
+    title: 'Contact',
+    path: '#contact',
   },
 ];
 
 const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const bgColor = isBackgroundDark ? "bg-[#121212]" : "bg-white";
+  const bgColor = isBackgroundDark ? 'bg-[#121212]' : 'bg-white';
   const navOptionsColor = isBackgroundDark
-    ? " text-slate-200 hover:text-white hover:border-white"
-    : " text-zinc-800 hover:text-slate-950 hover:border-slate-950";
+    ? ' text-slate-200 hover:text-white hover:border-white'
+    : ' text-zinc-800 hover:text-slate-950 hover:border-slate-950';
 
   return (
     <nav
@@ -33,7 +33,7 @@ const NavBar = ({ isBackgroundDark, onBackgroundToggle }) => {
     >
       <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
-          href={"/"}
+          href={'/'}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           {/* Add title here */}

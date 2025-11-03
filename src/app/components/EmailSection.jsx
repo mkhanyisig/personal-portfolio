@@ -82,7 +82,6 @@ const EmailSection = ({ isBackgroundDark }) => {
           />
         </div>
       </div>
-      
     </section>
   );
 };

@@ -1,10 +1,20 @@
-import React from "react";
-import { BriefcaseIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
+import React from 'react';
+import { BriefcaseIcon, AcademicCapIcon } from '@heroicons/react/24/solid';
 
-const ExperienceItem = ({ organization, role, date, logo, darkMode, url, work }) => {
-  const darkTextColorClass = darkMode ? "text-white" : "text-zinc-900";
-  const lightTextColorClass = darkMode ? "text-zinc-100" : "text-zinc-700";
-  const hoverTextColorClass = !work ? "hover:text-blue-500" : "hover:text-red-500";
+const ExperienceItem = ({
+  organization,
+  role,
+  date,
+  logo,
+  darkMode,
+  url,
+  work,
+}) => {
+  const darkTextColorClass = darkMode ? 'text-white' : 'text-zinc-900';
+  const lightTextColorClass = darkMode ? 'text-zinc-100' : 'text-zinc-700';
+  const hoverTextColorClass = !work
+    ? 'hover:text-blue-500'
+    : 'hover:text-red-500';
 
   return (
     <li className="flex gap-5">
@@ -21,7 +31,7 @@ const ExperienceItem = ({ organization, role, date, logo, darkMode, url, work })
           className={`w-full flex-none text-sm font-medium ${darkTextColorClass} ${hoverTextColorClass} hover:text-lg`}
         >
           <a href={url} target="_blank" rel="noreferrer">
-          {organization}
+            {organization}
           </a>
         </dd>
         <dt className="sr-only">Role</dt>
@@ -44,7 +54,7 @@ const ExperienceSection = ({ title, id, items, darkMode, work }) => {
   return (
     <section className="text-white py-1 " id={id}>
       <div className="rounded-2xl border border-gray-800 p-3 dark:border-zinc-400">
-        {title === "Work" ? (
+        {title === 'Work' ? (
           <h2 className="flex text-xl font-bold text-zinc-900 dark:text-zinc-100">
             <BriefcaseIcon className="h-12 w-12 text-red-800" />
             <span className="ml-3 py-2 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-800">
@@ -62,7 +72,12 @@ const ExperienceSection = ({ title, id, items, darkMode, work }) => {
 
         <ol className="mt-6 space-y-3">
           {items.map((item, index) => (
-            <ExperienceItem key={index} darkMode={darkMode}  {...item} work={work}/>
+            <ExperienceItem
+              key={index}
+              darkMode={darkMode}
+              {...item}
+              work={work}
+            />
           ))}
         </ol>
       </div>

@@ -81,9 +81,13 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          I’ve built my career in small, fast-moving teams focusing on problem solving for various stakeholders, delivering full-stack features and zero-to-one projects from concept to deployment. 
-          I focus on building efficient, scalable solutions, often automating workflows and integrating third-party APIs or cloud services. 
-          I’m passionate about continuous learning and contributing to impactful, forward-thinking engineering teams.
+          I’ve built my career in small, fast-moving teams focusing on problem
+          solving for various stakeholders, delivering full-stack features and
+          zero-to-one projects from concept to deployment. I focus on building
+          efficient, scalable solutions, often automating workflows and
+          integrating third-party APIs or cloud services. I’m passionate about
+          continuous learning and contributing to impactful, forward-thinking
+          engineering teams.
         </p>
       </div>
     ),
@@ -94,12 +98,14 @@ const TAB_DATA = [
     id: 'skills',
     content: (
       <div>
-        I build across the stack, with experience in web applications, data processing, and automation. 
-        I’m comfortable working within enterprise systems and modern frameworks for both frontend and backend development, using
-        <br /> 
+        I build across the stack, with experience in web applications, data
+        processing, and automation. I’m comfortable working within enterprise
+        systems and modern frameworks for both frontend and backend development,
+        using
+        <br />
         <b className="text-yellow-700">
           Python, JavaScript/TypeScript, and Java
-        </b> 
+        </b>
         <br />
         as my core languages.
       </div>
@@ -112,8 +118,10 @@ const TAB_DATA = [
     content: (
       <div>
         <p>
-          My MS and BS in Computer Science have strengthened my problem-solving abilities and foundation in computational thinking. 
-          I stay committed to continuous learning, adapting quickly to new technologies and evolving industry trends to keep my skills current and impactful.
+          My MS and BS in Computer Science have strengthened my problem-solving
+          abilities and foundation in computational thinking. I stay committed
+          to continuous learning, adapting quickly to new technologies and
+          evolving industry trends to keep my skills current and impactful.
         </p>
       </div>
     ),
