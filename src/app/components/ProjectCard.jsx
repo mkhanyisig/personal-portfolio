@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 const ProjectCard = ({
   imgUrl,
@@ -15,7 +15,7 @@ const ProjectCard = ({
     <div>
       <div
         className="group h-52 md:h-72 bg-center relative overflow-hidden project-card_thumbnail"
-        style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover" }}
+        style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover' }}
         alt={title}
       >
         <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 items-center justify-center">
@@ -37,7 +37,7 @@ const ProjectCard = ({
       </div>
       <div
         className="bg-sky-950 rounded-b-xl py-2 px-4 text-white overflow-hidden"
-        style={{ height: "15em" }}
+        style={{ height: '15em' }}
       >
         <h5 className="font-lg font-extrabold">{title}</h5>
         <div className="flex flex-wrap gap-2 py-1 mb-2">

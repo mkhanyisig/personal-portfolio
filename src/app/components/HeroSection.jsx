@@ -62,12 +62,12 @@ const HeroSection = ({ isBackgroundDark, forceUpdateKey }) => {
           <p
             className={`${welcomeColor} text-lg sm:text-base lg:text-xl leading-relaxed mb-6`}
           >
-            Welcome to my little corner of of the internet! Here I try to briefly
-            highlight some of my skills and experiences. Whether you're here to explore my
-            previous projects or just curious, feel free to reach out. I'm always up for a
-            good conversation!
+            Welcome to my little corner of of the internet! Here I try to
+            briefly highlight some of my skills and experiences. Whether you're
+            here to explore my previous projects or just curious, feel free to
+            reach out. I'm always up for a good conversation!
           </p>
-          
+
           <div className="flex items-center py-5">
             <div className="flex space-x-4">
               <SocialIcon

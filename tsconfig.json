@@ -21,6 +21,17 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/ProjectCard.jsx", "src/app/components/TabButton.jsx", "src/app/components/AboutSection.jsx", "src/app/components/NavLink.jsx", "src/app/components/NavBar.jsx", "src/app/components/Hero.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/components/ProjectCard.jsx",
+    "src/app/components/TabButton.jsx",
+    "src/app/components/AboutSection.jsx",
+    "src/app/components/NavLink.jsx",
+    "src/app/components/NavBar.jsx",
+    "src/app/components/Hero.jsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,11 +1,11 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 
 const ProjectTag = ({ name, onClick, isSelected, darkMode }) => {
   const buttonStyles = isSelected
-    ? "text-red-600 font-extrabold border-red-700"
+    ? 'text-red-600 font-extrabold border-red-700'
     : `font-semibold border-slate-600 ${
-        darkMode ? "text-[#ADB7BE]" : "text-black "
+        darkMode ? 'text-[#ADB7BE]' : 'text-black '
       } `;
 
   return (
