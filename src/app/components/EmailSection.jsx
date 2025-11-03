@@ -58,7 +58,7 @@ const EmailSection = ({ isBackgroundDark }) => {
           >
             <button className="px-2 py-2 mr-4 w-full sm:w-fit rounded-full bg-gradient-to-br from-slate-900 to-slate-300 hover:bg-slate-800 mt-1">
               <span className="text-red-400 block text-lg bg-gray-100 hover:bg-gray-300 rounded-full px-3 py-2 font-extrabold">
-                Schedule A Call
+                Get In Touch
               </span>
             </button>
           </a>
@@ -82,67 +82,7 @@ const EmailSection = ({ isBackgroundDark }) => {
           />
         </div>
       </div>
-      <div>
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <div className="mb-2">
-            <label
-              htmlFor="email"
-              className={`${subjectColor} block mb-2 text-base font-medium `}
-            >
-              Your Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="bg-gray-[#18191E] border border-[#33353F] bg-[#18191E] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg  block w-full p-2.5"
-              required
-              placeholder="your_email@domainname.com"
-            />
-          </div>
-          <div className="mb-2">
-            <label
-              htmlFor="subject"
-              className={`${subjectColor} block mb-2 text-base font-medium `}
-            >
-              Subject
-            </label>
-            <input
-              id="subject"
-              type="text"
-              name="subject"
-              className="bg-gray-[#18191E] border border-[#33353F] bg-[#18191E] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg  block w-full p-2.5"
-              required
-              placeholder="Your subject line here..."
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className={`${subjectColor} block mb-2 text-base font-medium `}
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              type="message"
-              className="bg-gray-[#18191E] border border-[#33353F] bg-[#18191E] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg  block w-full p-2.5"
-              required
-              placeholder="Let's talk about..."
-            />
-          </div>
-          <div className="mb-6">
-            <button
-              type="submit"
-              className="bg-[#71717a] hover:bg-slate-500 text-white font-bold  text-lg py-2.5 px-5 rounded-lg w-full"
-            >
-              {' '}
-              Send message{' '}
-            </button>
-          </div>
-        </form>
-      </div>
+      
     </section>
   );
 };
