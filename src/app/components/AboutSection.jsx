@@ -82,8 +82,8 @@ const TAB_DATA = [
     content: (
       <div>
         I build across the stack, with experience in web applications, data
-        processing, automation,predictive analytics and machine learning. I’m comfortable working with modern web frameworks and data systems for both frontend and backend development,
-        using
+        processing, automation,predictive analytics and machine learning. I’m comfortable working with modern web frameworks and data systems for both 
+        frontend and backend development, using
         <br />
         <b className="text-yellow-700">
           Python, JavaScript/TypeScript, and Java
