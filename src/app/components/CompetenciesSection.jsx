@@ -157,10 +157,8 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
             </p>
             <br />
             <p className={`${textColor}`} style={{ textAlign: 'left' }}>
-              I'm continually intigued by by data driven approaches to problem
-              solving both within the business context and beyond. While I
-              haven’t worked on MLOps infrastructure or full CI/CD production
-              deployment pipelines, I bring a full-stack mindset and take strong
+              I'm continually intrigued by data-driven approaches to problem
+              solving both within the business context and beyond. I bring a full-stack mindset and take strong
               ownership of integrating machine learning solutions into tools
               that drive measurable impact.
             </p>
