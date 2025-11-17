@@ -77,38 +77,19 @@ const workItems = [
 
 const TAB_DATA = [
   {
-    title: 'Work',
-    id: 'work',
-    content: (
-      <div>
-        <p>
-          I’ve built my career in small, fast-moving teams focusing on problem
-          solving for various stakeholders, delivering full-stack features and
-          zero-to-one projects from concept to deployment. I focus on building
-          efficient, scalable solutions, often automating workflows and
-          integrating third-party APIs or cloud services. I’m passionate about
-          continuous learning and contributing to impactful, forward-thinking
-          engineering teams.
-        </p>
-      </div>
-    ),
-    colorStyling: 'text-yellow-700 hover:text-yellow-400',
-  },
-  {
     title: 'Skills',
     id: 'skills',
     content: (
       <div>
         I build across the stack, with experience in web applications, data
-        processing, and automation. I’m comfortable working within enterprise
-        systems and modern frameworks for both frontend and backend development,
+        processing, automation,predictive analytics and machine learning. I’m comfortable working with modern web frameworks and data systems for both frontend and backend development,
         using
         <br />
         <b className="text-yellow-700">
           Python, JavaScript/TypeScript, and Java
         </b>
         <br />
-        as my core languages.
+        as my core/preferred languages.
       </div>
     ),
     colorStyling: 'text-red-700 hover:text-red-400',
