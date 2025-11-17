@@ -1,8 +1,7 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended"
   ],
   "plugins": ["react", "prettier"],
   "parserOptions": {
@@ -13,7 +12,6 @@
     }
   },
   "rules": {
-    "prettier/prettier": ["error"],
      "react/prop-types": "off",
      "react/no-unescaped-entities": "off",
      "@next/next/no-img-element": "off",
