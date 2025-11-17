@@ -158,7 +158,7 @@ const CompetenciesSection = ({ isBackgroundDark }) => {
             <br />
             <p className={`${textColor}`} style={{ textAlign: 'left' }}>
               I'm continually intrigued by data-driven approaches to problem
-              solving both within the business context and beyond. I bring a full-stack mindset and take strong
+              solving both within the business context and beyond, including Applied Machine Learning/Gen AI solutions. I bring a full-stack mindset and take strong
               ownership of integrating machine learning solutions into tools
               that drive measurable impact.
             </p>
