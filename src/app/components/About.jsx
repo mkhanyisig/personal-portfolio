@@ -12,9 +12,7 @@ const About = () => (
         <p>
           I'm a software engineer with experience spanning full-stack
           development, backend systems, data engineering, applied machine
-          learning, and cloud-based enterprise integrations. I hold a master's
-          in Computer Science from Brandeis University and a bachelor's from
-          Colby College.
+          learning, and cloud-based enterprise integrations. I hold an MS & BS in Computer Science.
         </p>
         <p>
           I've worked across small, early-stage teams building products from the
@@ -68,7 +66,7 @@ const About = () => (
             className="object-cover object-[72%_40%]"
           />
         </div>
-        <BlackHole className="mt-4 block h-60 w-full opacity-50" />
+        <BlackHole className="mt-2 block aspect-[4/3] w-full" />
       </Reveal>
     </div>
   </Section>

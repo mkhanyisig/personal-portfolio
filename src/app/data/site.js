@@ -22,7 +22,7 @@ export const toolkit = [
   },
   {
     title: 'Machine learning',
-    line: 'Taking predictive models from exploration and feature engineering through evaluation and into tools people use.',
+    line: 'Exploring zero-to-one R&D initiatives using business data to develop new product capabilities, applying statistical modeling, deep learning, and predictive analytics from experimentation through production integration.',
     tools: ['PyTorch', 'pandas', 'scikit-learn', 'NumPy'],
   },
   {

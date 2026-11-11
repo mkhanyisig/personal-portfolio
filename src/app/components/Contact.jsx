@@ -7,9 +7,8 @@ const Contact = () => (
   <Section id="contact" title="Say hello">
     <Reveal>
       <p className="max-w-xl text-lg leading-relaxed">
-        My inbox is always open. Whether you have a question, want to hear more
-        about my work or just want to say hi, I&apos;m always up for a good
-        conversation.
+        Whether you have a question, want to connect, or just say hello, 
+        I'm always happy to have a good conversation.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <a

@@ -64,7 +64,7 @@ export const education = [
   },
   {
     organization: 'Colby College',
-    degree: 'BA, Computer Science & Physics (Astrophysics)',
+    degree: 'BS, Computer Science & Physics (Astrophysics)',
     year: '2019',
     logo: '/images/colby2.png',
   },
