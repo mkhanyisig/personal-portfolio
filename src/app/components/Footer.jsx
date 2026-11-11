@@ -1,14 +1,38 @@
-import React from 'react';
+import { GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
-const Footer = () => {
-  return (
-    <footer className="footer lg:px-15 border border-top-zinc-700 border-l-transparent border-r-transparent border-b-transparent">
-      <div className="container p-5 flex justify-between">
-        <span className="text-lg text-gray-500">© 2024 Mkhanyisi Gamedze</span>
-        <p className="text-lg text-gray-500"></p>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className="border-t border-line">
+    <div className="container-page flex flex-col gap-4 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>© {new Date().getFullYear()} Mkhanyisi Gamedze</p>
+      <ul className="flex gap-6">
+        <li>
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-fg"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-fg"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="#top" className="hover:text-fg">
+            Back to top ↑
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+);
 
 export default Footer;
