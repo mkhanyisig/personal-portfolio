@@ -1,8 +1,10 @@
 import Reveal from './Reveal';
 
+// Sections after the hero flow continuously with moderate spacing; only the
+// hero fills the first screen.
 const Section = ({ id, title, intro, children }) => (
-  <section id={id} aria-labelledby={`${id}-title`} className="py-16 sm:py-24">
-    <div className="container-page">
+  <section id={id} aria-labelledby={`${id}-title`} className="py-12 sm:py-16">
+    <div className="container-page w-full">
       <Reveal className="mb-10">
         <div className="flex items-center gap-5">
           <h2 id={`${id}-title`} className="display text-5xl sm:text-6xl">

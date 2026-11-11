@@ -4,18 +4,20 @@
 
 /* ---- Theme -------------------------------------------------------------
    Noir (default): black and white, cold smoke, a few stars.
-   Day: newsprint, ink on paper. */
+   Day: warm off-white (#FFF8F0), soft ink, visible stars, and a soft
+   shadow halo behind the portrait instead of a glow. */
 :root {
-  --bg: #e9e7e2;
-  --surface: #f3f1ec;
-  --fg: #111111;
-  --muted: #5d5a55;
-  --line: #cfccc5;
-  --accent: #111111;
-  --accent-soft: rgba(0, 0, 0, 0.05);
-  --star: rgba(0, 0, 0, 0.18);
-  --haze: rgba(0, 0, 0, 0.05);
-  --glow: rgba(255, 255, 255, 0.9);
+  --bg: #fff8f0;
+  --surface: #fbf1e4;
+  --fg: #1f1a15;
+  --muted: #6b6157;
+  --line: #e8dccd;
+  --accent: #1f1a15;
+  --accent-soft: rgba(31, 26, 21, 0.05);
+  --star: rgba(31, 26, 21, 0.85);
+  --star-scale: 2;
+  --haze: rgba(150, 125, 100, 0.045);
+  --glow: rgba(110, 92, 74, 0.32);
   color-scheme: light;
 }
 
@@ -28,13 +30,14 @@
   --accent: #f4f1ea;
   --accent-soft: rgba(244, 241, 234, 0.06);
   --star: rgba(255, 255, 255, 0.5);
+  --star-scale: 1;
   --haze: rgba(176, 186, 198, 0.12);
   --glow: rgba(206, 212, 220, 0.38);
   color-scheme: dark;
 }
 
 html {
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4rem; /* sticky header height */
 }
 
 body {
@@ -55,17 +58,61 @@ body::before {
   background-image:
     radial-gradient(ellipse 70% 50% at 85% -10%, var(--haze), transparent 70%),
     radial-gradient(ellipse 60% 40% at 0% 0%, var(--haze), transparent 70%),
-    radial-gradient(1.5px 1.5px at 8% 22%, var(--star), transparent),
-    radial-gradient(1px 1px at 17% 63%, var(--star), transparent),
-    radial-gradient(1px 1px at 31% 84%, var(--star), transparent),
-    radial-gradient(1px 1px at 44% 52%, var(--star), transparent),
-    radial-gradient(1.5px 1.5px at 58% 71%, var(--star), transparent),
-    radial-gradient(1px 1px at 64% 41%, var(--star), transparent),
-    radial-gradient(1px 1px at 71% 93%, var(--star), transparent),
-    radial-gradient(1px 1px at 83% 58%, var(--star), transparent),
-    radial-gradient(1.5px 1.5px at 94% 78%, var(--star), transparent),
-    radial-gradient(1px 1px at 4% 46%, var(--star), transparent),
-    radial-gradient(1px 1px at 48% 96%, var(--star), transparent);
+    radial-gradient(
+      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 8% 22%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 17% 63%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 31% 84%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 44% 52%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 58% 71%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 64% 41%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 71% 93%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 83% 58%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 94% 78%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 4% 46%,
+      var(--star),
+      transparent
+    ),
+    radial-gradient(
+      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 48% 96%,
+      var(--star),
+      transparent
+    );
 }
 
 /* Film grain over everything, very faint. */
@@ -85,6 +132,13 @@ body::after {
 }
 
 @layer components {
+  /* Fill one screen below the 4rem sticky header (svh avoids mobile
+     browser-bar jumps). Longer content just grows past it. */
+  .screen {
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4rem);
+  }
+
   .container-page {
     @apply mx-auto w-full max-w-5xl px-5 sm:px-8;
   }
@@ -150,9 +204,23 @@ body::after {
   }
 }
 
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+
+  .nudge {
+    animation: nudge 2.2s ease-in-out infinite;
   }
 
   .smoke {
