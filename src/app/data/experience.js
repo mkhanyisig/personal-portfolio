@@ -1,6 +1,12 @@
-// Most recent role is intentionally not listed.
+// The first role intentionally has no organization: it renders as the role
+// title only, with no logo or company link.
 
 export const roles = [
+  {
+    role: 'Full Stack Engineer',
+    period: 'Recent',
+    line: '',
+  },
   {
     organization: 'Gamefam',
     role: 'Backend Engineer',

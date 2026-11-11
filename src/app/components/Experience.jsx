@@ -16,20 +16,26 @@ const Experience = () => (
   <Section id="work" title="Work">
     <ol>
       {roles.map((job) => (
-        <li key={job.organization}>
+        <li key={job.organization || job.role}>
           <Reveal className="grid gap-2 border-t border-line py-7 sm:grid-cols-[9rem_1fr] sm:gap-8">
             <p className="label pt-2">{job.period}</p>
             <div>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <Logo src={job.logo} name={job.organization} size={30} />
-                <h3 className="font-serif text-2xl">
-                  <OrgName {...job} />
-                </h3>
-                <span className="text-sm text-muted">{job.role}</span>
-              </div>
-              <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-                {job.line}
-              </p>
+              {job.organization ? (
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <Logo src={job.logo} name={job.organization} size={30} />
+                  <h3 className="font-serif text-2xl">
+                    <OrgName {...job} />
+                  </h3>
+                  <span className="text-sm text-muted">{job.role}</span>
+                </div>
+              ) : (
+                <h3 className="font-serif text-2xl">{job.role}</h3>
+              )}
+              {job.line && (
+                <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+                  {job.line}
+                </p>
+              )}
             </div>
           </Reveal>
         </li>
