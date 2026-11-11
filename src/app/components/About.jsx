@@ -9,21 +9,20 @@ const About = () => (
     <div className="grid gap-12 md:grid-cols-[1fr_15rem] md:gap-14">
       <Reveal className="max-w-2xl space-y-5 text-[17px] leading-relaxed">
         <p>
-          I came to software through physics. I majored in astrophysics and
-          computer science at Colby College, then went on to a master&apos;s in
-          computer science at Brandeis, where I also worked as a graduate
-          research assistant.
+          I'm a software engineer with experience spanning full-stack development, backend systems, 
+          data engineering, applied machine learning, and cloud-based enterprise integrations. 
+          I hold a master's in Computer Science from Brandeis University and a bachelor's 
+          from Colby College.
         </p>
         <p>
-          Since then I&apos;ve worked on product-focused teams across web
-          development, backend systems, analytics and applied machine learning,
-          and more recently on enterprise integrations in the cloud. My core
-          languages are Python, TypeScript/JavaScript and Java.
+          I've worked across small, early-stage teams building products from the ground up, as well 
+          as established environments modernizing and integrating complex enterprise systems. 
+          My experience ranges from taking features and new products from concept to production 
+          to improving the scalability, reliability, and maintainability of existing systems.
         </p>
         <p>
-          I like to understand how a system really works before I try to make it
-          better, and I care about software that is maintainable, reliable and
-          thoughtfully designed.
+          I'm naturally curious about how things work and enjoy tackling complex problems, whether 
+          that means designing something new or finding better ways to build on what's already there.
         </p>
         <p className="text-muted">
           Away from the screen you&apos;ll find me at the gym, on the soccer

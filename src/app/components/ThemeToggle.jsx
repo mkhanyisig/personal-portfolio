@@ -5,7 +5,7 @@ const ThemeToggle = () => {
   const toggle = () => {
     const isDark = document.documentElement.classList.toggle('dark');
     try {
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('theme-noir', isDark ? 'dark' : 'light');
     } catch {
       // Storage can be unavailable (private mode); the toggle still works.
     }

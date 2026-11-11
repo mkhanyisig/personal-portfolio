@@ -45,7 +45,7 @@ export const viewport: Viewport = {
 
 // Runs before first paint: applies the saved theme (noir by default, so no
 // flash) and marks JS as available so scroll-reveal never hides content without it.
-const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme')||'dark';d.classList.toggle('dark',t==='dark')}catch(e){d.classList.add('dark')}})()`;
+const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme-noir')||'dark';d.classList.toggle('dark',t==='dark')}catch(e){d.classList.add('dark')}})()`;
 
 export default function RootLayout({
   children,
