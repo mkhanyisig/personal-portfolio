@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import Reveal from './Reveal';
+import ScrollCue from './ScrollCue';
 import { GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
 const Hero = () => (
-  <section className="relative overflow-hidden">
-    {/* Slow-drifting smoke behind the hero. */}
+  <section className="screen relative flex flex-col justify-center overflow-hidden">
+    {/* Slow-drifting smoke behind the hero (dark theme only; it bands on light). */}
     <div
       aria-hidden="true"
-      className="smoke pointer-events-none absolute -right-1/4 -top-1/3 -z-10 h-[140%] w-[90%] rounded-full opacity-80 blur-3xl"
+      className="smoke pointer-events-none absolute hidden dark:block -right-1/4 -top-1/3 -z-10 h-[140%] w-[90%] rounded-full opacity-80 blur-3xl"
       style={{
         background:
-          'radial-gradient(closest-side, var(--haze), transparent 75%)',
+          'radial-gradient(closest-side, var(--haze), color-mix(in srgb, var(--haze) 50%, transparent) 40%, color-mix(in srgb, var(--haze) 20%, transparent) 65%, transparent 85%)',
       }}
     />
 
@@ -84,6 +85,7 @@ const Hero = () => (
         />
       </Reveal>
     </div>
+    <ScrollCue href="#about" label="Scroll to about" />
   </section>
 );
 

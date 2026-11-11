@@ -17,8 +17,8 @@ export const toolkit = [
   },
   {
     title: 'Backend & data',
-    line: 'Designing backend services and data pipelines that move, clean and store data reliably.',
-    tools: ['Python', 'SQL', 'PostgreSQL', 'DynamoDB', 'AWS', 'Docker'],
+    line: 'Designing and building backend systems, from application architecture and APIs to databases, cloud services, and data pipelines. Experienced in data migrations, ETL workflows, and developing scalable, maintainable solutions that support evolving product and business needs.',
+    tools: ['Python', 'SQL','OracleSQL' ,'PostgreSQL', 'DynamoDB', 'AWS', 'Docker'],
   },
   {
     title: 'Machine learning',

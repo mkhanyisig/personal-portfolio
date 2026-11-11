@@ -122,7 +122,7 @@ export const projects = [
   },
   {
     title: 'The old portfolio',
-    line: 'The previous version of this site.',
+    line: "The previous version of this site '24 version. Handcrafted with love, minimal AI usage ",
     tags: ['Next.js', 'Tailwind CSS'],
     image: '/images/portfolio.png',
     links: [
