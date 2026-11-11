@@ -1,51 +1,35 @@
-'use client';
-import HeroSection from './components/HeroSection';
-import NavBar from './components/NavBar';
-import { useState } from 'react';
-import AboutSection from './components/AboutSection';
-import ProjectSection from './components/Projects';
-import EmailSection from './components/EmailSection';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Competencies from './components/Competencies';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Technologies from './components/Technologies';
+import Education from './components/Education';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CompetenciesSection from './components/CompetenciesSection';
 
 export default function Home() {
-  const [isBackgroundDark, setIsBackgroundDark] = useState(true);
-  const [key, setKey] = useState(0);
-
-  const toggleBackgroundColor = () => {
-    setIsBackgroundDark(!isBackgroundDark);
-    setKey((prevKey) => prevKey + 1);
-  };
-
   return (
-    <main
-      className={`flex min-h-screen flex-col ${isBackgroundDark ? 'bg-[#121212]' : 'bg-white'}`}
-    >
-      <NavBar
-        isBackgroundDark={isBackgroundDark}
-        onBackgroundToggle={toggleBackgroundColor}
-      />
-      <div className="container mx-auto px-12 py-14">
-        <HeroSection isBackgroundDark={isBackgroundDark} forceUpdateKey={key} />
-      </div>
-
-      <div className="container mx-auto px-12 ">
-        <AboutSection isBackgroundDark={isBackgroundDark} />
-      </div>
-
-      <div className="container mx-auto px-12">
-        <CompetenciesSection isBackgroundDark={isBackgroundDark} />
-      </div>
-
-      <div className="container mx-auto px-12">
-        <ProjectSection isBackgroundDark={isBackgroundDark} />
-      </div>
-
-      <div className="container mx-auto px-12">
-        <EmailSection isBackgroundDark={isBackgroundDark} />
-      </div>
-
+    <div id="top">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-fg focus:px-4 focus:py-2 focus:text-bg"
+      >
+        Skip to content
+      </a>
+      <Header />
+      <main id="main">
+        <Hero />
+        <About />
+        <Competencies />
+        <Experience />
+        <Projects />
+        <Technologies />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
