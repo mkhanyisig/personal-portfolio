@@ -3,7 +3,7 @@
 
 export const roles = [
   {
-    role: 'Full Stack Engineer',
+    role: 'Full Stack Developer',
     period: 'Recent',
     line: '',
   },
