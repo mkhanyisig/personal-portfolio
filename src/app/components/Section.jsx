@@ -1,25 +1,23 @@
 import Reveal from './Reveal';
 
-const Section = ({ id, index, label, title, intro, children }) => (
-  <section id={id} aria-labelledby={`${id}-title`} className="py-20 sm:py-28">
+// Section heading: title, a hairline, and a small star, like a ruled page in
+// an old atlas.
+const Section = ({ id, title, intro, children }) => (
+  <section id={id} aria-labelledby={`${id}-title`} className="py-16 sm:py-24">
     <div className="container-page">
-      <Reveal className="mb-12 grid gap-4 md:mb-16 md:grid-cols-[13rem_1fr] md:gap-10">
-        <p className="eyebrow pt-2">
-          <span className="text-accent">{index}</span>
-          <span className="mx-2 text-line">/</span>
-          {label}
-        </p>
-        <div>
-          <h2
-            id={`${id}-title`}
-            className="max-w-2xl text-balance font-serif text-3xl leading-tight tracking-tight sm:text-4xl"
-          >
+      <Reveal className="mb-10">
+        <div className="flex items-center gap-5">
+          <h2 id={`${id}-title`} className="display text-2xl sm:text-3xl">
             {title}
           </h2>
-          {intro && (
-            <p className="mt-4 max-w-2xl leading-relaxed text-muted">{intro}</p>
-          )}
+          <span className="h-px flex-1 bg-line" aria-hidden="true" />
+          <span className="text-accent" aria-hidden="true">
+            ✦
+          </span>
         </div>
+        {intro && (
+          <p className="mt-4 max-w-xl leading-relaxed text-muted">{intro}</p>
+        )}
       </Reveal>
       {children}
     </div>

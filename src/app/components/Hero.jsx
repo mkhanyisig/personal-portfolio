@@ -1,36 +1,37 @@
 import Image from 'next/image';
-import { ArrowDownIcon } from '@heroicons/react/24/outline';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import Constellation from './Constellation';
 import Reveal from './Reveal';
 import { GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
 const Hero = () => (
-  <section className="relative">
-    <div className="container-page grid items-center gap-14 pb-16 pt-16 sm:pt-24 md:grid-cols-[1.35fr_1fr] md:gap-16 lg:pb-24 lg:pt-32">
+  <section className="relative overflow-hidden">
+    <div className="container-page grid items-center gap-12 pb-20 pt-16 sm:pt-24 md:grid-cols-[1.4fr_1fr] md:gap-14 md:pb-28">
       <Reveal>
-        <p className="eyebrow flex items-center gap-3">
-          <span className="h-px w-8 bg-accent" aria-hidden="true" />
-          Full Stack Software Engineer
+        <p className="label flex items-center gap-3">
+          <span className="text-accent" aria-hidden="true">
+            ✦
+          </span>
+          Software Engineer
         </p>
-        <h1 className="mt-6 font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-          Mkhanyisi Gamedze
+        <p className="mt-8 font-serif text-2xl italic text-muted">
+          Hello there, I&apos;m
+        </p>
+        <h1 className="display mt-3 text-[2.6rem] leading-none sm:text-6xl lg:text-7xl">
+          Mkhanyisi
         </h1>
-        <p className="mt-6 max-w-xl text-balance font-serif text-2xl italic leading-snug text-muted sm:text-[1.7rem]">
-          I build scalable applications, data-driven systems, and intelligent
-          solutions.
+        <p className="mt-8 max-w-md text-lg leading-relaxed">
+          I build web apps, backend services and data tools, and I enjoy the
+          puzzle of making complicated systems feel simple.
         </p>
-        <p className="mt-6 max-w-xl leading-relaxed">
-          I&apos;m a software engineer with experience building products across
-          the stack, from intuitive web applications to backend services, data
-          pipelines and machine learning solutions. I enjoy solving complex
-          problems and turning technical ideas into reliable, practical systems.
+        <p className="mt-3 max-w-md italic text-muted">
+          Welcome to my little corner of the internet.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a href="#contact" className="btn-primary">
-            Get in touch
+            Say hello
           </a>
-          <span className="mx-1 hidden h-6 w-px bg-line sm:block" />
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -52,38 +53,23 @@ const Hero = () => (
         </div>
       </Reveal>
 
-      <Reveal delay={120} className="mx-auto w-full max-w-sm md:max-w-none">
-        <figure className="relative isolate">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-3 -z-10 translate-x-4 translate-y-4 rounded-[2rem] bg-accent-soft"
-          />
-          <div className="overflow-hidden rounded-[2rem] border border-line bg-white">
+      <Reveal delay={150} className="relative mx-auto w-full max-w-[17rem]">
+        <Constellation className="absolute -right-10 -top-16 hidden w-48 md:block" />
+        {/* Double brass rule around the portrait, like an old frame. */}
+        <div className="relative border border-accent p-2">
+          <div className="border border-line">
             <Image
               src="/images/mk3.png"
               alt="Portrait of Mkhanyisi Gamedze"
               width={502}
               height={497}
               priority
-              sizes="(min-width: 768px) 400px, 90vw"
-              className="h-auto w-full"
+              sizes="(min-width: 768px) 272px, 70vw"
+              className="h-auto w-full sepia-[.35]"
             />
           </div>
-        </figure>
+        </div>
       </Reveal>
-    </div>
-
-    <div className="container-page">
-      <a
-        href="#about"
-        className="group flex items-center gap-4 border-t border-line pt-5 text-xs uppercase tracking-[0.18em] text-muted transition-colors hover:text-fg"
-      >
-        <ArrowDownIcon
-          className="h-4 w-4 transition-transform group-hover:translate-y-0.5"
-          aria-hidden="true"
-        />
-        More about me
-      </a>
     </div>
   </section>
 );

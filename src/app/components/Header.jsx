@@ -14,18 +14,18 @@ const Header = () => {
         <a
           href="#top"
           onClick={close}
-          className="font-serif text-xl tracking-tight transition-colors hover:text-accent"
+          className="display text-base transition-colors hover:text-accent"
         >
-          Mkhanyisi Gamedze
+          Mkhanyisi
         </a>
 
         <nav aria-label="Primary" className="flex items-center gap-1">
-          <ul className="mr-2 hidden items-center gap-7 text-sm md:flex">
+          <ul className="mr-3 hidden items-center gap-8 md:flex">
             {nav.map(({ label, href }) => (
               <li key={href}>
                 <a
                   href={href}
-                  className="text-muted transition-colors hover:text-fg"
+                  className="label transition-colors hover:text-accent"
                 >
                   {label}
                 </a>
@@ -35,7 +35,7 @@ const Header = () => {
           <ThemeToggle />
           <button
             type="button"
-            className="rounded-full p-2 text-muted hover:text-fg md:hidden"
+            className="p-2 text-muted hover:text-accent md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
