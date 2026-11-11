@@ -1,115 +1,61 @@
 import Image from 'next/image';
-import { ArrowUpRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import Reveal from './Reveal';
 import Section from './Section';
 import { projects } from '../data/projects';
 
-const isExternal = (href) => href.startsWith('http');
+const ext = (href) =>
+  href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {};
 
-const externalProps = (href) =>
-  isExternal(href) ? { target: '_blank', rel: 'noreferrer' } : {};
-
-// Thumbnail, or a quiet typographic placeholder when the image isn't available.
-const Thumb = ({ project, sizes, compact = false, className = '' }) => (
-  <div
-    className={`relative overflow-hidden border border-line bg-surface ${className}`}
-  >
-    {project.image ? (
+const Thumb = ({ image }) => (
+  <div className="relative hidden h-12 w-20 flex-none overflow-hidden border border-line bg-surface sm:block">
+    {image ? (
       <Image
-        src={project.image}
-        alt={`Screenshot of ${project.title}`}
+        src={image}
+        alt=""
         fill
-        sizes={sizes}
-        className="object-cover object-top transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
+        sizes="80px"
+        className="object-cover object-top opacity-90 sepia-[.3] transition duration-300 group-hover:opacity-100 group-hover:sepia-0"
       />
     ) : (
-      <div
-        className={`flex h-full w-full items-end bg-accent-soft ${compact ? 'p-2.5' : 'p-6'}`}
+      <span
+        className="flex h-full items-center justify-center text-accent"
+        aria-hidden="true"
       >
-        <span
-          className={`font-serif italic leading-tight text-accent ${compact ? 'text-sm' : 'text-2xl'}`}
-        >
-          {project.title}
-        </span>
-      </div>
+        ✦
+      </span>
     )}
   </div>
 );
 
-const ProjectLinks = ({ links }) => (
-  <p className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
-    {links.map(({ label, href }) => (
-      <a
-        key={label}
-        href={href}
-        {...externalProps(href)}
-        className="inline-flex items-center gap-1 font-medium text-fg transition-colors hover:text-accent"
-      >
-        {label}
-        <ArrowUpRightIcon className="h-3.5 w-3.5" aria-hidden="true" />
-      </a>
-    ))}
-  </p>
-);
-
-const FeaturedCard = ({ project }) => {
-  const [primary] = project.links;
-  return (
-    <article className="group flex h-full flex-col">
-      <a
-        href={primary.href}
-        {...externalProps(primary.href)}
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        <Thumb
-          project={project}
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="aspect-[16/10] rounded-2xl"
-        />
-      </a>
-      <h3 className="mt-6 font-serif text-2xl tracking-tight">
+const ProjectRow = ({ title, line, image, links }) => (
+  <li className="group flex items-center gap-5 border-t border-line py-5">
+    <Thumb image={image} />
+    <div className="min-w-0 flex-1">
+      <h3 className="font-serif text-xl">
         <a
-          href={primary.href}
-          {...externalProps(primary.href)}
+          href={links[0].href}
+          {...ext(links[0].href)}
           className="transition-colors hover:text-accent"
         >
-          {project.title}
+          {title}
         </a>
       </h3>
-      <p className="mt-2 leading-relaxed text-muted">{project.description}</p>
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-5">
-        <ul className="flex flex-wrap gap-2" aria-label="Technologies">
-          {project.tags.map((t) => (
-            <li key={t} className="chip">
-              {t}
-            </li>
-          ))}
-        </ul>
-        <ProjectLinks links={project.links} />
-      </div>
-    </article>
-  );
-};
-
-const CompactCard = ({ project }) => (
-  <li className="group flex gap-5 py-6">
-    <Thumb
-      project={project}
-      sizes="128px"
-      compact
-      className="hidden aspect-[16/10] w-32 flex-none rounded-lg sm:block"
-    />
-    <div className="min-w-0">
-      <h4 className="font-serif text-xl tracking-tight">{project.title}</h4>
-      <p className="mt-1 text-sm leading-relaxed text-muted">
-        {project.description}
-      </p>
-      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-        <span className="text-xs text-muted">{project.tags.join(' · ')}</span>
-        <ProjectLinks links={project.links} />
-      </div>
+      <p className="mt-0.5 text-sm text-muted">{line}</p>
     </div>
+    <p className="hidden flex-none gap-4 sm:flex">
+      {links.map(({ label, href }) => (
+        <a
+          key={label}
+          href={href}
+          {...ext(href)}
+          className="label inline-flex items-center gap-1 transition-colors hover:text-accent"
+        >
+          {label}
+          <ArrowUpRightIcon className="h-3 w-3" aria-hidden="true" />
+        </a>
+      ))}
+    </p>
   </li>
 );
 
@@ -120,44 +66,29 @@ const Projects = () => {
   return (
     <Section
       id="projects"
-      index="04"
-      label="Projects"
-      title="Featured work"
-      intro="Applications, machine learning experiments and data visualizations, most built during my studies and early career."
+      title="Projects"
+      intro="Mostly from my college and early-career days. A bit dated now, but they're where a lot of it started."
     >
-      <ul className="grid gap-x-10 gap-y-16 md:grid-cols-2">
-        {featured.map((project, i) => (
-          <li key={project.title}>
-            <Reveal delay={(i % 2) * 90} className="h-full">
-              <FeaturedCard project={project} />
-            </Reveal>
-          </li>
-        ))}
-      </ul>
-
-      {more.length > 0 && (
-        <Reveal className="mt-20">
-          <details className="group/more border-y border-line">
-            <summary className="flex cursor-pointer list-none items-center justify-between py-6 [&::-webkit-details-marker]:hidden">
-              <span className="font-serif text-2xl tracking-tight">
-                More projects
-                <span className="ml-3 align-middle text-sm text-muted">
-                  {more.length}
-                </span>
-              </span>
-              <ChevronDownIcon
-                className="h-5 w-5 text-muted transition-transform group-open/more:rotate-180"
-                aria-hidden="true"
-              />
-            </summary>
-            <ul className="divide-y divide-line border-t border-line">
-              {more.map((project) => (
-                <CompactCard key={project.title} project={project} />
-              ))}
-            </ul>
-          </details>
-        </Reveal>
-      )}
+      <Reveal>
+        <ul>
+          {featured.map((p) => (
+            <ProjectRow key={p.title} {...p} />
+          ))}
+        </ul>
+        <details className="group/more border-t border-line">
+          <summary className="label flex cursor-pointer list-none items-center gap-2 py-5 transition-colors hover:text-accent [&::-webkit-details-marker]:hidden">
+            <span className="transition-transform group-open/more:rotate-90">
+              ›
+            </span>
+            A few more ({more.length})
+          </summary>
+          <ul>
+            {more.map((p) => (
+              <ProjectRow key={p.title} {...p} />
+            ))}
+          </ul>
+        </details>
+      </Reveal>
     </Section>
   );
 };

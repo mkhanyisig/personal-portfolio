@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Newsreader } from 'next/font/google';
+import { Bodoni_Moda, Libre_Franklin } from 'next/font/google';
 import './globals.css';
 
-const sans = Inter({ subsets: ['latin'], variable: '--font-sans' });
-const serif = Newsreader({
+const sans = Libre_Franklin({ subsets: ['latin'], variable: '--font-sans' });
+const serif = Bodoni_Moda({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   variable: '--font-serif',
 });
 
-const title = 'Mkhanyisi Gamedze, Full Stack Software Engineer';
+const title = 'Mkhanyisi Gamedze, Software Engineer';
 const description =
-  'Software engineer building scalable applications, data-driven systems and machine learning solutions across the stack.';
+  'Full stack software engineer working across web apps, backend systems, data and enterprise integrations.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mkhanyisi.xyz'),
@@ -30,15 +30,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8f7f4' },
-    { media: '(prefers-color-scheme: dark)', color: '#0f0f0e' },
-  ],
+  themeColor: '#0b0d12',
 };
 
-// Runs before first paint: applies the saved/system theme (no flash) and
-// marks JS as available, so scroll-reveal styles never hide content without it.
-const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.classList.toggle('dark',t==='dark')}catch(e){}})()`;
+// Runs before first paint: applies the saved theme (night by default, so no
+// flash) and marks JS as available so scroll-reveal never hides content without it.
+const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme')||'dark';d.classList.toggle('dark',t==='dark')}catch(e){d.classList.add('dark')}})()`;
 
 export default function RootLayout({
   children,
@@ -48,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${serif.variable}`}
+      className={`dark ${sans.variable} ${serif.variable}`}
       suppressHydrationWarning
     >
       <head>

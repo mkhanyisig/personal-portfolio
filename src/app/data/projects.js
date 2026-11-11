@@ -1,14 +1,12 @@
-// `featured: true` projects get a full card; the rest live in "More projects".
-// `image: null` renders a typographic placeholder (source image isn't in the repo).
-// The first entry in `links` is also the link on the thumbnail and title.
+// `featured: true` shows in the main list; the rest sit under "A few more".
+// `image: null` shows a small placeholder (source image isn't in the repo).
+// The first link is also the link on the title.
 
 export const projects = [
   {
-    title: 'World Event Recognition with Deep Learning',
-    description:
-      'Revisited the ChaLearn 2015 Looking at People challenge, testing whether newer pretrained models could beat the original benchmarks.',
+    title: 'World Event Recognition',
+    line: 'Testing whether newer deep learning models could beat a 2015 computer vision benchmark.',
     image: null,
-    tags: ['Python', 'PyTorch', 'Computer vision'],
     featured: true,
     links: [
       {
@@ -23,39 +21,21 @@ export const projects = [
   },
   {
     title: 'Brandeis Apartment Search',
-    description:
-      'Two-sided housing platform connecting Brandeis students with verified landlords and landlord reviews.',
+    line: 'A housing marketplace for Brandeis students and local landlords.',
     image: '/images/brandeisApartmentSearch.png',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'Heroku'],
     featured: true,
     links: [
       { label: 'Demo', href: 'https://blooming-waters-59803.herokuapp.com/' },
       {
-        label: 'Project files',
+        label: 'Files',
         href: 'https://drive.google.com/drive/folders/18_WBurlnf1uv1L9oIhv2ox87tU8g3PFK?usp=drive_link',
       },
     ],
   },
   {
-    title: 'Data Analysis & Visualization GUI',
-    description:
-      'Desktop tool for exploring datasets in 3D, encoding up to six dimensions, with PCA, regression and clustering built in.',
-    image: '/images/datavizGUI.png',
-    tags: ['Python', 'Pandas', 'Matplotlib'],
-    featured: true,
-    links: [
-      {
-        label: 'Code',
-        href: 'https://github.com/mkhanyisig/Visualizing-the-impact-of-HIV-AIDS-in-Southern-Africa',
-      },
-    ],
-  },
-  {
-    title: 'Covid-19 Geo-Visualization, Swaziland',
-    description:
-      'Map of Covid-19 cases built from Ministry of Health and WHO reports, using a custom GeoJSON and data loaders.',
+    title: 'Covid-19 Map, Swaziland',
+    line: 'Mapping Covid-19 cases by region with D3.',
     image: '/images/covidGeoMap.png',
-    tags: ['JavaScript', 'D3.js', 'GeoJSON'],
     featured: true,
     links: [
       {
@@ -65,12 +45,21 @@ export const projects = [
     ],
   },
   {
-    title: 'Mineral Resource Geo-Visualization',
-    description:
-      'Proof-of-concept maps of public USGS mineral resource data, built with the Google Maps API.',
-    image: '/images/prospectorGeoMaps.png',
-    tags: ['JavaScript', 'Google Maps API'],
+    title: 'Data Visualization GUI',
+    line: 'A desktop tool for exploring datasets in 3D.',
+    image: '/images/datavizGUI.png',
     featured: true,
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/Visualizing-the-impact-of-HIV-AIDS-in-Southern-Africa',
+      },
+    ],
+  },
+  {
+    title: 'Mineral Resource Maps',
+    line: 'Mapping public USGS mineral data with Google Maps.',
+    image: '/images/prospectorGeoMaps.png',
     links: [
       {
         label: 'Code',
@@ -79,32 +68,15 @@ export const projects = [
     ],
   },
   {
-    title: 'Personal Portfolio Website',
-    description: 'This site, designed and built from scratch.',
-    image: '/images/portfolio.png',
-    tags: ['Next.js', 'React', 'Tailwind CSS'],
-    featured: true,
-    links: [
-      {
-        label: 'Code',
-        href: 'https://github.com/mkhanyisig/personal-portfolio',
-      },
-    ],
-  },
-  {
-    title: 'Database Management System GUI',
-    description:
-      'Java desktop app for CRUD operations on a US Forestry Registry PostgreSQL database.',
+    title: 'Database GUI',
+    line: 'A Java desktop app on top of a PostgreSQL database.',
     image: '/images/DBMS_GUI.png',
-    tags: ['Java', 'PostgreSQL', 'JDBC'],
     links: [{ label: 'Code', href: 'https://github.com/mkhanyisig/DBMS_GUI' }],
   },
   {
-    title: 'LinkedIn Data Scraper',
-    description:
-      'Selenium crawler that collects data from predefined LinkedIn company profiles for internal analysis.',
+    title: 'LinkedIn Scraper',
+    line: 'A Selenium scraper for company profile data.',
     image: '/images/linkedinScraping.png',
-    tags: ['Python', 'Selenium', 'BeautifulSoup'],
     links: [
       {
         label: 'Code',
@@ -113,11 +85,9 @@ export const projects = [
     ],
   },
   {
-    title: 'Gym Buddy Workouts',
-    description:
-      'Mobile app for tracking workouts during a session and logging body health data.',
+    title: 'Gym Buddy',
+    line: 'A React Native app for logging workouts.',
     image: '/images/gymBuddy.png',
-    tags: ['React Native', 'Expo'],
     links: [
       {
         label: 'Code',
@@ -131,15 +101,24 @@ export const projects = [
   },
   {
     title: 'Falcon',
-    description:
-      "Endless-flyer game built for a game design course: navigate each level's terrain and obstacles to find the nest.",
+    line: 'An endless-flyer game, built for a game design class.',
     image: null,
-    tags: ['Python', 'Pygame'],
     links: [
       { label: 'Code', href: 'https://github.com/mkhanyisig/Falcon-' },
       {
         label: 'Write-up',
         href: 'https://www.linkedin.com/pulse/falcon-vision-brought-life-gerald-nvule/',
+      },
+    ],
+  },
+  {
+    title: 'The old portfolio',
+    line: 'The previous version of this site.',
+    image: '/images/portfolio.png',
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/personal-portfolio',
       },
     ],
   },
