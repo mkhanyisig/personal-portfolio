@@ -4,6 +4,7 @@ import {
   Libre_Franklin,
   Stint_Ultra_Condensed,
 } from 'next/font/google';
+import StarField from './components/StarField';
 import './globals.css';
 
 const sans = Libre_Franklin({ subsets: ['latin'], variable: '--font-sans' });
@@ -61,7 +62,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <StarField />
+        {children}
+      </body>
     </html>
   );
 }

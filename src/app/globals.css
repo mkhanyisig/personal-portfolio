@@ -14,8 +14,6 @@
   --line: #e8dccd;
   --accent: #1f1a15;
   --accent-soft: rgba(31, 26, 21, 0.05);
-  --star: rgba(31, 26, 21, 0.85);
-  --star-scale: 2;
   --haze: rgba(150, 125, 100, 0.045);
   --glow: rgba(110, 92, 74, 0.32);
   color-scheme: light;
@@ -29,8 +27,6 @@
   --line: #262629;
   --accent: #f4f1ea;
   --accent-soft: rgba(244, 241, 234, 0.06);
-  --star: rgba(255, 255, 255, 0.5);
-  --star-scale: 1;
   --haze: rgba(176, 186, 198, 0.12);
   --glow: rgba(206, 212, 220, 0.38);
   color-scheme: dark;
@@ -48,7 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Fixed backdrop: cold smoke drifting in from the top, and a few stars. */
+/* Fixed backdrop: smoke drifting in from the top. Stars are drawn by
+   <StarField /> so they can twinkle. */
 body::before {
   content: '';
   position: fixed;
@@ -57,62 +54,7 @@ body::before {
   pointer-events: none;
   background-image:
     radial-gradient(ellipse 70% 50% at 85% -10%, var(--haze), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 0% 0%, var(--haze), transparent 70%),
-    radial-gradient(
-      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 8% 22%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 17% 63%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 31% 84%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 44% 52%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 58% 71%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 64% 41%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 71% 93%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 83% 58%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1.5px * var(--star-scale)) calc(1.5px * var(--star-scale)) at 94% 78%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 4% 46%,
-      var(--star),
-      transparent
-    ),
-    radial-gradient(
-      calc(1px * var(--star-scale)) calc(1px * var(--star-scale)) at 48% 96%,
-      var(--star),
-      transparent
-    );
+    radial-gradient(ellipse 60% 40% at 0% 0%, var(--haze), transparent 70%);
 }
 
 /* Film grain over everything, very faint. */
