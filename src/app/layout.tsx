@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Bodoni_Moda, Libre_Franklin } from 'next/font/google';
+import {
+  Bodoni_Moda,
+  Libre_Franklin,
+  Stint_Ultra_Condensed,
+} from 'next/font/google';
 import './globals.css';
 
 const sans = Libre_Franklin({ subsets: ['latin'], variable: '--font-sans' });
@@ -8,10 +12,16 @@ const serif = Bodoni_Moda({
   style: ['normal', 'italic'],
   variable: '--font-serif',
 });
+// Condensed slab-serif headline face, in the spirit of period wood type.
+const display = Stint_Ultra_Condensed({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display',
+});
 
 const title = 'Mkhanyisi Gamedze, Software Engineer';
 const description =
-  'Full stack software engineer working across web apps, backend systems, data and enterprise integrations.';
+  'Full stack software engineer working across web apps, backend systems, data, machine learning and enterprise integrations.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mkhanyisi.xyz'),
@@ -30,10 +40,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0b0d12',
+  themeColor: '#0a0a0b',
 };
 
-// Runs before first paint: applies the saved theme (night by default, so no
+// Runs before first paint: applies the saved theme (noir by default, so no
 // flash) and marks JS as available so scroll-reveal never hides content without it.
 const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme')||'dark';d.classList.toggle('dark',t==='dark')}catch(e){d.classList.add('dark')}})()`;
 
@@ -45,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${sans.variable} ${serif.variable}`}
+      className={`dark ${sans.variable} ${serif.variable} ${display.variable}`}
       suppressHydrationWarning
     >
       <head>

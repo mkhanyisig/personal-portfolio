@@ -1,11 +1,12 @@
 // `featured: true` shows in the main list; the rest sit under "A few more".
 // `image: null` shows a small placeholder (source image isn't in the repo).
-// The first link is also the link on the title.
+// The first link is also the link on the title and thumbnail.
 
 export const projects = [
   {
     title: 'World Event Recognition',
-    line: 'Testing whether newer deep learning models could beat a 2015 computer vision benchmark.',
+    line: 'Revisited the ChaLearn 2015 Looking at People challenge, testing whether newer pretrained models could beat the original benchmarks.',
+    tags: ['Python', 'PyTorch', 'Computer vision'],
     image: null,
     featured: true,
     links: [
@@ -21,7 +22,8 @@ export const projects = [
   },
   {
     title: 'Brandeis Apartment Search',
-    line: 'A housing marketplace for Brandeis students and local landlords.',
+    line: 'A two-sided housing platform connecting Brandeis students with verified landlords and landlord reviews.',
+    tags: ['Ruby on Rails', 'PostgreSQL', 'Heroku'],
     image: '/images/brandeisApartmentSearch.png',
     featured: true,
     links: [
@@ -34,7 +36,8 @@ export const projects = [
   },
   {
     title: 'Covid-19 Map, Swaziland',
-    line: 'Mapping Covid-19 cases by region with D3.',
+    line: 'A regional map of Covid-19 cases built from Ministry of Health and WHO reports, using a custom GeoJSON.',
+    tags: ['JavaScript', 'D3.js', 'GeoJSON'],
     image: '/images/covidGeoMap.png',
     featured: true,
     links: [
@@ -46,7 +49,8 @@ export const projects = [
   },
   {
     title: 'Data Visualization GUI',
-    line: 'A desktop tool for exploring datasets in 3D.',
+    line: 'A desktop tool for exploring datasets in 3D, with PCA, regression and clustering built in.',
+    tags: ['Python', 'Pandas', 'Matplotlib'],
     image: '/images/datavizGUI.png',
     featured: true,
     links: [
@@ -58,7 +62,8 @@ export const projects = [
   },
   {
     title: 'Mineral Resource Maps',
-    line: 'Mapping public USGS mineral data with Google Maps.',
+    line: 'Proof-of-concept maps of public USGS mineral resource data.',
+    tags: ['JavaScript', 'Google Maps API'],
     image: '/images/prospectorGeoMaps.png',
     links: [
       {
@@ -69,13 +74,15 @@ export const projects = [
   },
   {
     title: 'Database GUI',
-    line: 'A Java desktop app on top of a PostgreSQL database.',
+    line: 'A Java desktop app for CRUD operations on a PostgreSQL database.',
+    tags: ['Java', 'PostgreSQL', 'JDBC'],
     image: '/images/DBMS_GUI.png',
     links: [{ label: 'Code', href: 'https://github.com/mkhanyisig/DBMS_GUI' }],
   },
   {
     title: 'LinkedIn Scraper',
-    line: 'A Selenium scraper for company profile data.',
+    line: 'A Selenium crawler that collects company profile data for analysis.',
+    tags: ['Python', 'Selenium'],
     image: '/images/linkedinScraping.png',
     links: [
       {
@@ -86,7 +93,8 @@ export const projects = [
   },
   {
     title: 'Gym Buddy',
-    line: 'A React Native app for logging workouts.',
+    line: 'A mobile app for tracking workouts and logging health data.',
+    tags: ['React Native', 'Expo'],
     image: '/images/gymBuddy.png',
     links: [
       {
@@ -102,6 +110,7 @@ export const projects = [
   {
     title: 'Falcon',
     line: 'An endless-flyer game, built for a game design class.',
+    tags: ['Python', 'Pygame'],
     image: null,
     links: [
       { label: 'Code', href: 'https://github.com/mkhanyisig/Falcon-' },
@@ -114,6 +123,7 @@ export const projects = [
   {
     title: 'The old portfolio',
     line: 'The previous version of this site.',
+    tags: ['Next.js', 'Tailwind CSS'],
     image: '/images/portfolio.png',
     links: [
       {

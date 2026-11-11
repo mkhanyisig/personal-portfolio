@@ -6,21 +6,29 @@ import { education } from '../data/experience';
 
 const About = () => (
   <Section id="about" title="About">
-    <div className="grid gap-12 md:grid-cols-[1fr_14rem] md:gap-14">
-      <Reveal className="max-w-xl space-y-5 text-[17px] leading-relaxed">
+    <div className="grid gap-12 md:grid-cols-[1fr_15rem] md:gap-14">
+      <Reveal className="max-w-2xl space-y-5 text-[17px] leading-relaxed">
         <p>
           I came to software through physics. I majored in astrophysics and
-          computer science at Colby, then went on to a master&apos;s in computer
-          science at Brandeis.
+          computer science at Colby College, then went on to a master&apos;s in
+          computer science at Brandeis, where I also worked as a graduate
+          research assistant.
         </p>
         <p>
-          These days I work across the stack, from product features to backend
-          services, data pipelines and enterprise integrations. I like to
-          understand how a system really works before I try to make it better.
+          Since then I&apos;ve worked on product-focused teams across web
+          development, backend systems, analytics and applied machine learning,
+          and more recently on enterprise integrations in the cloud. My core
+          languages are Python, TypeScript/JavaScript and Java.
+        </p>
+        <p>
+          I like to understand how a system really works before I try to make it
+          better, and I care about software that is maintainable, reliable and
+          thoughtfully designed.
         </p>
         <p className="text-muted">
           Away from the screen you&apos;ll find me at the gym, on the soccer
           field, on my bike or somewhere outdoors, usually with music on.
+          Sports, travel and a good hike are what recharge me.
         </p>
 
         <ul className="space-y-3 border-t border-line pt-6">
@@ -39,13 +47,13 @@ const About = () => (
         </ul>
       </Reveal>
 
-      <Reveal delay={120} className="max-w-[14rem]">
+      <Reveal delay={120} className="max-w-[15rem]">
         <div className="relative aspect-[4/5] overflow-hidden border border-line">
           <Image
             src="/images/grad.jpeg"
             alt="Mkhanyisi on stage at a graduation ceremony"
             fill
-            sizes="224px"
+            sizes="240px"
             className="object-cover object-[72%_40%]"
           />
         </div>

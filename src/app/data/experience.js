@@ -1,11 +1,11 @@
-// One line per role. Most recent role is intentionally not listed.
+// Most recent role is intentionally not listed.
 
 export const roles = [
   {
     organization: 'Gamefam',
     role: 'Backend Engineer',
     period: '2024 – 2025',
-    line: 'Backend and analytics work on the RoMonitor platform, including models for estimating game engagement and revenue.',
+    line: 'Worked across backend systems, analytics product development and predictive modeling for the RoMonitor platform, including machine learning approaches for estimating game engagement and revenue.',
   },
   {
     organization: 'Electives',
@@ -13,7 +13,7 @@ export const roles = [
     period: '2023 – 2024',
     logo: '/images/electives2.png',
     url: 'https://www.electives.io/',
-    line: 'Built product features for a B2B live-learning platform.',
+    line: 'Built and improved features for a B2B live-learning platform, working across React interfaces, APIs, serverless services and product integrations.',
   },
   {
     organization: 'HubSpot',
@@ -21,21 +21,32 @@ export const roles = [
     period: '2022',
     logo: '/images/hubspot.png',
     url: 'https://www.hubspot.com/',
-    line: 'Backend APIs and developer tooling on the CMS Developer Infrastructure team.',
+    line: 'Worked on the CMS Developer Infrastructure team, contributing to Java backend APIs and a CLI authentication and feature-rollout tool for HubSpot’s developer products.',
   },
 ];
 
 export const earlier = [
   {
     organization: 'Prospector Portal',
+    role: 'Software Engineer',
+    period: '2020 – 2022',
     url: 'https://www.prospectorportal.com/',
+    line: 'Data pipelines, scraping automation and geospatial maps for a mining analytics platform.',
   },
   {
     organization: 'Brandeis University',
-    note: 'research',
+    role: 'Graduate Research Assistant',
+    period: '2021 – 2022',
     url: 'https://www.brandeis.edu/computer-science/',
+    line: 'Research software and data analysis for NLP and global health projects.',
   },
-  { organization: 'The Jackson Laboratory', url: 'https://www.jax.org/' },
+  {
+    organization: 'The Jackson Laboratory',
+    role: 'Scientific Software Engineer Intern',
+    period: '2019',
+    url: 'https://www.jax.org/',
+    line: 'D3.js visualizations of cancer genomics data for a clinical knowledge base.',
+  },
 ];
 
 export const education = [

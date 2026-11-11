@@ -9,26 +9,25 @@ export const nav = [
   { label: 'Contact', href: '#contact' },
 ];
 
-// "What I work on": one plain line each, with the tools underneath.
 export const toolkit = [
   {
     title: 'Web apps',
-    line: 'Product features, from the interface down to the API.',
-    tools: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Laravel'],
+    line: 'Building product features end to end, from React interfaces to the APIs and services behind them.',
+    tools: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Laravel', 'GraphQL'],
   },
   {
     title: 'Backend & data',
-    line: 'Services, pipelines and the plumbing in between.',
-    tools: ['Python', 'SQL', 'PostgreSQL', 'AWS', 'Docker'],
+    line: 'Designing backend services and data pipelines that move, clean and store data reliably.',
+    tools: ['Python', 'SQL', 'PostgreSQL', 'DynamoDB', 'AWS', 'Docker'],
   },
   {
     title: 'Machine learning',
-    line: 'Predictive models that end up inside real tools.',
-    tools: ['PyTorch', 'pandas', 'scikit-learn'],
+    line: 'Taking predictive models from exploration and feature engineering through evaluation and into tools people use.',
+    tools: ['PyTorch', 'pandas', 'scikit-learn', 'NumPy'],
   },
   {
     title: 'Enterprise integrations',
-    line: 'Connecting cloud platforms and keeping the data flowing.',
+    line: 'Connecting cloud platforms with other systems, automating data workflows and keeping business-critical processes running.',
     tools: [
       'Oracle Integration Cloud',
       'Oracle Fusion Cloud',
