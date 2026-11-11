@@ -7,55 +7,59 @@ import { projects } from '../data/projects';
 const ext = (href) =>
   href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {};
 
-const Thumb = ({ image }) => (
-  <div className="relative hidden h-12 w-20 flex-none overflow-hidden border border-line bg-surface sm:block">
+// Black-and-white thumbnail that comes into colour on hover.
+const Thumb = ({ image, title }) => (
+  <div className="relative hidden h-24 w-36 flex-none overflow-hidden border border-line bg-surface sm:block">
     {image ? (
       <Image
         src={image}
-        alt=""
+        alt={`Screenshot of ${title}`}
         fill
-        sizes="80px"
-        className="object-cover object-top opacity-90 sepia-[.3] transition duration-300 group-hover:opacity-100 group-hover:sepia-0"
+        sizes="144px"
+        className="object-cover object-top grayscale transition duration-500 group-hover:grayscale-0"
       />
     ) : (
       <span
-        className="flex h-full items-center justify-center text-accent"
+        className="display flex h-full items-center justify-center px-2 text-center text-xl leading-none text-muted"
         aria-hidden="true"
       >
-        ✦
+        {title}
       </span>
     )}
   </div>
 );
 
-const ProjectRow = ({ title, line, image, links }) => (
-  <li className="group flex items-center gap-5 border-t border-line py-5">
-    <Thumb image={image} />
+const ProjectRow = ({ title, line, tags, image, links }) => (
+  <li className="group flex gap-6 border-t border-line py-6">
+    <Thumb image={image} title={title} />
     <div className="min-w-0 flex-1">
-      <h3 className="font-serif text-xl">
+      <h3 className="font-serif text-2xl">
         <a
           href={links[0].href}
           {...ext(links[0].href)}
-          className="transition-colors hover:text-accent"
+          className="transition-opacity hover:opacity-75"
         >
           {title}
         </a>
       </h3>
-      <p className="mt-0.5 text-sm text-muted">{line}</p>
+      <p className="mt-1 max-w-xl leading-relaxed text-muted">{line}</p>
+      <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <span className="tag">{tags.join(' · ')}</span>
+        <span className="flex gap-4">
+          {links.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              {...ext(href)}
+              className="label inline-flex items-center gap-1 text-fg transition-opacity hover:opacity-75"
+            >
+              {label}
+              <ArrowUpRightIcon className="h-3 w-3" aria-hidden="true" />
+            </a>
+          ))}
+        </span>
+      </div>
     </div>
-    <p className="hidden flex-none gap-4 sm:flex">
-      {links.map(({ label, href }) => (
-        <a
-          key={label}
-          href={href}
-          {...ext(href)}
-          className="label inline-flex items-center gap-1 transition-colors hover:text-accent"
-        >
-          {label}
-          <ArrowUpRightIcon className="h-3 w-3" aria-hidden="true" />
-        </a>
-      ))}
-    </p>
   </li>
 );
 
@@ -76,7 +80,7 @@ const Projects = () => {
           ))}
         </ul>
         <details className="group/more border-t border-line">
-          <summary className="label flex cursor-pointer list-none items-center gap-2 py-5 transition-colors hover:text-accent [&::-webkit-details-marker]:hidden">
+          <summary className="label flex cursor-pointer list-none items-center gap-2 py-5 transition-colors hover:text-fg [&::-webkit-details-marker]:hidden">
             <span className="transition-transform group-open/more:rotate-90">
               ›
             </span>

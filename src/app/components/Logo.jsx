@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
-// Organization mark: the logo image when we have one, otherwise a monogram.
-const Logo = ({ src, name, size = 40 }) => (
+// Organization mark in black and white: the logo when we have one,
+// otherwise a monogram.
+const Logo = ({ src, name, size = 32 }) => (
   <span
-    className="flex flex-none items-center justify-center overflow-hidden rounded-full border border-line bg-white"
+    className="flex flex-none items-center justify-center overflow-hidden rounded-full bg-white"
     style={{ width: size, height: size }}
   >
     {src ? (
@@ -12,10 +13,10 @@ const Logo = ({ src, name, size = 40 }) => (
         alt=""
         width={size}
         height={size}
-        className="h-full w-full object-contain p-1"
+        className="h-full w-full object-contain p-1 grayscale"
       />
     ) : (
-      <span aria-hidden="true" className="font-serif text-lg text-neutral-800">
+      <span aria-hidden="true" className="font-serif text-base text-black">
         {name.charAt(0)}
       </span>
     )}

@@ -14,7 +14,7 @@ const Header = () => {
         <a
           href="#top"
           onClick={close}
-          className="display text-base transition-colors hover:text-accent"
+          className="display text-2xl transition-opacity hover:opacity-75"
         >
           Mkhanyisi
         </a>
@@ -25,7 +25,7 @@ const Header = () => {
               <li key={href}>
                 <a
                   href={href}
-                  className="label transition-colors hover:text-accent"
+                  className="label transition-colors hover:text-fg"
                 >
                   {label}
                 </a>
@@ -35,7 +35,7 @@ const Header = () => {
           <ThemeToggle />
           <button
             type="button"
-            className="p-2 text-muted hover:text-accent md:hidden"
+            className="p-2 text-muted hover:text-fg md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -60,7 +60,7 @@ const Header = () => {
               <a
                 href={href}
                 onClick={close}
-                className="block py-3 font-serif text-2xl transition-colors hover:text-accent"
+                className="display block py-2 text-4xl"
               >
                 {label}
               </a>

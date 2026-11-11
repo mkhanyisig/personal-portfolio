@@ -6,26 +6,36 @@ import { GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
 const Hero = () => (
   <section className="relative overflow-hidden">
-    <div className="container-page grid items-center gap-12 pb-20 pt-16 sm:pt-24 md:grid-cols-[1.4fr_1fr] md:gap-14 md:pb-28">
+    {/* Slow-drifting smoke behind the hero. */}
+    <div
+      aria-hidden="true"
+      className="smoke pointer-events-none absolute -right-1/4 -top-1/3 -z-10 h-[140%] w-[90%] rounded-full opacity-80 blur-3xl"
+      style={{
+        background:
+          'radial-gradient(closest-side, var(--haze), transparent 75%)',
+      }}
+    />
+
+    <div className="container-page grid items-center gap-10 pb-16 pt-16 sm:pt-20 md:grid-cols-[1.3fr_1fr] md:gap-12 md:pb-24">
       <Reveal>
         <p className="label flex items-center gap-3">
-          <span className="text-accent" aria-hidden="true">
-            ✦
-          </span>
+          <span aria-hidden="true">✦</span>
           Software Engineer
         </p>
         <p className="mt-8 font-serif text-2xl italic text-muted">
           Hello there, I&apos;m
         </p>
-        <h1 className="display mt-3 text-[2.6rem] leading-none sm:text-6xl lg:text-7xl">
+        <h1 className="display mt-1 text-[5.5rem] leading-[0.85] sm:text-[8rem] lg:text-[9.5rem]">
           Mkhanyisi
         </h1>
-        <p className="mt-8 max-w-md text-lg leading-relaxed">
-          I build web apps, backend services and data tools, and I enjoy the
-          puzzle of making complicated systems feel simple.
+        <p className="mt-8 max-w-lg text-lg leading-relaxed">
+          I&apos;m a full stack software engineer. I build web apps, backend
+          services, data pipelines and the occasional machine learning model,
+          and I enjoy the puzzle of making complicated systems feel simple.
         </p>
-        <p className="mt-3 max-w-md italic text-muted">
-          Welcome to my little corner of the internet.
+        <p className="mt-4 max-w-lg italic text-muted">
+          Welcome to my little corner of the internet. Whether you&apos;re here
+          to explore or just curious, feel free to reach out.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -53,22 +63,27 @@ const Hero = () => (
         </div>
       </Reveal>
 
-      <Reveal delay={150} className="relative mx-auto w-full max-w-[17rem]">
-        <Constellation className="absolute -right-10 -top-16 hidden w-48 md:block" />
-        {/* Double brass rule around the portrait, like an old frame. */}
-        <div className="relative border border-accent p-2">
-          <div className="border border-line">
-            <Image
-              src="/images/mk3.png"
-              alt="Portrait of Mkhanyisi Gamedze"
-              width={502}
-              height={497}
-              priority
-              sizes="(min-width: 768px) 272px, 70vw"
-              className="h-auto w-full sepia-[.35]"
-            />
-          </div>
-        </div>
+      <Reveal delay={150} className="relative mx-auto w-full max-w-[20rem]">
+        <Constellation className="absolute -right-6 -top-10 hidden w-44 md:block" />
+        {/* Backlit portrait that fades into the dark, like a figure in smoke. */}
+        <div
+          aria-hidden="true"
+          className="backlight absolute inset-x-[-15%] top-[-8%] h-[95%]"
+        />
+        <Image
+          src="/images/mk3.png"
+          alt="Portrait of Mkhanyisi Gamedze"
+          width={502}
+          height={497}
+          priority
+          sizes="(min-width: 768px) 320px, 80vw"
+          className="relative h-auto w-full contrast-125 grayscale"
+          style={{
+            WebkitMaskImage:
+              'linear-gradient(to bottom, black 62%, transparent 98%)',
+            maskImage: 'linear-gradient(to bottom, black 62%, transparent 98%)',
+          }}
+        />
       </Reveal>
     </div>
   </section>

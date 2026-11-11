@@ -9,13 +9,11 @@ const Toolkit = () => (
         <Reveal
           key={title}
           delay={(i % 2) * 80}
-          className="border-t border-line py-6"
+          className="border-t border-line py-7"
         >
           <dt className="font-serif text-2xl">{title}</dt>
-          <dd className="mt-1 text-muted">{line}</dd>
-          <dd className="mt-3 text-xs uppercase tracking-[0.14em] text-accent">
-            {tools.join(' · ')}
-          </dd>
+          <dd className="mt-2 leading-relaxed text-muted">{line}</dd>
+          <dd className="tag mt-4 text-fg">{tools.join(' · ')}</dd>
         </Reveal>
       ))}
     </dl>
