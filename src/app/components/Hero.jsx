@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import Constellation from './Constellation';
 import Reveal from './Reveal';
 import { GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
@@ -64,7 +63,6 @@ const Hero = () => (
       </Reveal>
 
       <Reveal delay={150} className="relative mx-auto w-full max-w-[20rem]">
-        <Constellation className="absolute -right-6 -top-10 hidden w-44 md:block" />
         {/* Backlit portrait that fades into the dark, like a figure in smoke. */}
         <div
           aria-hidden="true"

@@ -18,7 +18,7 @@ const Contact = () => (
           rel="noreferrer"
           className="btn-primary"
         >
-          Book a call
+          Get In Touch
         </a>
         <a
           href={LINKEDIN_URL}
