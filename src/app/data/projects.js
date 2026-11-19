@@ -4,6 +4,19 @@
 
 export const projects = [
   {
+    title: 'Live Player Analytics',
+    line: "A live player analytics app for Habbo Hotel. A scheduled Laravel job polls Habbo's public API every 10 minutes and stores the counts in SQLite, with the backend, scheduler and database running in Docker containers. A simple Vue front end reads it back as a live counter, a 24-hour trend chart with CSV export, and 7-day peak and average stats.",
+    tags: ['Laravel', 'Vue.js', 'SQLite', 'Docker'],
+    image: '/images/gamefamAnalytics.png',
+    featured: true,
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/Gamefam-Analytics',
+      },
+    ],
+  },
+  {
     title: 'World Event Recognition',
     line: 'Revisited the ChaLearn 2015 Looking at People challenge, testing whether newer pretrained models could beat the original benchmarks.',
     tags: ['Python', 'PyTorch', 'Computer vision'],
