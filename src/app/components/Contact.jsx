@@ -8,11 +8,7 @@ const Contact = () => (
     <Reveal>
       <p className="max-w-xl text-lg leading-relaxed">
         Whether you have a question, want to connect, or just say hello, 
-        I'm always happy to have a good conversation. Write me a note at{' '}
-        <a href={`mailto:${EMAIL}`} className="link text-fg">
-          {EMAIL}
-        </a>
-        .
+        I'm always happy to have a good conversation.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <a href={`mailto:${EMAIL}`} className="btn-primary">
