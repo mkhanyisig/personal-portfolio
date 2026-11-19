@@ -5,13 +5,13 @@ export const roles = [
   {
     role: 'Full Stack Developer',
     period: 'Recent',
-    line: '',
+    line: 'Leading technical implementations and modernization efforts across enterprise systems, data migrations, and cloud integrations. Developing internal automation and QA tools to improve reliability and efficiency, while supporting business-critical systems, troubleshooting issues, and helping non-technical stakeholders navigate information technology services.',
   },
   {
     organization: 'Gamefam',
     role: 'Backend Engineer',
     period: '2024 – 2025',
-    line: 'Worked across backend systems, analytics product development and predictive modeling for the RoMonitor platform, including machine learning approaches for estimating game engagement and revenue.',
+    line: 'Developed backend services and custom analytics for RoMonitor, a Roblox engagement analytics platform, supporting game portfolio performance tracking, data-driven product features, and exploratory machine learning models for predicting game engagement and revenue.',
   },
   {
     organization: 'Electives',
@@ -19,7 +19,7 @@ export const roles = [
     period: '2023 – 2024',
     logo: '/images/electives2.png',
     url: 'https://www.electives.io/',
-    line: 'Built and improved features for a B2B live-learning platform, working across React interfaces, APIs, serverless services and product integrations.',
+    line: 'Built end-to-end product features for an early-stage B2B corporate learning platform, supporting instructors, learners, and enterprise training management across frontend applications, backend microservices, and serverless AWS infrastructure.',
   },
   {
     organization: 'HubSpot',
@@ -27,7 +27,7 @@ export const roles = [
     period: '2022',
     logo: '/images/hubspot.png',
     url: 'https://www.hubspot.com/',
-    line: 'Worked on the CMS Developer Infrastructure team, contributing to Java backend APIs and a CLI authentication and feature-rollout tool for HubSpot’s developer products.',
+    line: 'Contributed to developer infrastructure at HubSpot, building Java backend APIs and supporting CLI authentication and feature-rollout tooling for the CMS platform.',
   },
 ];
 
