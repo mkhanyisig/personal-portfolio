@@ -4,6 +4,19 @@
 
 export const projects = [
   {
+    title: 'Live Player Analytics',
+    line: 'Tracks how many Habbos are online. A Dockerized Laravel job stores counts in SQLite every 10 minutes, and a Vue front end charts the trends.',
+    tags: ['Laravel', 'Vue.js', 'SQLite', 'Docker'],
+    image: '/images/gamefamAnalytics.png',
+    featured: true,
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/Gamefam-Analytics',
+      },
+    ],
+  },
+  {
     title: 'World Event Recognition',
     line: 'Revisited the ChaLearn 2015 Looking at People challenge, testing whether newer pretrained models could beat the original benchmarks.',
     tags: ['Python', 'PyTorch', 'Computer vision'],
@@ -36,7 +49,7 @@ export const projects = [
   },
   {
     title: 'Covid-19 Map, Swaziland',
-    line: 'A regional map of Covid-19 cases built from Ministry of Health and WHO reports, using a custom GeoJSON.',
+    line: 'A dashboard I built during Covid for a fundraising and awareness initiative back home, mapping regional cases from Ministry of Health and WHO reports with a custom GeoJSON.',
     tags: ['JavaScript', 'D3.js', 'GeoJSON'],
     image: '/images/covidGeoMap.png',
     featured: true,
@@ -46,6 +59,14 @@ export const projects = [
         href: 'https://github.com/mkhanyisig/covidGeoMapEswatini/tree/master',
       },
     ],
+  },
+  {
+    title: 'Database GUI',
+    line: 'A Java desktop app for CRUD operations on a PostgreSQL database.',
+    tags: ['Java', 'PostgreSQL', 'JDBC'],
+    image: '/images/DBMS_GUI.png',
+    featured: true,
+    links: [{ label: 'Code', href: 'https://github.com/mkhanyisig/DBMS_GUI' }],
   },
   {
     title: 'Data Visualization GUI',
@@ -71,13 +92,6 @@ export const projects = [
         href: 'https://github.com/mkhanyisig/prospector_geomaps',
       },
     ],
-  },
-  {
-    title: 'Database GUI',
-    line: 'A Java desktop app for CRUD operations on a PostgreSQL database.',
-    tags: ['Java', 'PostgreSQL', 'JDBC'],
-    image: '/images/DBMS_GUI.png',
-    links: [{ label: 'Code', href: 'https://github.com/mkhanyisig/DBMS_GUI' }],
   },
   {
     title: 'LinkedIn Scraper',
