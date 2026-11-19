@@ -12,7 +12,10 @@ const About = () => (
         <p>
           I'm a software engineer with experience spanning full-stack
           development, backend systems, data engineering, applied machine
-          learning, and cloud-based enterprise integrations. I hold an MS & BS in Computer Science.
+          learning, and cloud-based enterprise integrations. I hold an MS & BS
+          in Computer Science, with my master&apos;s coursework focused on{' '}
+          <span className="font-serif italic">machine learning</span> and{' '}
+          <span className="font-serif italic">systems</span>.
         </p>
         <p>
           I've worked across small, early-stage teams building products from the
