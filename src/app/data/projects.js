@@ -5,7 +5,7 @@
 export const projects = [
   {
     title: 'Live Player Analytics',
-    line: "A live player analytics app for Habbo Hotel. A scheduled Laravel job polls Habbo's public API every 10 minutes and stores the counts in SQLite, with the backend, scheduler and database running in Docker containers. A simple Vue front end reads it back as a live counter, a 24-hour trend chart with CSV export, and 7-day peak and average stats.",
+    line: 'Tracks how many Habbos are online. A Dockerized Laravel job stores counts in SQLite every 10 minutes, and a Vue front end charts the trends.',
     tags: ['Laravel', 'Vue.js', 'SQLite', 'Docker'],
     image: '/images/gamefamAnalytics.png',
     featured: true,
