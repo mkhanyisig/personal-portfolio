@@ -28,7 +28,12 @@ const Hero = () => (
         <h1 className="display mt-1 text-[5.5rem] leading-[0.85] sm:text-[8rem] lg:text-[9.5rem]">
           Mkhanyisi
         </h1>
-        <p className="mt-8 max-w-lg text-lg leading-relaxed">
+        {/* Nickname, kept small so it reads as an aside. */}
+        <p className="mt-3 font-serif text-xl italic text-muted">
+          or just{' '}
+          <span className="display not-italic text-3xl text-fg">MK</span>
+        </p>
+        <p className="mt-7 max-w-lg text-lg leading-relaxed">
           I&apos;m a full stack software engineer. I build web apps, backend
           services, data pipelines and the occasional machine learning model,
           and I enjoy the puzzle of making complicated systems feel simple.
