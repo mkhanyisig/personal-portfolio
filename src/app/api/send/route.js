@@ -1,11 +1,20 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 const myEmail = process.env.MY_EMAIL;
 
 export async function POST(req, res) {
+  // Create the client per request, not at import time. Creating it at import
+  // made `next build` fail whenever RESEND_API_KEY wasn't set.
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      { error: 'Email is not configured on this server.' },
+      { status: 503 },
+    );
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const formData = await req.formData();
     console.log('formData:', formData);
