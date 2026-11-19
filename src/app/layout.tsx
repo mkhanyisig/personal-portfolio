@@ -24,6 +24,9 @@ const title = 'Mkhanyisi 👨🏾‍💻';
 const description =
   'Full stack software engineer working across web apps, backend systems, data, machine learning and enterprise integrations.';
 
+// Absolute production URL, so social previews never point at localhost.
+const OG_IMAGE = 'https://mkhanyisi.xyz/images/mk3.png';
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://mkhanyisi.xyz'),
   title: { default: title, template: '%s · Mkhanyisi' },
@@ -35,9 +38,9 @@ export const metadata: Metadata = {
     siteName: 'Mkhanyisi',
     title,
     description,
-    images: [{ url: '/images/mk3.png', width: 502, height: 497 }],
+    images: [{ url: OG_IMAGE, width: 502, height: 497 }],
   },
-  twitter: { card: 'summary', title, description },
+  twitter: { card: 'summary', title, description, images: [OG_IMAGE] },
 };
 
 export const viewport: Viewport = {
