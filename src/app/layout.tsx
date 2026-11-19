@@ -20,19 +20,19 @@ const display = Stint_Ultra_Condensed({
   variable: '--font-display',
 });
 
-const title = 'Mkhanyisi Gamedze, Software Engineer';
+const title = 'Mkhanyisi 👨🏾‍💻';
 const description =
   'Full stack software engineer working across web apps, backend systems, data, machine learning and enterprise integrations.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mkhanyisi.xyz'),
-  title: { default: title, template: '%s · Mkhanyisi Gamedze' },
+  title: { default: title, template: '%s · Mkhanyisi' },
   description,
   authors: [{ name: 'Mkhanyisi Gamedze' }],
   openGraph: {
     type: 'website',
     url: '/',
-    siteName: 'Mkhanyisi Gamedze',
+    siteName: 'Mkhanyisi',
     title,
     description,
     images: [{ url: '/images/mk3.png', width: 502, height: 497 }],
