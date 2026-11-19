@@ -4,8 +4,8 @@
 
 /* ---- Theme -------------------------------------------------------------
    Noir (default): black and white, cold smoke, a few stars.
-   Day: warm off-white (#FFF8F0), soft ink, visible stars, and a soft
-   shadow halo behind the portrait instead of a glow. */
+   Day: warm off-white (#FFF8F0) with a soft warm vignette at the edges for
+   depth, soft ink, visible stars, and a shadow halo behind the portrait. */
 :root {
   --bg: #fff8f0;
   --surface: #fbf1e4;
@@ -14,8 +14,9 @@
   --line: #e8dccd;
   --accent: #1f1a15;
   --accent-soft: rgba(31, 26, 21, 0.05);
-  --haze: rgba(150, 125, 100, 0.045);
-  --glow: rgba(110, 92, 74, 0.32);
+  --haze: rgba(140, 112, 84, 0.13);
+  --glow: rgba(95, 75, 55, 0.55);
+  --vignette: rgba(100, 74, 48, 0.46);
   color-scheme: light;
 }
 
@@ -29,6 +30,7 @@
   --accent-soft: rgba(244, 241, 234, 0.06);
   --haze: rgba(176, 186, 198, 0.12);
   --glow: rgba(206, 212, 220, 0.38);
+  --vignette: rgba(0, 0, 0, 0);
   color-scheme: dark;
 }
 
@@ -54,7 +56,12 @@ body::before {
   pointer-events: none;
   background-image:
     radial-gradient(ellipse 70% 50% at 85% -10%, var(--haze), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 0% 0%, var(--haze), transparent 70%);
+    radial-gradient(ellipse 60% 40% at 0% 0%, var(--haze), transparent 70%),
+    radial-gradient(
+      ellipse 120% 95% at 50% 42%,
+      transparent 56%,
+      var(--vignette) 100%
+    );
 }
 
 /* Film grain over everything, very faint. */
@@ -125,15 +132,42 @@ body::after {
     -webkit-backdrop-filter: blur(10px);
   }
 
-  /* Backlight behind the hero portrait, like light through smoke. */
+  /* Backlight behind the hero portrait, like light through smoke.
+     Dark theme: a bright silvery glow with a soft wide falloff. */
   .backlight {
     background: radial-gradient(
       closest-side,
-      var(--glow),
-      color-mix(in srgb, var(--glow) 35%, transparent) 55%,
+      rgba(232, 236, 244, 0.7),
+      rgba(196, 206, 222, 0.38) 40%,
+      rgba(150, 162, 184, 0.14) 68%,
       transparent
     );
-    filter: blur(12px);
+    filter: blur(16px);
+    transform: scale(1.3);
+  }
+
+  /* Light theme: a warm glow instead of a shadow. Hot white core, golden
+     amber, then a darker rim so it reads as light against the cream page. */
+  :root:not(.dark) .backlight {
+    background: radial-gradient(
+      closest-side,
+      rgba(255, 251, 238, 1),
+      rgba(252, 214, 140, 0.78) 34%,
+      rgba(210, 145, 70, 0.4) 62%,
+      rgba(150, 100, 55, 0.14) 82%,
+      transparent
+    );
+    filter: blur(16px);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes breathe {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -167,6 +201,10 @@ body::after {
 
   .smoke {
     animation: drift 18s ease-in-out infinite alternate;
+  }
+
+  .backlight {
+    animation: breathe 1.8s ease-in-out infinite alternate;
   }
 
   .js .reveal {
