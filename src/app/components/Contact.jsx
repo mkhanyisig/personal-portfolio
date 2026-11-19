@@ -1,22 +1,21 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import Reveal from './Reveal';
 import Section from './Section';
-import { CALENDLY_URL, GITHUB_URL, LINKEDIN_URL } from '../data/site';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '../data/site';
 
 const Contact = () => (
   <Section id="contact" title="Say hello">
     <Reveal>
       <p className="max-w-xl text-lg leading-relaxed">
         Whether you have a question, want to connect, or just say hello, 
-        I'm always happy to have a good conversation.
+        I'm always happy to have a good conversation. Write me a note at{' '}
+        <a href={`mailto:${EMAIL}`} className="link text-fg">
+          {EMAIL}
+        </a>
+        .
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-3">
-        <a
-          href={CALENDLY_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="btn-primary"
-        >
+        <a href={`mailto:${EMAIL}`} className="btn-primary">
           Get In Touch
         </a>
         <a

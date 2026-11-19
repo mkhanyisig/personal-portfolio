@@ -1,4 +1,4 @@
-export const CALENDLY_URL = 'https://calendly.com/mkhanyisi-g/30min';
+export const EMAIL = 'mkhanyisi.g@gmail.com';
 export const GITHUB_URL = 'https://github.com/mkhanyisig';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/mkhanyisifabo/';
 
