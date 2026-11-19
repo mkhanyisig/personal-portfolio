@@ -34,11 +34,15 @@ const Hero = () => (
           <span className="display not-italic text-3xl text-fg">MK</span>
           {' '}that's also fine
         </p>
+        
         <p className="mt-7 max-w-lg text-lg leading-relaxed">
-          I&apos;m a full stack software engineer. I build web apps, backend
-          services, data pipelines, enterprise integrations and the occasional machine learning model,
-          and I enjoy the puzzle of making complicated systems feel simple.
+          I'm a full stack software engineer with experience spanning web
+          applications, backend systems, data engineering, enterprise integrations,
+          and applied machine learning. I've worked on everything from building
+          products from the ground up to modernizing complex (legacy) systems, and I enjoy
+          the puzzle of making complicated things feel simple.
         </p>
+
         <p className="mt-4 max-w-lg italic text-muted">
           Welcome to my little corner of the internet. Whether you&apos;re here
           to explore or just curious, feel free to reach out.
