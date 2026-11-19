@@ -31,7 +31,7 @@ const Hero = () => (
         {/* Nickname, kept small so it reads as an aside. */}
         <p className="mt-3 font-serif text-xl italic text-muted">
           or just{' '}
-          <span className="display not-italic text-3xl text-fg">MK</span> that's
+          <span className="display not-italic text-3xl text-fg">MK</span>{' '}, that's
           also fine
         </p>
 
