@@ -5,13 +5,13 @@ export const roles = [
   {
     role: 'Full Stack Developer',
     period: 'Recent',
-    line: 'Leading technical implementations and modernization efforts across enterprise systems, data migrations, and cloud integrations. Developing internal automation and QA tools to improve reliability and efficiency, while supporting business-critical systems, troubleshooting issues, and helping non-technical stakeholders navigate information technology services.',
+    line: 'Led enterprise integration and data migration initiatives, including a business-critical student case-management migration and modernization of legacy SQL workflows supporting approximately 3,000 students. Developed cloud integrations, internal automation, and QA tooling to improve data reliability, system maintainability, and institutional operations.',
   },
   {
     organization: 'Gamefam',
     role: 'Backend Engineer',
     period: '2024 – 2025',
-    line: 'Developed backend services and custom analytics for RoMonitor, a Roblox engagement analytics platform, supporting game portfolio performance tracking, data-driven product features, and exploratory machine learning models for predicting game engagement and revenue.',
+    line: 'Built backend services and custom analytics for RoMonitor, a Roblox engagement analytics platform supporting game portfolio performance tracking. Led applied ML research using proprietary and custom datasets, developing DAU and MAU prediction models that improved estimation accuracy and were deployed to the platform for beta testing with paying customers.',
   },
   {
     organization: 'Electives',
@@ -19,7 +19,7 @@ export const roles = [
     period: '2023 – 2024',
     logo: '/images/electives2.png',
     url: 'https://www.electives.io/',
-    line: 'Built end-to-end product features for an early-stage B2B corporate learning platform, supporting instructors, learners, and enterprise training management across frontend applications, backend microservices, and serverless AWS infrastructure.',
+    line: 'Built end-to-end product features for an early-stage corporate live-learning platform, working across frontend applications and fully serverless AWS microservices. Collaborated within a small engineering team to launch class memberships, a pivotal product offering that strengthened client engagement, while improving platform integrations, automated testing, and maintainability.',
   },
   {
     organization: 'HubSpot',
