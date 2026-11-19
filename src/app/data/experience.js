@@ -27,7 +27,7 @@ export const roles = [
     period: '2022',
     logo: '/images/hubspot.png',
     url: 'https://www.hubspot.com/',
-    line: 'Contributed to developer infrastructure at HubSpot, building Java backend APIs and supporting CLI authentication and feature-rollout tooling for the CMS platform.',
+    line: "Worked on HubSpot's CMS Developer Infrastructure team, developing Java backend APIs and internal CLI tooling for authentication, feature rollouts, and developer workflows.",
   },
 ];
 
