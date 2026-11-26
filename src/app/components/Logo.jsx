@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 // Organization mark: the logo when we have one, otherwise a monogram.
-// By default it's black and white with a little padding (matches the noir
-// theme). `fill` makes the image cover the whole circle; `color` keeps the
+// By default it's black and white and fits inside the circle (matches the
+// noir theme). `fill` makes the image cover the whole circle; `color` keeps the
 // original colours.
 const Logo = ({ src, name, size = 32, fill = false, color = false }) => (
   <span
@@ -15,7 +15,7 @@ const Logo = ({ src, name, size = 32, fill = false, color = false }) => (
         alt=""
         width={size}
         height={size}
-        className={`h-full w-full ${fill ? 'object-cover' : 'object-contain p-1'} ${color ? '' : 'grayscale'}`}
+        className={`h-full w-full ${fill ? 'object-cover' : 'object-contain'} ${color ? '' : 'grayscale'}`}
       />
     ) : (
       <span aria-hidden="true" className="font-serif text-base text-black">

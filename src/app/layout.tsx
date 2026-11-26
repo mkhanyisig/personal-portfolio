@@ -20,7 +20,7 @@ const display = Stint_Ultra_Condensed({
   variable: '--font-display',
 });
 
-const title = 'Mkhanyisi 👨🏾‍💻';
+const title = 'Mkhanyisi';
 const description =
   'Full stack software engineer working across web apps, backend systems, data, machine learning and enterprise integrations.';
 

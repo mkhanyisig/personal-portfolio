@@ -10,6 +10,8 @@ export const roles = [
   {
     organization: 'Gamefam',
     role: 'Backend Engineer',
+    logo: '/images/gamefamII.png',
+    logoFit: 'contain', // tall mascot on white; cropping cuts it off
     period: '2024 – 2025',
     line: 'Built backend services and custom analytics for RoMonitor, a Roblox engagement analytics platform supporting game portfolio performance tracking. Led applied ML research using proprietary and custom datasets, developing DAU and MAU prediction models that improved estimation accuracy and were deployed to the platform for beta testing with paying customers.',
   },

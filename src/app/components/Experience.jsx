@@ -23,7 +23,7 @@ const Experience = () => (
             <div>
               {job.organization ? (
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <Logo src={job.logo} name={job.organization} size={30} />
+                  <Logo src={job.logo} name={job.organization} size={30} fill={job.logoFit !== 'contain'} />
                   <h3 className="font-serif text-2xl">
                     <OrgName {...job} />
                   </h3>

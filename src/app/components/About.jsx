@@ -31,9 +31,10 @@ const About = () => (
           ways to build on what's already there.
         </p>
         <p className="text-muted">
-          Away from the screen you&apos;ll find me at the gym, on the soccer
-          field, on my bike or somewhere outdoors, usually with music on.
-          Sports, travel and a good hike are what recharge me.
+          Away from the screen, fitness is a big part of my life.
+          You'll often find me at the gym, playing soccer or basketball,
+          usually with music on. I also love traveling, hiking,
+          and exploring new places.
         </p>
 
         <ul className="space-y-5 border-t border-line pt-7">
