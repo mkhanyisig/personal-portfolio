@@ -135,7 +135,7 @@ body::after {
 
   /* How much AI went into a project. Colour is set per level (--ai-*). */
   .ai-badge {
-    @apply inline-flex items-center gap-1.5 border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em];
+    @apply inline-flex items-center gap-1.5 border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.16em];
     border-color: color-mix(in srgb, currentColor 45%, transparent);
   }
   .ai-badge::before {
