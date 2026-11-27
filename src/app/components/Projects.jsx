@@ -1,5 +1,8 @@
 import Image from 'next/image';
-import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowUpRightIcon,
+  ChevronDownIcon,
+} from '@heroicons/react/24/outline';
 import Reveal from './Reveal';
 import Section from './Section';
 import { projects } from '../data/projects';
@@ -34,14 +37,19 @@ const AiBadge = ({ level }) => {
 };
 
 // Key shown above the list, so each badge is explained before you scan it.
+// Collapsed by default; opens to explain each badge.
 const AiLegend = () => (
-  <div className="mb-8">
-    <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-fg">
+  <details className="group/ai mb-8">
+    <summary className="flex w-fit cursor-pointer list-none items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-fg transition-opacity hover:opacity-75 [&::-webkit-details-marker]:hidden">
       <span aria-hidden="true" className="text-base tracking-normal">
         🤖
       </span>
-      AI usage
-    </p>
+      AI usage flags
+      <ChevronDownIcon
+        className="h-3.5 w-3.5 transition-transform group-open/ai:rotate-180"
+        aria-hidden="true"
+      />
+    </summary>
     <ul className="mt-3 space-y-2">
       {Object.entries(AI_LEVELS).map(([level, { title }]) => (
         <li key={level} className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -50,7 +58,7 @@ const AiLegend = () => (
         </li>
       ))}
     </ul>
-  </div>
+  </details>
 );
 
 const ext = (href) =>
