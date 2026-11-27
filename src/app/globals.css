@@ -17,6 +17,10 @@
   --haze: rgba(140, 112, 84, 0.13);
   --glow: rgba(95, 75, 55, 0.55);
   --vignette: rgba(100, 74, 48, 0.46);
+  /* AI-usage badges, in period inks: verdigris, brass, oxblood. */
+  --ai-none: #4e6b55;
+  --ai-chat: #8a6a2c;
+  --ai-agent: #8e3b33;
   color-scheme: light;
 }
 
@@ -31,6 +35,9 @@
   --haze: rgba(176, 186, 198, 0.12);
   --glow: rgba(206, 212, 220, 0.38);
   --vignette: rgba(0, 0, 0, 0);
+  --ai-none: #8faf94;
+  --ai-chat: #c9a25e;
+  --ai-agent: #c4675f;
   color-scheme: dark;
 }
 
@@ -124,6 +131,17 @@ body::after {
 
   .tag {
     @apply text-[11px] uppercase tracking-[0.14em] text-muted;
+  }
+
+  /* How much AI went into a project. Colour is set per level (--ai-*). */
+  .ai-badge {
+    @apply inline-flex items-center gap-1.5 border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.16em];
+    border-color: color-mix(in srgb, currentColor 45%, transparent);
+  }
+  .ai-badge::before {
+    content: '';
+    @apply h-1.5 w-1.5 rounded-full;
+    background: currentColor;
   }
 
   .header-glass {

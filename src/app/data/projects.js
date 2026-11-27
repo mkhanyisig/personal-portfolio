@@ -1,6 +1,7 @@
 // `featured: true` shows in the main list; the rest sit under "A few more".
 // `image: null` shows a small placeholder (source image isn't in the repo).
 // The first link is also the link on the title and thumbnail.
+// `ai` is how much AI helped build it: 'none' (default), 'chat' or 'agent'.
 
 export const projects = [
   {
@@ -8,6 +9,7 @@ export const projects = [
     line: 'Tracks how many Habbos are online. A Dockerized Laravel job stores counts in SQLite every 10 minutes, and a Vue front end charts the trends.',
     tags: ['Laravel', 'Vue.js', 'SQLite', 'Docker'],
     image: '/images/gamefamAnalytics.png',
+    ai: 'chat',
     featured: true,
     links: [
       {
@@ -139,6 +141,7 @@ export const projects = [
     line: "The previous version of this site '24 version. Handcrafted with love, minimal AI usage ",
     tags: ['Next.js', 'Tailwind CSS'],
     image: '/images/portfolio.png',
+    ai: 'chat', 
     links: [
       {
         label: 'Code',
