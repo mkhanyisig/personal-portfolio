@@ -9,7 +9,7 @@ export const roles = [
   },
   {
     organization: 'Gamefam',
-    role: 'Backend Engineer',
+    role: 'Software Engineer - Backend',
     logo: '/images/gamefamII.png',
     logoFit: 'contain', // tall mascot on white; cropping cuts it off
     period: '2024 – 2025',

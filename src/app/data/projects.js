@@ -89,7 +89,7 @@ export const projects = [
     line: 'A desktop tool for exploring datasets in 3D, with PCA, regression and clustering built in.',
     tags: ['Python', 'Pandas', 'Matplotlib'],
     image: '/images/datavizGUI.png',
-    featured: true,
+    featured: false,
     links: [
       {
         label: 'Code',
