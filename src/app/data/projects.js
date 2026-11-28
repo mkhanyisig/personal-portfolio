@@ -2,8 +2,24 @@
 // `image: null` shows a small placeholder (source image isn't in the repo).
 // The first link is also the link on the title and thumbnail.
 // `ai` is how much AI helped build it: 'none' (default), 'chat' or 'agent'.
+// `status` adds a small label next to the title (e.g. still in development).
 
 export const projects = [
+  {
+    title: 'My Form.',
+    line: 'An offline-first fitness companion for intentional training, featuring weight tracking, native workout timers, and progress summaries. Actively evolving toward flexible workout logging, routines, and training insights.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'SQLite'],
+    image: '/images/myForm.png',
+    ai: 'agent',
+    status: 'In active development',
+    featured: true,
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/MK-Gym-App-II',
+      },
+    ],
+  },
   {
     title: 'Live Player Analytics',
     line: 'Tracks how many Habbos are online. A Dockerized Laravel job stores counts in SQLite every 10 minutes, and a Vue front end charts the trends.',
