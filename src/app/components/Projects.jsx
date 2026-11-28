@@ -86,38 +86,19 @@ const Thumb = ({ image, title }) => (
   </div>
 );
 
-const ProjectRow = ({
-  title,
-  line,
-  tags,
-  image,
-  links,
-  ai = 'none',
-  status,
-}) => (
+const ProjectRow = ({ title, line, tags, image, links, ai = 'none' }) => (
   <li className="group flex gap-6 border-t border-line py-6">
     <Thumb image={image} title={title} />
     <div className="min-w-0 flex-1">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <h3 className="font-serif text-2xl">
-          <a
-            href={links[0].href}
-            {...ext(links[0].href)}
-            className="transition-opacity hover:opacity-75"
-          >
-            {title}
-          </a>
-        </h3>
-        {status && (
-          <span className="label inline-flex items-center gap-1.5 text-fg">
-            <span
-              aria-hidden="true"
-              className="h-1.5 w-1.5 rounded-full bg-current motion-safe:animate-pulse"
-            />
-            {status}
-          </span>
-        )}
-      </div>
+      <h3 className="font-serif text-2xl">
+        <a
+          href={links[0].href}
+          {...ext(links[0].href)}
+          className="transition-opacity hover:opacity-75"
+        >
+          {title}
+        </a>
+      </h3>
       <p className="mt-1 max-w-xl leading-relaxed text-muted">{line}</p>
       <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
         <span className="tag">{tags.join(' · ')}</span>

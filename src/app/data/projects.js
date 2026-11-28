@@ -2,7 +2,6 @@
 // `image: null` shows a small placeholder (source image isn't in the repo).
 // The first link is also the link on the title and thumbnail.
 // `ai` is how much AI helped build it: 'none' (default), 'chat' or 'agent'.
-// `status` adds a small label next to the title (e.g. still in development).
 
 export const projects = [
   {
@@ -11,7 +10,6 @@ export const projects = [
     tags: ['React Native', 'Expo', 'TypeScript', 'SQLite'],
     image: '/images/myForm.png',
     ai: 'agent',
-    status: 'In active development',
     featured: true,
     links: [
       {
