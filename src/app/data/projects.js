@@ -159,7 +159,7 @@ export const projects = [
     links: [
       {
         label: 'Code',
-        href: 'https://github.com/mkhanyisig/personal-portfolio',
+        href: 'https://github.com/mkhanyisig/personal-portfolio/tree/portfolio-2024',
       },
     ],
   },
