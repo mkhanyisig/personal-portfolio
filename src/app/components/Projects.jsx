@@ -26,12 +26,32 @@ const AI_LEVELS = {
   },
 };
 
-const AiBadge = ({ level }) => {
+// On project rows, hovering (or tapping/focusing) the badge shows what it
+// means. The legend already explains each badge, so it skips the tooltip.
+// On phones the tooltip spans the row (it's anchored to the row, not the
+// badge) so it never runs off the screen.
+const AiBadge = ({ level, tooltip = true }) => {
   const { label, color, title } = AI_LEVELS[level] ?? AI_LEVELS.none;
-  return (
-    <span className="ai-badge" style={{ color }} title={title}>
+  const badge = (
+    <span className="ai-badge" style={{ color }}>
       <span className="sr-only">AI usage: </span>
       {label}
+    </span>
+  );
+  if (!tooltip) return badge;
+
+  return (
+    <span
+      tabIndex={0}
+      className="group/ai-tip inline-flex cursor-help sm:relative outline-none focus-visible:ring-1 focus-visible:ring-fg"
+    >
+      {badge}
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute bottom-full left-0 right-0 z-20 mb-2 sm:right-auto sm:w-max sm:max-w-[16rem] border border-line bg-surface px-3 py-2 text-xs leading-snug text-fg opacity-0 shadow-lg transition-opacity duration-150 group-hover/ai-tip:opacity-100 group-focus/ai-tip:opacity-100"
+      >
+        {title}
+      </span>
     </span>
   );
 };
@@ -53,7 +73,7 @@ const AiLegend = () => (
     <ul className="mt-3 space-y-2">
       {Object.entries(AI_LEVELS).map(([level, { title }]) => (
         <li key={level} className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <AiBadge level={level} />
+          <AiBadge level={level} tooltip={false} />
           <span className="text-sm text-muted">{title}</span>
         </li>
       ))}
@@ -100,7 +120,7 @@ const ProjectRow = ({ title, line, tags, image, links, ai = 'none' }) => (
         </a>
       </h3>
       <p className="mt-1 max-w-xl leading-relaxed text-muted">{line}</p>
-      <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
+      <div className="relative mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
         <span className="tag">{tags.join(' · ')}</span>
         <AiBadge level={ai} />
         <span className="flex gap-4">

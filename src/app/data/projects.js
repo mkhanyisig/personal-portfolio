@@ -5,6 +5,20 @@
 
 export const projects = [
   {
+    title: 'My Form.',
+    line: 'An offline-first fitness companion for intentional training, featuring weight tracking, native workout timers, and progress summaries. Actively evolving toward flexible workout logging, routines, and training insights.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'SQLite'],
+    image: '/images/myForm.png',
+    ai: 'agent',
+    featured: true,
+    links: [
+      {
+        label: 'Code',
+        href: 'https://github.com/mkhanyisig/MK-Gym-App-II',
+      },
+    ],
+  },
+  {
     title: 'Live Player Analytics',
     line: 'Tracks how many Habbos are online. A Dockerized Laravel job stores counts in SQLite every 10 minutes, and a Vue front end charts the trends.',
     tags: ['Laravel', 'Vue.js', 'SQLite', 'Docker'],
@@ -75,7 +89,7 @@ export const projects = [
     line: 'A desktop tool for exploring datasets in 3D, with PCA, regression and clustering built in.',
     tags: ['Python', 'Pandas', 'Matplotlib'],
     image: '/images/datavizGUI.png',
-    featured: true,
+    featured: false,
     links: [
       {
         label: 'Code',
@@ -145,7 +159,7 @@ export const projects = [
     links: [
       {
         label: 'Code',
-        href: 'https://github.com/mkhanyisig/personal-portfolio',
+        href: 'https://github.com/mkhanyisig/personal-portfolio/tree/portfolio-2024',
       },
     ],
   },
